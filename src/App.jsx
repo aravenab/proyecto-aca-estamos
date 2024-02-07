@@ -4,7 +4,8 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Faq from './views/Faq/Faq'
-import Contacto from './views/Faq/Contacto/Contacto'
+import Contacto from './views/Contacto/Contacto'
+import Login from './views/Login/Login'
 
 function App() {
   
@@ -15,13 +16,10 @@ function App() {
 
       {/* Inserte el componente que desee visualizar*/}
       <Navbar/>
-      <Contacto/>
+      <Login/>
       <Footer/>
 
     </div>
-
-     
-    
   )
 }
 
