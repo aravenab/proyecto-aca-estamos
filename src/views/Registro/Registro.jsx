@@ -14,7 +14,7 @@ function RegistrationForm() {
 
     return (
         <div>
-            <section className="" style={{ backgroundColor: '#eee' }}>
+            <section className="p-3" style={{ backgroundColor: '#eee' }}>
                 <div className="container">
                     <div className="row d-flex justify-content-center align-items-center mb-4">
                         <div className="col-lg-12 col-xl-11">
