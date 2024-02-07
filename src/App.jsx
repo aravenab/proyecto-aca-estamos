@@ -3,6 +3,7 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import Faq from './views/Faq/Faq'
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
 
       <Navbar/>
       {/* Inserte el componente que desee visualizar*/}
+      <Faq/>
       <Footer/>
 
     </div>
