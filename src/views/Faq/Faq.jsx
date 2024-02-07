@@ -58,11 +58,11 @@ export default function Faq() {
 
                   <div className="accordion-item">
                       <h2 className="accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                               <strong>¿Qué opciones de contacto tengo?</strong>
                           </button>
                       </h2>
-                      <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse">
+                      <div id="panelsStayOpen-collapseFour" className="accordion-collapse collapse">
                           <div className="accordion-body">
                               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis amet iusto inventore sint exercitationem. Ex reiciendis nobis dolorum esse quaerat tempore consectetur odit commodi magni fugit, et quisquam. Omnis, totam.
                           </div>
@@ -71,11 +71,11 @@ export default function Faq() {
 
                   <div className="accordion-item">
                       <h2 className="accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
                               <strong>¿Cómo puedo encontrar trabajo rapido?</strong>
                           </button>
                       </h2>
-                      <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse">
+                      <div id="panelsStayOpen-collapseFive" className="accordion-collapse collapse">
                           <div className="accordion-body">
                               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis amet iusto inventore sint exercitationem. Ex reiciendis nobis dolorum esse quaerat tempore consectetur odit commodi magni fugit, et quisquam. Omnis, totam.
                           </div>
@@ -84,11 +84,11 @@ export default function Faq() {
 
                   <div className="accordion-item">
                       <h2 className="accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
                               <strong>¿Este servicio es gratuito?</strong>
                           </button>
                       </h2>
-                      <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse">
+                      <div id="panelsStayOpen-collapseSix" className="accordion-collapse collapse">
                           <div className="accordion-body">
                               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis amet iusto inventore sint exercitationem. Ex reiciendis nobis dolorum esse quaerat tempore consectetur odit commodi magni fugit, et quisquam. Omnis, totam.
                           </div>
@@ -97,11 +97,11 @@ export default function Faq() {
 
                   <div className="accordion-item">
                       <h2 className="accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
                               <strong>Tuve un problema con la página, ¿Cómo avanzo?</strong>
                           </button>
                       </h2>
-                      <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse">
+                      <div id="panelsStayOpen-collapseSeven" className="accordion-collapse collapse">
                           <div className="accordion-body">
                               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis amet iusto inventore sint exercitationem. Ex reiciendis nobis dolorum esse quaerat tempore consectetur odit commodi magni fugit, et quisquam. Omnis, totam.
                           </div>
