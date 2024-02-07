@@ -13,7 +13,7 @@ export default function Contacto() {
                         <div className="col-md-6 text-start">
                             <ul className="list-unstyled mb-0">
                                 {/*Section description*/}
-                                <li><i className="fas fa-phone mt-4 fa-2x"></i>
+                                <li><i className="fas fa-phone fa-2x"></i>
                                     <h3>Numeros:</h3>
                                     <p>+56 2 2342 2352</p>
                                     <p>+56 2 3512 1351</p>
@@ -33,7 +33,7 @@ export default function Contacto() {
                         <form className="formulario-contacto" id="liveAlertForm">
                             <div className="col-6 mb-4">
                                 <h3>Consulta directa:</h3>
-                                <label for="exampleInputEmail1" className="form-label mt-4">Tu Correo</label>
+                                <label for="exampleInputEmail1" className="form-label mt-2">Tu Correo</label>
                                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                 <div id="emailHelp" className="form-text">Respondemos a más tardar, mañana</div>
                             </div>
