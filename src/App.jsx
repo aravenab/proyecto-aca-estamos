@@ -10,7 +10,7 @@ function App() {
 
   return (
     
-    <div className='container'>
+    <div>
 
       <Navbar/>
       {/* Inserte el componente que desee visualizar*/}

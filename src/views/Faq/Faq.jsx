@@ -3,19 +3,19 @@ import React from 'react'
 export default function Faq() {
   return (
       <div>
-          <div className="container">
+          <div className="container-fluid">
               <div className="row">
                   <div className="col-3"></div>
                   <div className="col-6">
-                      <h3 className="container m-4 p-4">
+                      <h3 className="container-fluid m-4 p-4">
                           Preguntas Frecuentes
-                          <small className="text-body-secondary">(FAQ)</small>
+                          <small className="text-body-secondary ms-1">(FAQ)</small>
                       </h3></div>
                   <div className="col-3"></div>
               </div>
           </div>
 
-          <div className="container col-6 ">
+          <div className="container-fluid col-6 ">
               <div className="accordion" id="accordionPanelsStayOpenExample">
                   <div className="accordion-item">
                       <h2 className="accordion-header">
@@ -108,7 +108,7 @@ export default function Faq() {
                       </div>
                   </div>
               </div>
-                  <div className="container-fluid h-100">
+                  <div className="container-fluid-fluid h-100">
                       <div className="row w-100 align-items-center">
                           <div className="col text-center">
                               <button className="btn btn-info regular-button mb-4"> Volver </button>
