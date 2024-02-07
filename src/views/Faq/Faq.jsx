@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 export default function Faq() {
   return (
-      <div>
+
+    <div>
+        <Navbar/>
+        <div>
           <div className="container-fluid">
               <div className="row">
                   <div className="col-3"></div>
@@ -117,6 +122,9 @@ export default function Faq() {
                   </div>
           </div>
       </div>
+      <Footer/>
+    </div>
+      
     
   )
 }

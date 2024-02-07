@@ -12,10 +12,8 @@ function App() {
     
     <div>
 
-      <Navbar/>
       {/* Inserte el componente que desee visualizar*/}
       <Faq/>
-      <Footer/>
 
     </div>
 
