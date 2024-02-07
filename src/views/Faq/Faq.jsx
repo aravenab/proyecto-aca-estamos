@@ -4,9 +4,6 @@ import Footer from '../../components/Footer/Footer'
 
 export default function Faq() {
   return (
-
-    <div>
-        <Navbar/>
         <div>
           <div className="container-fluid">
               <div className="row">
@@ -122,9 +119,6 @@ export default function Faq() {
                   </div>
           </div>
       </div>
-      <Footer/>
-    </div>
-      
     
   )
 }
