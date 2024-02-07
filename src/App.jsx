@@ -9,6 +9,7 @@ import Login from './views/Login/Login'
 import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
 import RegistroUusariosTalentos from './views/RegistroUusariosTalentos/RegistroUusariosTalentos'
 import RegistrationForm from './views/Registro/Registro'
+import PerfilUsuario from './views/PerfilUsuario/PerFILUsuario'
 
 function App() {
   
@@ -19,7 +20,7 @@ function App() {
 
       {/* Inserte el componente que desee visualizar*/}
       <Navbar/>
-      <RegistrationForm/>
+      <PerfilUsuario/>
       <Footer/>
 
     </div>
