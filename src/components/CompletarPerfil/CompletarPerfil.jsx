@@ -6,6 +6,7 @@ export default function CompletarPerfil() {
         <div className="container-fluid m-2">
               <form className="container position-relative">
 
+                {/* <!-- BOTON CERRAR --> */}
                   <div className='row text-end'>
                       <div className='col-11'>
                       </div>
@@ -13,6 +14,8 @@ export default function CompletarPerfil() {
                         <button type="button" className="btn-close fs-2" aria-label="Close"></button>
                       </div>
                   </div>
+
+
                   <div className="col-12">
                       <h1>Información Personal - Preguntas Usuario</h1>
                   </div>
