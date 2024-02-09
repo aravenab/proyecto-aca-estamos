@@ -33,12 +33,12 @@ export default function Contacto() {
                         <form className="formulario-contacto" id="liveAlertForm">
                             <div className="col-6 mb-4">
                                 <h3>Consulta directa:</h3>
-                                <label for="exampleInputEmail1" className="form-label mt-2">Tu Correo</label>
+                                <label forHtml="exampleInputEmail1" className="form-label mt-2">Tu Correo</label>
                                 <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                                 <div id="emailHelp" className="form-text">Respondemos a más tardar, mañana</div>
                             </div>
                             <div className="col-6 mb-4">
-                                <label for="exampleFormControlTextarea1" className="form-label">Tu mensaje</label>
+                                <label forHtml="exampleFormControlTextarea1" className="form-label">Tu mensaje</label>
                                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                             <div id="liveAlertPlaceholder"></div>

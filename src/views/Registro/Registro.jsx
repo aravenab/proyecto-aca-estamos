@@ -67,7 +67,7 @@ function RegistrationForm() {
                                                         <label className="form-label" htmlFor="form3Example1c">Rut</label>
                                                     </div>
                                                 </div>
-                                                {/* Similar input elements for email, password, confirmPassword, phoneNumber, and rut */}
+                                                {/* Similar input elements forHtml email, password, confirmPassword, phoneNumber, and rut */}
                                                 <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                                     <button type="button" className="btn btn-primary btn-lg" onClick={handleRegister}>Registrate como persona Natural</button>
                                                 </div>

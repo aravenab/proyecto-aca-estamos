@@ -25,6 +25,7 @@ export default function Footer() {
       <div className="col-6 col-md-2 mb-3">
         <h5>Section</h5>
         <ul className="nav flex-column">
+        <img src="../../assets/logo/f.jpg" />
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Home</a></li>
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Features</a></li>
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Pricing</a></li>
@@ -38,7 +39,7 @@ export default function Footer() {
           <h5>Subscribe to our newsletter</h5>
           <p>Monthly digest of what's new and exciting from us.</p>
           <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label for="newsletter1" className="visually-hidden">Email address</label>
+            <label forHtml="newsletter1" className="visually-hidden">Email address</label>
             <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
             <button className="btn btn-primary" type="button">Subscribe</button>
           </div>
@@ -46,13 +47,13 @@ export default function Footer() {
       </div>
     </div>
 
-    <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <div className="d-flex flex-column flex-sm-row justify-content-between border-top">
       <p>© 2024 Ilustre Municipalidad de Renca </p>
       <ul className="list-unstyled d-flex">
-        <li className="ms-3 bi bi-twitter-x"><a className="link-body-emphasis" href="#"><svg className="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li className="ms-3 bi bi-instagram"><a className="link-body-emphasis" href="#"><svg className="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li className="ms-3 bi bi-facebook"><a className="link-body-emphasis" href="#"><svg className="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-        <li className="ms-3 bi bi-youtube"><a className="link-body-emphasis" href="#"><svg className="bi" width="24" height="24"><use xlink:href="#youtube"></use></svg></a></li>
+        <li className="ms-3 bi bi-twitter-x"><a className="link-body-emphasis" href="https://twitter.com/Muni_Renca"><svg className="bi" width="24" height="24"><use href="#twitter"></use></svg></a></li>
+        <li className="ms-3 bi bi-instagram"><a className="link-body-emphasis" href="https://www.instagram.com/muni_renca/"><svg className="bi" width="24" height="24"><use href="#instagram"></use></svg></a></li>
+        <li className="ms-3 bi bi-facebook"><a className="link-body-emphasis" href="https://www.facebook.com/MuniRenca/"><svg className="bi" width="24" height="24"><use href="#facebook"></use></svg></a></li>
+        <li className="ms-3 bi bi-youtube"><a className="link-body-emphasis" href="https://www.youtube.com/channel/UCosdtBKfRSxhhi4x9247Nbw"><svg className="bi" width="24" height="24"><use href="#youtube"></use></svg></a></li>
         
       </ul>
     </div>
