@@ -11,64 +11,67 @@ export default function PerfilUsuario() {
                     <div className="col-3">
 
                         <div className="container-fluid"> {/* <!--Container de foto perfil y redes-->*/}
-                            <div className="row"> {/* <!--FOTO PERFIL--> */}
+                            <div className="row m-4"> {/* <!--FOTO PERFIL--> */}
                                 <div className="col 12">
-                                    <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="img-fluid" />
+                                    <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="img-fluid border border-black rounded-4" />
                                 </div>
                             </div>
-                            <div className="row"> {/* <!--ESTRELLAS-->*/}
-                                <div className="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <div className="progress-bar" style={{width: '25%'}}>25%</div>
+                            <div className="row px-4"> {/* <!--ESTRELLAS-->*/}
+                                <div className='col-12'>
+                                    <div className="progress">
+                                        <div className="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style={{width: "25%"}} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
                                 </div>
+        
                             </div>
-                            <div className="row"> {/*<!--COMPLETAR PERFIL-->*/}
-                                <div className="col-12">
+                            <div className="row mt-2"> {/*<!--COMPLETAR PERFIL-->*/}
+                                <div className="col-12 text-center">
                                     <a href="https://http.cat/status/102">(+) Completar perfil</a>
                                 </div>
                             </div>
-                            <div className="row"> {/* <!--RED 1--> */}
-                                <div className="col-4">
+                            <div className="row my-4"> {/* <!--RED 1--> */}
+                                <div className="col-4 text-end">
                                     <i className="bi bi-github"></i>
                                 </div>
                                 <div className="col-8">
                                     <a href="https://github.com/Osvaldoisv">Nombre red</a>
                                 </div>
                             </div>
-                            <div className="row align-middle"> {/*<!--RED 2-->*/}
-                                <div className="col-4 align-middle">
+                            <div className="row my-4"> {/*<!--RED 2-->*/}
+                                <div className="col-4 text-end">
                                     <i className="bi bi-linkedin"></i>
                                 </div>
                                 <div className="col-8">
                                     <a href="https://github.com/Osvaldoisv">Nombre red</a>
                                 </div>
                             </div>
-                            <div className="row text-center align-middle"> {/*<!--Agregar más redes-->*/}
+                            <div className="row text-center align-middle my-4"> {/*<!--Agregar más redes-->*/}
                                 <div className="col-12">
                                     <a href="https://http.cat/status/102">(+) Agregar más redes</a>
                                 </div>
                             </div>
                             <div className="row text-center align-middle"> {/* <!--Agregar más redes--> */}
                                 <div className="col-12">
-                                    <a href="https://http.cat/status/102">(+) Subir Curriculum</a>
+                                    <button type="button" className="btn btn-secondary rounded-5 align-self-center mt-2">(+) Subir Curriculum</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div className="col-7">
+                    <div className="col-7"> 
                         <div className="container-fluid"> {/* <!--Container de info perfil-->*/}
                             <div className="row">
-                                <div className="col-12 mb-4">
+                                <div className="col-12 my-4">
                                     <h2>Osvaldo Sepulveda</h2>
                                 </div>
                             </div>
                             <div className="row mb-4">
-                                <div className="col-3">
+                                <div className="col-2">
                                     <h2>Estado:</h2>
                                 </div>
-                                <div className="col-9">
-                                    <button type="button" className="btn btn-success rounded-5 align-self-center">Disponible</button>
+                                <div className="col-10 text-start">
+                                    <button type="button" className="btn btn-success rounded-5 mt-1">Disponible</button>
                                 </div>
                             </div>
                             <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
