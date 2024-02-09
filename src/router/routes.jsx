@@ -8,14 +8,14 @@ import RegistroUusariosTalentos from "../views/RegistroUusariosTalentos/Registro
 
 const router = createBrowserRouter([
     {path:"/", element: <Contacto/>},
-    {path:"/contacto", element:<Contacto/>}
-    {path: "faq", element: <Faq />}
-    {path: "login", element: <Login />}
-    {path: "perfil_usuario", element: < PerfilUsuario/>}
-    {path: "registro_usuarios_empresas", element: < RegistroUsuariosEmpresas/>}
-    {path: "registro_usuarios_talentos", element: < RegistroUusariosTalentos/>}
+    {path:"/contacto", element:<Contacto/>},
+    {path: "faq", element: <Faq />},
+    {path: "login", element: <Login />},
+    {path: "perfil_usuario", element: < PerfilUsuario/>},
+    {path: "registro_usuarios_empresas", element: < RegistroUsuariosEmpresas/>},
+    {path: "registro_usuarios_talentos", element: < RegistroUusariosTalentos/>},
      
 
 ]);
 
-exportar default router;
+export default router;
