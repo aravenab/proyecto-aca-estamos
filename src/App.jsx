@@ -9,7 +9,7 @@ import Login from './views/Login/Login'
 import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
 import RegistroUusariosTalentos from './views/RegistroUusariosTalentos/RegistroUusariosTalentos'
 import RegistrationForm from './views/Registro/Registro'
-// import PerfilUsuario from './views/PerfilUsuario/PerFILUsuario'
+import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario'
 import ContactarTalento from './components/ContactarTalento/ContactarTalento'
 import CompletarPerfil from './components/CompletarPerfil/CompletarPerfil'
 
@@ -22,9 +22,13 @@ function App() {
 
       {/* Inserte el componente que desee visualizar*/}
       <Navbar/>
+<<<<<<< HEAD
       <Faq/>
       <CompletarPerfil/>
       <RegistroUsuariosEmpresas/>
+=======
+      <PerfilUsuario/>
+>>>>>>> 246a20fd271303edc7bb0cf97b99057770f521cc
       <Footer/>
 
     </div>
