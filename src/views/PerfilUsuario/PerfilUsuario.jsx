@@ -71,7 +71,7 @@ export default function PerfilUsuario() {
                                     <button type="button" className="btn btn-success rounded-5 align-self-center">Disponible</button>
                                 </div>
                             </div>
-                            <div className="row bg-primary rounded-2 ms-1 my-1 pt-1 pb-2">
+                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
                                 <div className="col-4">
                                     Nombre Completo:
                                 </div>
@@ -79,7 +79,7 @@ export default function PerfilUsuario() {
                                     Osvaldo Sepulveda
                                 </div>
                             </div>
-                            <div className="row bg-primary rounded-2 ms-1 my-1 pt-1 pb-2">
+                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
                                 <div className="col-4">
                                     Descripción:
                                 </div>
@@ -87,7 +87,7 @@ export default function PerfilUsuario() {
                                     Soy un Desarrollador Fullstack Javascript con habilidades sólidas en CSS, HTML y Python. Mi experiencia abarca desde la creación de interfaces de usuario atractivas con React y Angular hasta el diseño de arquitecturas backend sólidas con Django y Flask.
                                 </div>
                             </div>
-                            <div className="row bg-primary rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2">
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
                                 <div className="col-4">
                                     Habilidades y virtudes:
                                 </div>
@@ -100,32 +100,103 @@ export default function PerfilUsuario() {
                                     <h3>Experiencia</h3>
                                 </div>
                             </div>
-                            <div className="row bg-primary rounded-2 ms-1 my-1 pt-1 pb-2">
-                                <div className="col-4">
-                                    Actividad:
+
+                            {/* -------------------EXPERIENCIA LABORAL */}
+
+                            {/* EXPERIENCIA 1 */}
+
+                            <div className='container-fluid pe-4 pb-1 border rounded-3'>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold fs-5">
+                                        Actividad:
+                                    </div>
+                                    <div className="col-10 fs-5">
+                                        Consultora Senior de Gestión de Proyectos
+                                    </div>
                                 </div>
-                                <div className="col-8">
-                                    Desarrollador Full Stack - Acá Estamos
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Fecha:
+                                    </div>
+                                    <div className="col-10">
+                                        Octubre 2019 - Presente
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="container">
-                                <div className="row bg-primary rounded-2 ms-1 my-1 pt-1 pb-2 lh-3">
-                                    <div className="col-2">
+
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
                                         Lugar:
                                     </div>
                                     <div className="col-10">
-                                        Municipalidad de Renca (Remoto)
+                                        ABC Consulting, Ciudad de México
                                     </div>
                                 </div>
-                                <div className="row bg-primary rounded-2 ms-1 my-1 pt-1 pb-2 lh-1">
-                                    <div className="col-2">
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
                                         Descripción:
                                     </div>
                                     <div className="col-10">
-                                        Creación de portal web “Acá estamos” para la Municipalidad de Renca mediante el marco de trabajo SCRUM. Se usó Javascript, CSS y stack MERN
+                                        <ul>
+                                            <li>Dirijo proyectos de consultoría estratégica para clientes de diversos sectores, desde la planificación hasta la implementación y el seguimiento.</li>
+                                            <li>Colaboro con equipos internos y clientes para identificar oportunidades de mejora y desarrollar soluciones personalizadas que impulsen el crecimiento y la eficiencia operativa.</li>
+                                            <li>Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los plazos y el presupuesto.</li>
+                                            <li>Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y recomendar acciones correctivas cuando sea necesario.</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
+
+                            {/* EXPERIENCIA 2 */}
+
+                            <div className='container-fluid pe-4 pb-1 border rounded-3'>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold fs-5">
+                                        Actividad:
+                                    </div>
+                                    <div className="col-10 fs-5">
+                                        Analista de Procesos
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Fecha:
+                                    </div>
+                                    <div className="col-10">
+                                        Febrero 2016 - Septiembre 2019
+                                    </div>
+                                </div>
+
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Lugar:
+                                    </div>
+                                    <div className="col-10">
+                                        ABC Consulting, Ciudad de México
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Descripción:
+                                    </div>
+                                    <div className="col-10">
+                                        <ul>
+                                            <li>Analicé y optimicé los procesos empresariales para aumentar la eficiencia operativa y reducir los costos.</li>
+                                            <li>Colaboré con equipos interfuncionales para implementar cambios y mejoras en los procesos.</li>
+                                            <li>Lideré la capacitación del personal en nuevas metodologías y herramientas para mejorar la productividad y la calidad del trabajo.</li>
+                                            <li>Participé en la elaboración de informes y análisis para la alta dirección, proporcionando información clave para la toma de decisiones estratégicas.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div className='row'>
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir experiencia</button>
+                            </div>
+
+                            
+                            
                         </div>
                     </div>
 
