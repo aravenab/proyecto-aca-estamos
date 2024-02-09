@@ -10,9 +10,10 @@ const router = createBrowserRouter([
     {path:"/", element: <Contacto/>},
     {path:"/contacto", element:<Contacto/>}
     {path: "faq", element: <Faq />}
-    {path: "", element: < />}
-    {path: "", element: < />}
-    {path: "", element: < />}
+    {path: "login", element: <Login />}
+    {path: "perfil_usuario", element: < PerfilUsuario/>}
+    {path: "registro_usuarios_empresas", element: < RegistroUsuariosEmpresas/>}
+    {path: "registro_usuarios_talentos", element: < RegistroUusariosTalentos/>}
      
 
 ]);
