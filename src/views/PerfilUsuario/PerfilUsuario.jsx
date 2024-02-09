@@ -9,8 +9,7 @@ export default function PerfilUsuario() {
 
                     {/* <!--Dividimos la página en 3 columnas--> */}
                     <div className="col-3">
-
-                        <div className="container-fluid"> {/* <!--Container de foto perfil y redes-->*/}
+                        <div className="container-fluid border my-3 pb-4 rounded-4 shadow-sm"> {/* <!--Container de foto perfil y redes-->*/}
                             <div className="row m-4"> {/* <!--FOTO PERFIL--> */}
                                 <div className="col 12">
                                     <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" className="img-fluid border border-black rounded-4" />
@@ -29,20 +28,24 @@ export default function PerfilUsuario() {
                                     <a href="https://http.cat/status/102">(+) Completar perfil</a>
                                 </div>
                             </div>
+
+                            <div className='row border-top mt-4 m-2 border-2'> {/*<!-------separador-->*/}
+                            </div>
+
                             <div className="row my-4"> {/* <!--RED 1--> */}
                                 <div className="col-4 text-end">
-                                    <i className="bi bi-github"></i>
+                                    <i className="bi bi-github" style={{fontSize: "1.5rem"}}></i>
                                 </div>
-                                <div className="col-8">
-                                    <a href="https://github.com/Osvaldoisv">Nombre red</a>
+                                <div className="col-8 align-self-center">
+                                    <a href="https://github.com/Osvaldoisv">Github</a>
                                 </div>
                             </div>
                             <div className="row my-4"> {/*<!--RED 2-->*/}
                                 <div className="col-4 text-end">
-                                    <i className="bi bi-linkedin"></i>
+                                    <i className="bi bi-linkedin" style={{fontSize: "1.5rem"}}></i>
                                 </div>
-                                <div className="col-8">
-                                    <a href="https://github.com/Osvaldoisv">Nombre red</a>
+                                <div className="col-8 align-self-center">
+                                    <a href="https://github.com/Osvaldoisv">Linkedin</a>
                                 </div>
                             </div>
                             <div className="row text-center align-middle my-4"> {/*<!--Agregar más redes-->*/}
@@ -50,20 +53,24 @@ export default function PerfilUsuario() {
                                     <a href="https://http.cat/status/102">(+) Agregar más redes</a>
                                 </div>
                             </div>
-                            <div className="row text-center align-middle"> {/* <!--Agregar más redes--> */}
+
+                            <div className='row border-top mt-4 m-2 border-2'> {/*<!-------separador-->*/}
+                            </div>
+
+                            <div className="row text-center align-middle"> {/* <!--Agregar CV--> */}
                                 <div className="col-12">
-                                    <button type="button" className="btn btn-secondary rounded-5 align-self-center mt-2">(+) Subir Curriculum</button>
+                                    <button type="button" className="btn btn-secondary rounded-5 align-self-center mt-3">(+) Subir Curriculum</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div className="col-7"> 
+                    <div className="col-7"> {/* <!--Info perfil--> */}
                         <div className="container-fluid"> {/* <!--Container de info perfil-->*/}
-                            <div className="row">
+                            <div className="row mt-2">
                                 <div className="col-12 my-4">
-                                    <h2>Osvaldo Sepulveda</h2>
+                                    <h2>María García</h2>
                                 </div>
                             </div>
                             <div className="row mb-4">
@@ -74,37 +81,47 @@ export default function PerfilUsuario() {
                                     <button type="button" className="btn btn-success rounded-5 mt-1">Disponible</button>
                                 </div>
                             </div>
-                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
-                                <div className="col-4">
-                                    Nombre Completo:
-                                </div>
-                                <div className="col-8">
-                                    Osvaldo Sepulveda
-                                </div>
-                            </div>
-                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold" style={{ backgroundColor: '#eee' }}>
                                 <div className="col-4">
                                     Descripción:
                                 </div>
-                                <div className="col-8 lh-1">
-                                    Soy un Desarrollador Fullstack Javascript con habilidades sólidas en CSS, HTML y Python. Mi experiencia abarca desde la creación de interfaces de usuario atractivas con React y Angular hasta el diseño de arquitecturas backend sólidas con Django y Flask.
+                                <div className="col-8">
+                                    Consultora Senior de Gestión de Proyectos
+                                </div>
+                            </div>
+                            <div className="row rounded-2 ms-1 my-1 py-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                <div className="col-4 align-self-start lh-1 fw-bold">
+                                    Acerca de:
+                                </div>
+                                <div className="col-8 lh-1 py-1">
+                                    Soy una profesional comprometida y orientada a resultados con más de 8 años de experiencia en el campo de la gestión de proyectos y la consultoría empresarial. Mi enfoque se centra en la optimización de procesos, la mejora continua y el desarrollo de soluciones innovadoras para desafíos empresariales. Poseo habilidades excepcionales de comunicación y liderazgo, lo que me permite colaborar eficazmente con equipos multidisciplinarios y motivar a los miembros del equipo hacia el logro de objetivos comunes.
                                 </div>
                             </div>
                             <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
-                                <div className="col-4">
+                                <div className="col-4 fw-bold">
                                     Habilidades y virtudes:
                                 </div>
                                 <div className="col-8">
-                                    Javascript, HTML, CSS, Python
+                                    Javascript (Avanzado), HTML (Avanzado), CSS (Avanzado), SQL (Avanzado), Python (Avanzado)
                                 </div>
                             </div>
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                <div className="col-4 fw-bold">
+                                    Idiomas:
+                                </div>
+                                <div className="col-8">
+                                    Español (Nativo), Inglés (Avanzado), Coreano (Básico)
+                                </div>
+                            </div>
+
+
+                            {/* -------------------EXPERIENCIA LABORAL */}
+
                             <div className="row">
                                 <div className="col-12">
                                     <h3>Experiencia</h3>
                                 </div>
                             </div>
-
-                            {/* -------------------EXPERIENCIA LABORAL */}
 
                             {/* EXPERIENCIA 1 */}
 
@@ -119,19 +136,18 @@ export default function PerfilUsuario() {
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
                                     <div className="col-2 text-end fw-bold">
-                                        Fecha:
-                                    </div>
-                                    <div className="col-10">
-                                        Octubre 2019 - Presente
-                                    </div>
-                                </div>
-
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
-                                    <div className="col-2 text-end fw-bold">
                                         Lugar:
                                     </div>
                                     <div className="col-10">
                                         ABC Consulting, Ciudad de México
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Fecha:
+                                    </div>
+                                    <div className="col-10">
+                                        Octubre 2019 - Presente
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
@@ -162,19 +178,18 @@ export default function PerfilUsuario() {
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
                                     <div className="col-2 text-end fw-bold">
-                                        Fecha:
-                                    </div>
-                                    <div className="col-10">
-                                        Febrero 2016 - Septiembre 2019
-                                    </div>
-                                </div>
-
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
-                                    <div className="col-2 text-end fw-bold">
                                         Lugar:
                                     </div>
                                     <div className="col-10">
                                         ABC Consulting, Ciudad de México
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Fecha:
+                                    </div>
+                                    <div className="col-10">
+                                        Febrero 2016 - Septiembre 2019
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
@@ -192,12 +207,131 @@ export default function PerfilUsuario() {
                                 </div>
                             </div>
 
-
-
                             <div className='row'>
                                 <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir experiencia</button>
                             </div>
 
+                            {/* EDUCACIÓN */}
+
+                            <div className="row mt-4">
+                                <div className="col-12">
+                                    <h3>Educación</h3>
+                                </div>
+                            </div>
+                            
+                            {/* EDUDACION 1 */}
+                            
+                            <div className='container-fluid pe-4 pb-1 border rounded-3'>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold fs-5">
+                                        Título:
+                                    </div>
+                                    <div className="col-10 fs-5">
+                                        Licenciatura en Administración de Empresas
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Lugar:
+                                    </div>
+                                    <div className="col-10">
+                                        Universidad Nacional Autónoma de México (UNAM), Ciudad de México
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Fecha:
+                                    </div>
+                                    <div className="col-10">
+                                        Septiembre 2008 - Junio 2012
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Acerca de:
+                                    </div>
+                                    <div className="col-10">
+                                        <ul>
+                                            <li>Titulada con distinción máxima</li>
+                                            <li>Participé activamente en actividades estudiantiles, incluyendo la organización de eventos académicos y voluntariado comunitario.</li>
+                                            <li>Desarrollé habilidades de liderazgo, trabajo en equipo y comunicación</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Certificado:
+                                    </div>
+                                    <div className="col-10">
+                                        <a href='https://www.credly.com/badges/ae3cc147-dfb9-4b85-a343-c67bab0cb743/linked_in_profile'>Universidad Nacional Autónoma de México (UNAM)</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='row'>
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir educación</button>
+                            </div>
+
+                            {/* CERTIFICACIONES */}
+
+                            <div className="row mt-4">
+                                <div className="col-12">
+                                    <h3>Certificaciones y Licencias</h3>
+                                </div>
+                            </div>
+                            
+                            {/* CERTIFICACION 1 */}
+                            
+                            <div className='container-fluid pe-4 pb-1 border rounded-3'>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold fs-5">
+                                        Título:
+                                    </div>
+                                    <div className="col-10 fs-5">
+                                        Scrum Foundation Professional Certification - SFPC™
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Empresa emisora:
+                                    </div>
+                                    <div className="col-10">
+                                        CertiProf International
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Fecha:
+                                    </div>
+                                    <div className="col-10">
+                                        Septiembre 2008 - Junio 2012
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Acerca de:
+                                    </div>
+                                    <div className="col-10">
+                                        <ul>
+                                            <li>Conocimiento sobre metodologías ágiles</li>
+                                            <li>Conocimiento de roles Scrum</li>
+                                            <li>Conocimientos sobre eventos de Scrum</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{ backgroundColor: '#eee' }}>
+                                    <div className="col-2 text-end fw-bold">
+                                        Certificado:
+                                    </div>
+                                    <div className="col-10">
+                                        <a href='https://www.credly.com/badges/ae3cc147-dfb9-4b85-a343-c67bab0cb743/linked_in_profile'>CertiProf International</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='row'>
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir certificación o licencia</button>
+                            </div>
                             
                             
                         </div>
@@ -206,12 +340,14 @@ export default function PerfilUsuario() {
 
 
                     <div className="col-2 text-center mt-4"> {/* <!--Completar preguntas y contactar--> */}
-                        <div className="row">
-                            <div className="col-12 mb-4 align-center">
-                                <button type="button" className="btn btn-success">Contactar</button>
-                            </div>
-                            <div className="col-12 align-center">
-                                <button type="button" className="btn btn-info">Completar perfil</button>
+                        <div className='container-fluid border-start py-4'>
+                            <div className="row">
+                                <div className="col-12 mb-4 align-center">
+                                    <button type="button" className="btn btn-success">Contactar</button>
+                                </div>
+                                <div className="col-12 align-center">
+                                    <button type="button" className="btn btn-info">Completar perfil</button>
+                                </div>
                             </div>
                         </div>
                     </div>
