@@ -2,10 +2,17 @@ import React from 'react'
 
 export default function CompletarPerfil() {
   return (
-    <div>
-        <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
+    <div className='container-fluid'>
+        <div className="container-fluid m-2">
               <form className="container position-relative">
 
+                  <div className='row text-end'>
+                      <div className='col-11'>
+                      </div>
+                      <div className='col-1 '>
+                        <button type="button" className="btn-close fs-2" aria-label="Close"></button>
+                      </div>
+                  </div>
                   <div className="col-12">
                       <h1>Información Personal - Preguntas Usuario</h1>
                   </div>
@@ -90,12 +97,26 @@ export default function CompletarPerfil() {
 
 
                   {/* <!-- formulario de contacto-boton --> */}
-                  <div className="d-grid">
-                      <button className="btn btn-primary btn-lg m-4" type="submit">Enviar</button>
-                  </div>   
+                  <div className='row'>
+                    <div className='col-10'>
+                    </div>
+                    <div className='col-2'>
+                        <button type="button" class="btn btn-success">Guardar cambios</button>
+                    </div>
+
+                  </div>
               </form>
               <img src="" className="img-fluid mx-auto d-block mb-2" alt="" />
-          </div>
-      </div>
+        </div>
+
+        <div className="container-fluid-fluid h-100 mt-4">
+                <div className="row w-100 align-items-center">
+                    <div className="col text-center">
+                        <button className="btn btn-info regular-button mb-4"> Volver </button>
+                    </div>
+                </div>
+            </div>
+
+    </div>
   )
 }
