@@ -22,13 +22,9 @@ function App() {
 
       {/* Inserte el componente que desee visualizar*/}
       <Navbar/>
-<<<<<<< HEAD
       <Faq/>
       <CompletarPerfil/>
       <RegistroUsuariosEmpresas/>
-=======
-      <PerfilUsuario/>
->>>>>>> 246a20fd271303edc7bb0cf97b99057770f521cc
       <Footer/>
 
     </div>
