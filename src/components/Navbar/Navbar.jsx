@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Navbar() {
+
+  useEffect(() => {
+    // Inicializar el popover cuando el componente se monte
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+    
+    // Limpia el popover cuando el componente se desmonte
+    return () => {
+        popoverList.forEach(popover => popover.dispose());
+    };
+}, []); // [] como segundo argumento para que solo se ejecute una vez al montar el componente
+
+
   return (
     <header className="container-fluid-fluid p-3 text-bg-dark">
     <div className="container-fluid-fluid">
@@ -16,11 +29,17 @@ export default function Navbar() {
           </svg>
         </a>
 
-        <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" className="nav-link px-2 text-white">Contacto</a></li>
-          <li><a href="#" className="nav-link px-2 text-white">Preguntas Frecuentes</a></li>
-          <li><a href="#" className="nav-link px-2 text-white">¿Quiénes somos?</a></li>
-        </ul>
+          <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li class="nav-item">
+              <button type="button" className="btn btn-lg" data-bs-toggle="popover"
+                data-bs-title="Notificaciones" data-bs-content="No hay notificaciones disponibles" data-bs-placement="bottom">
+                <i className="bi bi-bell" style={{color: "white"}}></i>
+              </button>
+            </li>
+            <li><a href="#" className="nav-link px-2 text-white">Contacto</a></li>
+            <li><a href="#" className="nav-link px-2 text-white">Preguntas Frecuentes</a></li>
+            <li><a href="#" className="nav-link px-2 text-white">¿Quiénes somos?</a></li>
+          </ul>
 
         <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
           <input type="search" className="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search"/>
