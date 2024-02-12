@@ -22,7 +22,9 @@ function App() {
 
       {/* Inserte el componente que desee visualizar*/}
       <Navbar/>
-      <PerfilUsuario/>
+      <Faq/>
+      <CompletarPerfil/>
+      <RegistroUsuariosEmpresas/>
       <Footer/>
 
     </div>

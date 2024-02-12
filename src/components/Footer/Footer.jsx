@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -53,7 +54,9 @@ export default function Footer() {
         <li className="ms-3 bi bi-twitter-x"><a className="link-body-emphasis" href="https://twitter.com/Muni_Renca"><svg className="bi" width="24" height="24"><use href="#twitter"></use></svg></a></li>
         <li className="ms-3 bi bi-instagram"><a className="link-body-emphasis" href="https://www.instagram.com/muni_renca/"><svg className="bi" width="24" height="24"><use href="#instagram"></use></svg></a></li>
         <li className="ms-3 bi bi-facebook"><a className="link-body-emphasis" href="https://www.facebook.com/MuniRenca/"><svg className="bi" width="24" height="24"><use href="#facebook"></use></svg></a></li>
-        <li className="ms-3 bi bi-youtube"><a className="link-body-emphasis" href="https://www.youtube.com/channel/UCosdtBKfRSxhhi4x9247Nbw"><svg className="bi" width="24" height="24"><use href="#youtube"></use></svg></a></li>
+        <li className="ms-3 bi bi-youtube"><a className="link-body-emphasis" href="https://www.youtube.com/channel/UCosdtBKfRSxhhi4x9247Nbw"><svg className="bi" width="24" height="24"><use href="#youtube"></use></svg></a>
+        {/* aqui va el link-------- se importa: import {Link } from 'react-router-dom'y despues se ocupa la etiqueta  <Link to */}
+        </li>
         
       </ul>
     </div>
