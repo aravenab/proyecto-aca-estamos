@@ -1,5 +1,4 @@
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
-import '../../animaciones/Animacion';
 import React, { useEffect } from 'react';
 
 const Navbar = () => {
