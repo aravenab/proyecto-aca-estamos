@@ -285,7 +285,7 @@ const Index = () => {
   
         <div className="col-lg-4 col-md-6 portfolio-item filter-web">
           <div className="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" className="img-fluid" alt="">
+            <img src="assets/img/portfolio/portfolio-2.jpg" className="img-fluid" alt=""/>
             <div className="portfolio-info">
               <h4>Web 3</h4>
               <p>Web</p>
@@ -365,7 +365,7 @@ const Index = () => {
   
         <div className="col-lg-4 col-md-6">
           <div className="member" data-aos="zoom-in" data-aos-delay="200">
-            <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt=""></div>
+            <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt=""/></div>
             <div className="member-info">
               <h4>William Anderson</h4>
               <span>CTO</span>
@@ -682,7 +682,7 @@ const Index = () => {
 
 </main>{/* End #main */}
 
-{/* ======= Footer ======= */}
+{/* ======= Footer =======
 <footer id="footer">
     
   <div className="footer-top">
@@ -752,15 +752,15 @@ const Index = () => {
       {/* You can delete the links only if you purchased the pro version. */}
       {/* Licensing information: https://bootstrapmade.com/license/ */}
       {/* Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ */}
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      {/* Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
   </div>
 </footer>{/* End Footer */}
 
-<a href="#" className="back-to-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a>
+{/* <a href="#" className="back-to-top d-flex align-items-center justify-content-center"><i className="bi bi-arrow-up-short"></i></a> */} 
 
 {/* Vendor JS Files */}
-<script src="assets/vendor/aos/aos.js"></script>
+{/* <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -768,10 +768,13 @@ const Index = () => {
 <script src="assets/vendor/php-email-form/validate.js"></script>
 
 {/* Template Main JS File */}
-<script src="assets/js/main.js"></script>
-<script src="../script/script_navbar.js"></script>
+{/* <script src="assets/js/main.js"></script>
+<script src="../script/script_navbar.js"></script> */} 
+
+
 
 </body>
+
   )
 }
 

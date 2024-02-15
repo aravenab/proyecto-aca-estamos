@@ -1,7 +1,9 @@
 //import { useState } from 'react'
 
-
+import React from 'react'
 import Navbar from './components/Navbar/Navbar'
+
+import Hero from './components/Hero/Hero'
 
 function App() {
   
@@ -10,9 +12,11 @@ function App() {
     
     <div>
 
-      {/* Inserte el componente que desee visualizar*/}
+   
       <Navbar />
-      {/* <Index/> */}
+      
+      <Hero />
+
     </div>
   )
 }
