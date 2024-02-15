@@ -1,5 +1,9 @@
 //import { useState } from 'react'
 
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+
+import Hero from './components/Hero/Hero'
 import './App.css'
 // import Navbar from './components/Navbar/Navbar'
 // import Footer from './components/Footer/Footer'
@@ -21,8 +25,10 @@ function App() {
     
     <div>
 
-      {/* Inserte el componente que desee visualizar*/}
-      <Faq/>
+   
+   
+      <Navbar />
+      <Hero />
 
     </div>
   )
