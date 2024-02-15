@@ -1,7 +1,22 @@
-import React from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
+import '../../animaciones/Animacion';
+import React, { useEffect } from 'react';
 
 const Navbar = () => {
+
+  useEffect(() => {
+    // Inicializar el popover cuando el componente se monte
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+    
+    // Limpia el popover cuando el componente se desmonte
+    return () => {
+        popoverList.forEach(popover => popover.dispose());
+    };
+}, []); // [] como segundo argumento para que solo se ejecute una vez al montar el componente
+
+  
+
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">

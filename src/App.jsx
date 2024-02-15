@@ -19,8 +19,8 @@ import Faq from './views/Faq/Faq'
 import Inicio from './views/Inicio/Inicio'
 
 function App() {
-  
 
+  
   return (
     
     <div>
