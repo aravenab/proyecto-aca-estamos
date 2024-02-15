@@ -5,9 +5,10 @@ import Login from "../views/Login/Login.jsx";
 import PerfilUsuario from "../views/PerfilUsuario/PerfilUsuario.jsx";
 import RegistroUsuariosEmpresas from "../views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas.jsx";
 import RegistroUusariosTalentos from "../views/RegistroUusariosTalentos/RegistroUusariosTalentos.jsx";
+import App from "../App.jsx";
 
 const router = createBrowserRouter([
-    {path:"/", element: <Contacto/>},
+    {path:"/", element: <App/>},
     {path:"/contacto", element:<Contacto/>},
     {path: "faq", element: <Faq />},
     {path: "login", element: <Login />},
