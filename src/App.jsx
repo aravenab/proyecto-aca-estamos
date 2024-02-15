@@ -8,8 +8,8 @@ import Hero2 from './components/Hero2/Hero2'
 
 
 function App() {
-  
 
+  
   return (
     
     <div>
