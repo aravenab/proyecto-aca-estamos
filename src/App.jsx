@@ -24,7 +24,7 @@ function App() {
 
       {/* Inserte el componente que desee visualizar*/}
     
-      <Index/>
+      <Navbar/>
     </div>
   )
 }
