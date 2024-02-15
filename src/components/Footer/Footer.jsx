@@ -29,22 +29,22 @@ export default function Footer() {
             <div className="col-lg-2 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
-                {/* <li><i className="bx bx-chevron-right"></i> <Link to="#">Home</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">About us</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Home</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quiénes somos</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Services</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Terms of service</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Privacy policy</Link></li> */}
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Privacy policy</Link></li>
               </ul>
             </div>
 
             <div className="col-lg-3 col-md-6 footer-links">
               <h4>Our Services</h4>
               <ul>
-                {/* <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Design</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Design</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Development</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Product Management</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Marketing</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Graphic Design</Link></li> */}
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Graphic Design</Link></li>
               </ul>
             </div>
 
