@@ -1,6 +1,7 @@
 
 import heroImage from './hero-img.png';
 
+
 const Hero = () => {
   return (
     <section id="hero">
