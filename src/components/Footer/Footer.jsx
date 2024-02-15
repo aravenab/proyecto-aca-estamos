@@ -1,65 +1,73 @@
-import React from 'react'
-import {Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="container-fluid py-5 mt-3">
-    <div className="row">
-      <div className="col-6 col-md-2 mb-3">
-        <h5>Páginas</h5>
-        <ul className="nav flex-column">
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Home</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">¿Quiénes somos?</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Contacto</a></li>
-        </ul>
-      </div>
+    <footer id="footer">
+      <div className="footer-top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6">
+              <div className="footer-info">
+                <h3>Scaffold</h3>
+                <p>
+                  A108 Adam Street <br />
+                  NY 535022, USA<br /><br />
+                  <strong>Phone:</strong> +1 5589 55488 55<br />
+                  <strong>Email:</strong> info@example.com<br />
+                </p>
+                <div className="social-links mt-3">
+                  <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
+                  <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
+                  <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
+                  <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
+                  <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
 
-      <div className="col-6 col-md-2 mb-3">
-        <h5>Contacto</h5>
-        <ul className="nav flex-column">
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">+56 2 2685 6600</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">contacto@renca.cl</a></li>
-        </ul>
-      </div>
+            <div className="col-lg-2 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Home</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">About us</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Services</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Terms of service</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Privacy policy</Link></li>
+              </ul>
+            </div>
 
-      <div className="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul className="nav flex-column">
-        <img src="../../assets/logo/f.jpg" />
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Home</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Features</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
+            <div className="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Design</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Development</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Product Management</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Marketing</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Graphic Design</Link></li>
+              </ul>
+            </div>
 
-      <div className="col-md-5 offset-md-1 mb-3">
-        <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of what's new and exciting from us.</p>
-          <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label forHtml="newsletter1" className="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
-            <button className="btn btn-primary" type="button">Subscribe</button>
+            <div className="col-lg-4 col-md-6 footer-newsletter">
+              <h4>Our Newsletter</h4>
+              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+              <form action="" method="post">
+                <input type="email" name="email" /><input type="submit" value="Subscribe" />
+              </form>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
 
-    <div className="d-flex flex-column flex-sm-row justify-content-between border-top">
-      <p>© 2024 Ilustre Municipalidad de Renca </p>
-      <ul className="list-unstyled d-flex">
-        <li className="ms-3 bi bi-twitter-x"><a className="link-body-emphasis" href="https://twitter.com/Muni_Renca"><svg className="bi" width="24" height="24"><use href="#twitter"></use></svg></a></li>
-        <li className="ms-3 bi bi-instagram"><a className="link-body-emphasis" href="https://www.instagram.com/muni_renca/"><svg className="bi" width="24" height="24"><use href="#instagram"></use></svg></a></li>
-        <li className="ms-3 bi bi-facebook"><a className="link-body-emphasis" href="https://www.facebook.com/MuniRenca/"><svg className="bi" width="24" height="24"><use href="#facebook"></use></svg></a></li>
-        <li className="ms-3 bi bi-youtube"><a className="link-body-emphasis" href="https://www.youtube.com/channel/UCosdtBKfRSxhhi4x9247Nbw"><svg className="bi" width="24" height="24"><use href="#youtube"></use></svg></a>
-        {/* aqui va el link-------- se importa: import {Link } from 'react-router-dom'y despues se ocupa la etiqueta  <Link to */}
-        </li>
-        
-      </ul>
-    </div>
-  </footer>
-  )
+      <div className="container">
+        <div className="copyright">
+          &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
+        </div>
+        <div className="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+  );
 }
+
