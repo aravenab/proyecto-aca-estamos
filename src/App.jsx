@@ -5,7 +5,7 @@
 import './App.css'
 import Hero from './components/Hero/Hero'
 import Hero2 from './components/Hero2/Hero2'
-// import pruebaAnimacion from './animaciones/pruebaAnimacion'
+import Footer from './components/Footer/Footer'
 
 
 function App() {
@@ -14,8 +14,13 @@ function App() {
   return (
     
     <div>
-      <Hero/>
 
+   
+   
+      <Navbar />
+      <Hero />
+      <Hero2 />
+      <Footer/>
     </div>
   )
 }
