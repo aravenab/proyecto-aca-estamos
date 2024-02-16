@@ -71,7 +71,7 @@ export default function PerfilUsuario() {
                                     <div className="col-4 text-end">
                                         <i className="bi bi-github" style={{fontSize: "1.5rem"}}></i>
                                     </div>
-                                    <div className="col-8 align-self-center">
+                                    <div className="col-8 align-self-center text-start">
                                         <a href="https://github.com/Osvaldoisv">Github</a>
                                     </div>
                                 </div>
@@ -79,7 +79,7 @@ export default function PerfilUsuario() {
                                     <div className="col-4 text-end">
                                         <i className="bi bi-linkedin" style={{fontSize: "1.5rem"}}></i>
                                     </div>
-                                    <div className="col-8 align-self-center">
+                                    <div className="col-8 align-self-center text-start">
                                         <a href="https://github.com/Osvaldoisv">Linkedin</a>
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@ export default function PerfilUsuario() {
                                     Consultora Senior de Gestión de Proyectos
                                 </div>
                             </div>
-                            <div className="row rounded-2 ms-1 my-1 py-1 pb-2" style={{backgroundColor: "#eee"}}>
+                            <div className="row rounded-2 ms-1 my-1 py-1 pb-2 text-start" style={{backgroundColor: "#eee"}}>
                                 <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold">
                                     Acerca de:
                                 </div>
@@ -167,7 +167,7 @@ export default function PerfilUsuario() {
                                     multidisciplinarios y motivar a los miembros del equipo hacia el logro de objetivos comunes.
                                 </div>
                             </div>
-                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{backgroundColor: "#eee"}}>
                                 <div className="col-sm-12 col-lg-4 fw-bold">
                                     Habilidades y virtudes:
                                 </div>
@@ -175,7 +175,7 @@ export default function PerfilUsuario() {
                                     Javascript (Avanzado), HTML (Avanzado), CSS (Avanzado), SQL (Avanzado), Python (Avanzado)
                                 </div>
                             </div>
-                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{backgroundColor: "#eee"}}>
                                 <div className="col-sm-12 col-lg-4 fw-bold">
                                     Idiomas:
                                 </div>
@@ -185,7 +185,7 @@ export default function PerfilUsuario() {
                             </div>
 
                             {/* EXPERIENCIA LABORAL */}
-                            <div className="row">
+                            <div className="row text-start">
                                 <div className="col-12">
                                     <h3>Experiencia</h3>
                                 </div>
@@ -194,34 +194,34 @@ export default function PerfilUsuario() {
                             {/* EXPERIENCIA 1 */}
                             <div className="container-fluid pe-4 pb-1 border rounded-3">
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold fs-5">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold fs-5">
                                         Actividad:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10 fs-5">
+                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
                                         Consultora Senior de Gestión de Proyectos
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Lugar:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         ABC Consulting, Ciudad de México
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Fecha:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         Octubre 2019 - Presente
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Descripción:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         <ul>
                                             <li>Dirijo proyectos de consultoría estratégica para clientes de diversos sectores, desde la
                                                 planificación hasta
@@ -243,34 +243,34 @@ export default function PerfilUsuario() {
                             {/* EXPERIENCIA 2 */}
                             <div className="container-fluid pe-4 pb-1 border rounded-3">
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold fs-5">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Actividad:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10 fs-5">
+                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
                                         Analista de Procesos
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Lugar:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         ABC Consulting, Ciudad de México
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Fecha:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         Febrero 2016 - Septiembre 2019
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Descripción:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         <ul>
                                             <li>Analicé y optimicé los procesos empresariales para aumentar la eficiencia operativa y reducir los
                                                 costos.
@@ -302,34 +302,34 @@ export default function PerfilUsuario() {
                             {/* EDUCACION 1 */}
                             <div className="container-fluid pe-4 pb-1 border rounded-3">
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold fs-5">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold fs-5">
                                         Título:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10 fs-5">
+                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
                                         Licenciatura en Administración de Empresas
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Lugar:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         Universidad Nacional Autónoma de México (UNAM), Ciudad de México
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Fecha:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         Septiembre 2008 - Junio 2012
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Descripción:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         <ul>
                                             <li>Excelencia académica y el liderazgo en actividades extracurriculares</li>
                                             <li>Participación activa en diversas iniciativas estudiantiles</li>
@@ -343,10 +343,10 @@ export default function PerfilUsuario() {
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Link:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         <a href="https://www.unam.mx">UNAM</a>
                                     </div>
                                 </div>
@@ -367,34 +367,34 @@ export default function PerfilUsuario() {
                             {/* CERTIFICACIONES Y LICENCIAS 1 */}
                             <div className="container-fluid pe-4 pb-1 border rounded-3">
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold fs-5">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold fs-5">
                                         Actividad:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10 fs-5">
+                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
                                         Certification Scrum Foundation
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Lugar:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         CertiProf
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Fecha:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         Diciembre 2023
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Descripción:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         <ul>
                                             <li>Conocimiento general de metodologías Ágiles</li>
                                             <li>Trabajo dentro del marco de trabajo SCRUM.</li>
@@ -408,10 +408,10 @@ export default function PerfilUsuario() {
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-sm-12 col-lg-2 text-sm-start text-lg-end fw-bold">
+                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
                                         Link:
                                     </div>
-                                    <div className="col-sm-12 col-lg-10">
+                                    <div className="col-12 col-md-8 col-lg-9 text-start">
                                         <a href="https://www.unam.mx">CertiProf</a>
                                     </div>
                                 </div>
