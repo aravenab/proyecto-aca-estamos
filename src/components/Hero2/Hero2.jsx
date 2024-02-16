@@ -24,13 +24,13 @@ const Hero2 = () => {
               <ul>
                 <li><i class="bi bi-check-circle"></i> Conexion entre empresas y personas.</li>
                 <li><i class="bi bi-check-circle"></i> Facilitación del proceso de contratación.</li>
-                <li><i class="bi bi-check-circle"></i> Sistema de administración: La aplicación cuenta con un sistema de administración que permite a los administradores autorizar perfiles de nuevos talentos y gestionar la disponibilidad de los currículums.
-                </li>
+                {/* <li><i class="bi bi-check-circle"></i> Sistema de administración: La aplicación cuenta con un sistema de administración que permite a los administradores autorizar perfiles de nuevos talentos y gestionar la disponibilidad de los currículums.
+                </li> */}
               </ul>
-              <p>
+              {/* <p>
                 En resumen,
                 "Acá Estamos" es una herramienta poderosa que ayuda a conectar a personas talentosas con oportunidades laborales.
-              </p>
+              </p> */}
               </div>
             </div>
           </div>
