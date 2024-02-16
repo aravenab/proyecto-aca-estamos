@@ -147,11 +147,11 @@ export default function PerfilUsuario() {
                         <div className="container-fluid"> {/*Container de info perfil*/}
 
 
-                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold" style={{backgroundColor: "#eee"}}>
+                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold text-start" style={{backgroundColor: "#eee"}}>
                                 <div className="col-4">
                                     Descripción:
                                 </div>
-                                <div className="col-8">
+                                <div className="col-8 text-start">
                                     Consultora Senior de Gestión de Proyectos
                                 </div>
                             </div>
