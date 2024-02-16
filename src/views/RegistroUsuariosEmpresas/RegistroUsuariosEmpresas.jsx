@@ -65,10 +65,7 @@ const formEnviado = () =>{
                             <input className="form-control" id="contratar" type="number" placeholder="Nº de colaboradores que buscas" />
                         </div>
                     </div>
-                    <div className="mb-3">
-                        <label className="form-label" htmlFor="cargo">Descripción del cargo</label>
-                        <textarea className="form-control" id="cargo" type="text" placeholder="Descripción del cargo" style={{ height: '10rem' }}></textarea>
-                    </div>
+                    
                     <div className="mb-3">
                         <label className="form-label" htmlFor="acerca">Cuentanos más acerca de tu empresa</label>
                         <textarea className="form-control" id="acerca" type="text" placeholder="Cuentanos más acerca de tu empresa" style={{ height: '10rem' }}></textarea>

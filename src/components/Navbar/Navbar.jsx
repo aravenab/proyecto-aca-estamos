@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
 import '../../assets/assets_index/css/style.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   useEffect(() => {
@@ -49,7 +50,9 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li><a className="nav-link scrollto" href="#services">¡Únete!</a></li>
+              <li><i className="nav-link scrollto"></i> <Link to="login">¡Únete!</Link></li>
+
+              
               {/* <li><a className="nav-link scrollto " href="#portfolio">Nuestros perfiles</a></li>
                 <li><a className="nav-link scrollto" href="#clients">Nuestros clientes</a></li> */}
               <li><a className="nav-link scrollto" href="#contact">Contacto</a></li>
