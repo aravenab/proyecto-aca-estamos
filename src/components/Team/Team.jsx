@@ -1,4 +1,7 @@
 import React from 'react';
+import Team1 from '../../assets/img/team/team-1.jpg' 
+import Team2 from '../../assets/img/team/team-2.jpg' 
+import Team3 from '../../assets/img/team/team-3.jpg' 
 
 const Team = () => {
   return (
@@ -18,7 +21,7 @@ const Team = () => {
 
             <div className="col-lg-4 col-md-6">
               <div className="member" data-aos="zoom-in">
-                <div className="pic"><img src="assets/img/team/team-1.jpg" className="img-fluid" alt="" /></div>
+                <div className="pic"><img src={Team1} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>Walter White</h4>
                   <span>Chief Executive Officer</span>
@@ -34,7 +37,7 @@ const Team = () => {
 
             <div className="col-lg-4 col-md-6">
               <div className="member" data-aos="zoom-in" data-aos-delay="100">
-                <div className="pic"><img src="assets/img/team/team-2.jpg" className="img-fluid" alt="" /></div>
+                <div className="pic"><img src={Team2} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>Sarah Jhonson</h4>
                   <span>Product Manager</span>
@@ -50,7 +53,7 @@ const Team = () => {
 
             <div className="col-lg-4 col-md-6">
               <div className="member" data-aos="zoom-in" data-aos-delay="200">
-                <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt="" /></div>
+                <div className="pic"><img src={Team3} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>William Anderson</h4>
                   <span>CTO</span>
