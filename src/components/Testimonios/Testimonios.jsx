@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/assets_index/css/style.css'
 
 const Testimonios = () => {
   return (

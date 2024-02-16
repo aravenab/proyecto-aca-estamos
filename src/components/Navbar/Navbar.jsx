@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
+import '../../assets/assets_index/css/style.css'
 
 const Navbar = () => {
   useEffect(() => {
