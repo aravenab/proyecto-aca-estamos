@@ -38,7 +38,7 @@ const Team = () => {
                 <div className="pic"><img src={Team2} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
+                  <span></span>
                   <div className="social">
                     <a href=""><i className="bi bi-twitter"></i></a>
                     <a href=""><i className="bi bi-facebook"></i></a>
@@ -54,7 +54,7 @@ const Team = () => {
                 <div className="pic"><img src={Team3} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>William Anderson</h4>
-                  <span>CTO</span>
+                  <span></span>
                   <div className="social">
                     <a href=""><i className="bi bi-twitter"></i></a>
                     <a href=""><i className="bi bi-facebook"></i></a>
