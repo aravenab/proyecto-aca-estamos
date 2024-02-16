@@ -15,15 +15,15 @@ const Hero2 = () => {
               <div className="content pt-4 pt-lg-0">
                 <h3>¿Quiénes somos?</h3>
                 <p class="fst-italic">
-                Acá Estamos" es una plataforma innovadora que tiene como objetivo principal conectar a empresas que necesitan contratar personal.Esta 
-                aplicación brinda una forma eficiente y conveniente de facilitar el proceso de contratación,permitiendo a los talentos registrarse,cargar
+                Acá Estamos" es una plataforma innovadora que tiene como objetivo principal conectar a empresas que necesitan contratar personal. Esta 
+                aplicación brinda una forma eficiente y conveniente de facilitar el proceso de contratación, permitiendo a los talentos registrarse, cargar
                 sus currículums y detallar su información personal y laboral. Por otro lado, las empresas pueden buscar talentos  según diferentes criterios
                 y revisar los perfiles para tomar decisiones informadas de contratación. 
                  
               </p>
               <ul>
                 <li><i class="bi bi-check-circle"></i> Conexion entre empresas y personas.</li>
-                <li><i class="bi bi-check-circle"></i> Facilitacion del proceso de contratación.</li>
+                <li><i class="bi bi-check-circle"></i> Facilitación del proceso de contratación.</li>
                 <li><i class="bi bi-check-circle"></i> Sistema de administración: La aplicación cuenta con un sistema de administración que permite a los administradores autorizar perfiles de nuevos talentos y gestionar la disponibilidad de los currículums.
                 </li>
               </ul>
