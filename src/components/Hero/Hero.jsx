@@ -1,5 +1,5 @@
 
-import heroImage from './hero-img.png';
+import heroImage from './hero.png';
 import { Link } from 'react-router-dom';
 
 
