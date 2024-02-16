@@ -1,90 +1,95 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function RegistrationForm() {
-    const [fullName, setFullName] = useState('');
-    const [email, setEmail] = useState('');
+const RegistrationForm = () => {
+    const [usuario, setUsuario] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
+    const [email, setEmail] = useState('');
     const [rut, setRut] = useState('');
+    const [telefono, setTelefono] = useState('');
 
-    const handleRegister = () => {
-        // Handle registration logic here
+    const handleRegisterTalento = () => {
+        // Lógica de registro para talento
+    };
+
+    const handleRegisterEmpresa = () => {
+        // Lógica de registro para empresa
     };
 
     return (
-        <div>
-            <section className="p-3" style={{ backgroundColor: '#eee' }}>
-                <div className="container">
-                    <div className="row d-flex justify-content-center align-items-center mb-4">
-                        <div className="col-lg-12 col-xl-11">
-                            <div className="card text-black" style={{ borderRadius: '25px' }}>
-                                <div className="card-body p-md-5">
-                                    <div className="row justify-content-center">
-                                        <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                                            <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4"> "ACA ESTAMOS" RENCA</p>
-                                            <form className="mx-1 mx-md-4">
-                                                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registro</p>
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type="text" id="form3Example1c" className="form-control" value={fullName} onChange={(e) => setFullName(e.target.value)} />
-                                                        <label className="form-label" htmlFor="form3Example1c">Nombre Completo</label>
-                                                    </div>
-                                                </div>
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type="text" id="form3Example1c" className="form-control" value={fullName} onChange={(e) => setEmail(e.target.value)} />
-                                                        <label className="form-label" htmlFor="form3Example1c">Correo</label>
-                                                    </div>
-                                                </div>
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type="text" id="form3Example1c" className="form-control" value={fullName} onChange={(e) => setPassword(e.target.value)} />
-                                                        <label className="form-label" htmlFor="form3Example1c">Contraseña</label>
-                                                    </div>
-                                                </div>
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type="text" id="form3Example1c" className="form-control" value={fullName} onChange={(e) => setConfirmPassword(e.target.value)} />
-                                                        <label className="form-label" htmlFor="form3Example1c">Confirma contraseña</label>
-                                                    </div>
-                                                </div>
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type="text" id="form3Example1c" className="form-control" value={fullName} onChange={(e) => setPhoneNumber(e.target.value)} />
-                                                        <label className="form-label" htmlFor="form3Example1c"></label>
-                                                    </div>
-                                                </div>
-                                                <div className="d-flex flex-row align-items-center mb-4">
-                                                    <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                                                    <div className="form-outline flex-fill mb-0">
-                                                        <input type="text" id="form3Example1c" className="form-control" value={fullName} onChange={(e) => setRut(e.target.value)} />
-                                                        <label className="form-label" htmlFor="form3Example1c">Rut</label>
-                                                    </div>
-                                                </div>
-                                                {/* Similar input elements forHtml email, password, confirmPassword, phoneNumber, and rut */}
-                                                <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                    <button type="button" className="btn btn-primary btn-lg" onClick={handleRegister}>Registrate como persona Natural</button>
-                                                </div>
-                                                <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                    <button type="button" className="btn btn-primary btn-lg" onClick={handleRegister}>Registrate como empresa</button>
-                                                </div>
-                                            </form>
+        <section className="p-3 p-md-4 p-xl-5">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-md-6 bsb-tpl-bg-platinum">
+                        <div className="d-flex flex-column justify-content-between h-100 p-3 p-md-4 p-xl-5">
+                            <h3 className="m-0">Bienvenido "Aca Estamos"</h3>
+                            <p className="mb-0">Solo quiero mirar? <a href="#!" className="link-secondary text-decoration-none">Mirar</a></p>
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-6 bsb-tpl-bg-lotion">
+                        <div className="p-3 p-md-4 p-xl-5">
+                            <form action="#!">
+                                <div className="row gy-3 gy-md-4 overflow-hidden">
+                                    <div className="col-12">
+                                        <h2 className="h3">Registro</h2>
+                                        <h3 className="fs-6 fw-normal text-secondary m-0">Aqui comienza el futuro laboral</h3>
+                                    </div>
+                                    <div className="col-12">
+                                        <label htmlFor="Usuario" className="form-label">Nombre Usuario<span className="text-danger">*</span></label>
+                                        <input type="text" className="form-control" name="Usuario" id="Usuario" value={usuario} onChange={(e) => setUsuario(e.target.value)} required />
+                                    </div>
+                                    <div className="col-12">
+                                        <label htmlFor="password" className="form-label">Contraseña <span className="text-danger">*</span></label>
+                                        <input type="password" className="form-control" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                                    </div>
+                                    <div className="col-12">
+                                        <label htmlFor="confirmPassword" className="form-label">Confirmar Contraseña <span className="text-danger">*</span></label>
+                                        <input type="password" className="form-control" name="confirmPassword" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+                                    </div>
+                                    <div className="col-12">
+                                        <label htmlFor="email" className="form-label">Email <span className="text-danger">*</span></label>
+                                        <input type="email" className="form-control" name="email" id="email" placeholder="nombre@ejemplo.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                                    </div>
+                                    <div className="col-12">
+                                        <label htmlFor="Rut" className="form-label">Rut (Obligatorio para empresa) <span className="text-danger">*</span></label>
+                                        <input type="text" className="form-control" name="Rut" id="Rut" value={rut} onChange={(e) => setRut(e.target.value)} required />
+                                    </div>
+                                    <div className="col-12">
+                                        <label htmlFor="Telefono" className="form-label">Teléfono (Opcional) <span className="text-danger">*</span></label>
+                                        <input type="text" className="form-control" name="Telefono" id="Telefono" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="form-check">
+                                            <input className="form-check-input" type="checkbox" value="" name="iAgree" id="iAgree" required />
+                                            <label className="form-check-label text-secondary" htmlFor="iAgree">
+                                                Estoy de acuerdo con los <a href="#!" className="link-primary text-decoration-none">términos y condiciones</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="d-grid">
+                                        <Link to="/registro_usuarios_talentos" className="btn bsb-btn-xl btn-primary mb-3" onClick={handleRegisterTalento}><i className="tu-clase-icono"></i> Regístrate como Talento</Link>
+
+
+                                        </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="d-grid">
+                                        <Link to="/registro_usuarios_empresas" className="btn bsb-btn-xl btn-primary mb-3" onClick={handleRegisterEmpresa}><i className="tu-clase-icono"></i> Regístrate como Empresa</Link>
+
+
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
-}
+};
 
 export default RegistrationForm;
+
