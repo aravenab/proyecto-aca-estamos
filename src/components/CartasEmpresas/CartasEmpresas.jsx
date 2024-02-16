@@ -1,6 +1,9 @@
 import React from 'react';
 import CartasEmpresasItem from './CartasEmpresasItem';
 import '../../assets/assets_index/css/style.css'
+import Porta1 from "../../assets/img/portfolio/portfolio-1.jpg"
+import Porta2 from "../../assets/img/portfolio/portfolio-2.jpg"
+import Porta3 from "../../assets/img/portfolio/portfolio-3.jpg"
 
 const CartasEmpresas = () => (
   <section id="portfolio" className="portfolio">
@@ -25,9 +28,9 @@ const CartasEmpresas = () => (
       </div>
 
       <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-        <CartasEmpresasItem imgSrc="assets/img/portfolio/portfolio-1.jpg" title="App 1" category="app" />
-        <CartasEmpresasItem imgSrc="assets/img/portfolio/portfolio-2.jpg" title="Web 3" category="web" />
-        <CartasEmpresasItem imgSrc="assets/img/portfolio/portfolio-3.jpg" title="App 2" category="app" />
+        <CartasEmpresasItem imgSrc={Porta1} title="App 1" category="app" />
+        <CartasEmpresasItem imgSrc={Porta2} title="Web 3" category="web" />
+        <CartasEmpresasItem imgSrc={Porta3} title="App 2" category="app" />
       </div>
 
     </div>
