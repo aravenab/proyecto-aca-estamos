@@ -8,14 +8,14 @@ const UneteANosotros = () => {
       <div className="container">
         <div className="section-title" data-aos="fade-up">
           <h2>¡Únete a nosotros!</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+          <p> Juntos construyamos un camino hacia el éxito.</p> 
+          </div> 
         <div className="row">
           <UneteItem
             iconClass="bx bxl-dribbble"
             title="1. Regístrate como Talento o Empresa"
             link=""
-            description="Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate"
+            description=" Si eres una empresa y estás buscando talento, puedes registrarte en Acá Estamos como empresa. Solo necesitas completar el formulario de registro en nuestra página web y seguir los pasos indicados. Si eres un talento en busca de oportunidades laborales, también puedes registrarte en nuestra plataforma como talento. ¡Es muy sencillo! Solo sigue los pasos de registro y completa tu perfil. "
           />
           <UneteItem
             iconClass="bx bx-file"

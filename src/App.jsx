@@ -11,7 +11,7 @@ import PreguntasFrecuentes from './components/PreguntasFrecuentes/PreguntasFrecu
 import Aliados from './components/Aliados/Aliados'
 import Testimonios from './components/Testimonios/Testimonios'
 import Team from './components/Team/Team'
-
+// import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
 
 function App() {
   

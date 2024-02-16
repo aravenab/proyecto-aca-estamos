@@ -1,6 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 export default function RegistroUsuariosEmpresas() {
+
+// declarar state
+const[enviar, setEnviar] = useState(false)
+
+const formEnviado = () =>{
+    setEnviar( preEnvio => !preEnvio);
+
+};
+
+
   return (
         <div>
             <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
@@ -54,16 +65,14 @@ export default function RegistroUsuariosEmpresas() {
                             <input className="form-control" id="contratar" type="number" placeholder="Nº de colaboradores que buscas" />
                         </div>
                     </div>
-                    <div className="mb-3">
-                        <label className="form-label" htmlFor="cargo">Descripción del cargo</label>
-                        <textarea className="form-control" id="cargo" type="text" placeholder="Descripción del cargo" style={{ height: '10rem' }}></textarea>
-                    </div>
+                    
                     <div className="mb-3">
                         <label className="form-label" htmlFor="acerca">Cuentanos más acerca de tu empresa</label>
                         <textarea className="form-control" id="acerca" type="text" placeholder="Cuentanos más acerca de tu empresa" style={{ height: '10rem' }}></textarea>
                     </div>
                     <div className="d-grid">
-                        <button className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>
+                        <button  onClick={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>
+                        <h3>{enviar ? "Has enviado exitosamente el formulario":"No has enviado el Formulario" }</h3>
                     </div>
                 </form>
             </div>

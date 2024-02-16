@@ -11,9 +11,7 @@ const CartasEmpresas = () => (
 
       <div className="section-title" data-aos="fade-up">
         <h2>Nuestras Empresas</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
-          iste officiis commodi quidem hic quas.</p>
+        <p>Contamos con una lista de empresas registradas que están buscando personal talentoso. Son algunas de las empresas destacadas en nuestra comunidad. Estas empresas están ansiosas por encontrar nuevos talentos y ofrecerles oportunidades laborales emocionantes. ¡Únete a "Acá Estamos" y descubre las increíbles oportunidades que estas empresas tienen para ofrecerte!</p>
       </div>
 
       <div className="row">

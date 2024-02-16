@@ -1,4 +1,7 @@
 import React from 'react';
+import Team1 from '../../assets/img/team/team-1.jpg' 
+import Team2 from '../../assets/img/team/team-2.jpg' 
+import Team3 from '../../assets/img/team/team-3.jpg' 
 
 const Team = () => {
   return (
@@ -9,16 +12,14 @@ const Team = () => {
 
           <div className="section-title" data-aos="fade-up">
             <h2>Nuestros Talentos</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-              consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
-              iste officiis commodi quidem hic quas.</p>
+            <p>En "Acá Estamos" tenemos una gran variedad de talentos registrados en nuestra plataforma. Contamos con expertos en marketing digital, desarrolladores de software, diseñadores gráficos, profesionales de recursos humanos y muchos más. Cada uno de ellos tiene habilidades y experiencia únicas que los hacen destacar en sus áreas.</p>
           </div>
 
           <div className="row">
 
             <div className="col-lg-4 col-md-6">
               <div className="member" data-aos="zoom-in">
-                <div className="pic"><img src="assets/img/team/team-1.jpg" className="img-fluid" alt="" /></div>
+                <div className="pic"><img src={Team1} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>Walter White</h4>
                   <span>Chief Executive Officer</span>
@@ -34,7 +35,7 @@ const Team = () => {
 
             <div className="col-lg-4 col-md-6">
               <div className="member" data-aos="zoom-in" data-aos-delay="100">
-                <div className="pic"><img src="assets/img/team/team-2.jpg" className="img-fluid" alt="" /></div>
+                <div className="pic"><img src={Team2} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>Sarah Jhonson</h4>
                   <span>Product Manager</span>
@@ -50,7 +51,7 @@ const Team = () => {
 
             <div className="col-lg-4 col-md-6">
               <div className="member" data-aos="zoom-in" data-aos-delay="200">
-                <div className="pic"><img src="assets/img/team/team-3.jpg" className="img-fluid" alt="" /></div>
+                <div className="pic"><img src={Team3} className="img-fluid" alt="" /></div>
                 <div className="member-info">
                   <h4>William Anderson</h4>
                   <span>CTO</span>

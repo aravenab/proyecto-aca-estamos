@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
 import '../../assets/assets_index/css/style.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   
@@ -18,7 +19,7 @@ const Navbar = () => {
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
         <div className="container d-flex align-items-center">
-          <div className="logo me-auto">
+          <div className="logo me-auto mt-5"  >
             <h1><a href="index.html">Acá estamos</a></h1>
             {/* Uncomment below if you prefer to use an image logo */}
             {/* <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
@@ -50,7 +51,9 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li><a className="nav-link scrollto" href="#services">¡Únete!</a></li>
+              <li><i className="nav-link scrollto"></i> <Link to="login">¡Únete!</Link></li>
+
+              
               {/* <li><a className="nav-link scrollto " href="#portfolio">Nuestros perfiles</a></li>
                 <li><a className="nav-link scrollto" href="#clients">Nuestros clientes</a></li> */}
               <li><a className="nav-link scrollto" href="#contact">Contacto</a></li>
