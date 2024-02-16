@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import logoAca from './aca_estamos.png'
 
 const Navbar = () => {
+  
   useEffect(() => {
     // Inicializar el popover cuando el componente se monte
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
