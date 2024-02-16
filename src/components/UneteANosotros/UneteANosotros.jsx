@@ -1,5 +1,6 @@
 import React from 'react';
 import UneteItem from './UneteItem';
+import '../../assets/assets_index/css/style.css'
 
 const UneteANosotros = () => {
   return (
