@@ -15,12 +15,12 @@ body {
 }
 
 a {
-  color: #009cea;
+  color: #FF571E;
   text-decoration: none;
 }
 
 a:hover {
-  color: #1eb4ff;
+  color: #FF571E;
   text-decoration: none;
 }
 
@@ -43,7 +43,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #009cea;
+  background: #FF571E;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -57,7 +57,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #14b1ff;
+  background: #FF571E;
   color: #fff;
 }
 
