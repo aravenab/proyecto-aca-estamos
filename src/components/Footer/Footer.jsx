@@ -27,30 +27,28 @@ export default function Footer() {
             </div>
 
             <div className="col-lg-2 col-md-6 footer-links">
-              <h4>Useful Links</h4>
+              <h4>Nuestras Paginas</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Home</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quiénes somos</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Services</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Terms of service</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Privacy policy</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quienes somos</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonnios</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestras empresas</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros talentos</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros aliados</Link></li>
               </ul>
             </div>
 
             <div className="col-lg-3 col-md-6 footer-links">
-              <h4>Our Services</h4>
+              <h4>Únete</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#"></Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Development</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Product Management</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Marketing</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Graphic Design</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Registrate como empresa</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Registrate como talento</Link></li>
+                
               </ul>
             </div>
 
             <div className="col-lg-4 col-md-6 footer-newsletter">
-              <h4>Our Newsletter</h4>
-              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+              <h4>Boletín informativo</h4>
+              <p>Si quieres mantenerte actualizada con toda la información y novedades de "Acá Estamos!</p>
               <form action="" method="post">
                 <input type="email" name="email" /><input type="submit" value="Subscribe" />
               </form>
