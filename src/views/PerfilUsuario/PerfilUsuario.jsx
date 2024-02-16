@@ -331,11 +331,9 @@ export default function PerfilUsuario() {
                                     </div>
                                     <div className="col-12 col-md-8 col-lg-9 text-start">
                                         <ul>
-                                            <li>Excelencia académica y el liderazgo en actividades extracurriculares</li>
-                                            <li>Participación activa en diversas iniciativas estudiantiles</li>
-                                            <li>Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los
-                                                plazos y el
-                                                presupuesto.</li>
+                                            <li>Titulada con distinción máxima</li>
+                                            <li>Participé activamente en actividades estudiantiles, incluyendo la organización de eventos académicos y voluntariado comunitario.</li>
+                                            <li>Desarrollé habilidades de liderazgo, trabajo en equipo y comunicación</li>
                                             <li>Miembro activo de la sociedad de estudiantes de administración, donde colaboré en la organización
                                                 de eventos académicos y actividades de networking que enriquecieron la experiencia estudiantil de
                                                 mis compañeros.</li>
@@ -347,7 +345,7 @@ export default function PerfilUsuario() {
                                         Link:
                                     </div>
                                     <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <a href="https://www.unam.mx">UNAM</a>
+                                        <a href="https://www.unam.mx">Universidad Autónoma de México (UNAM)</a>
                                     </div>
                                 </div>
                             </div>
@@ -371,7 +369,7 @@ export default function PerfilUsuario() {
                                         Actividad:
                                     </div>
                                     <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
-                                        Certification Scrum Foundation
+                                        Scrum Foundation Professional Certification - SFPC™
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
@@ -379,7 +377,7 @@ export default function PerfilUsuario() {
                                         Lugar:
                                     </div>
                                     <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        CertiProf
+                                        CertiProf International
                                     </div>
                                 </div>
                                 <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
@@ -412,7 +410,7 @@ export default function PerfilUsuario() {
                                         Link:
                                     </div>
                                     <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <a href="https://www.unam.mx">CertiProf</a>
+                                        <a href="https://www.unam.mx">CertiProf International</a>
                                     </div>
                                 </div>
                             </div>
