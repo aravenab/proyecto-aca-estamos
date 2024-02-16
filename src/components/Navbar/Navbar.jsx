@@ -3,6 +3,7 @@ import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para es
 import '../../assets/assets_index/css/style.css'
 
 const Navbar = () => {
+  
   useEffect(() => {
     // Inicializar el popover cuando el componente se monte
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
