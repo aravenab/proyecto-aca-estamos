@@ -17,10 +17,10 @@ const CartasEmpresas = () => (
       <div className="row">
         <div className="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <ul id="portfolio-flters">
-            <li data-filter="*" className="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
+            <li data-filter="*" className="filter-active">Todo</li>
+            <li data-filter=".filter-app">Área 1</li>
+            <li data-filter=".filter-card">Área 2</li>
+            <li data-filter=".filter-web">Área 3</li>
           </ul>
         </div>
       </div>
