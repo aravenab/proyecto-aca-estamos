@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
         <div className="container d-flex align-items-center">
-          <div className="logo me-auto">
+          <div className="logo me-auto mt-5"  >
             <h1><a href="index.html">Acá estamos</a></h1>
             {/* Uncomment below if you prefer to use an image logo */}
             {/* <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
