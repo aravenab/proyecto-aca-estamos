@@ -26,9 +26,9 @@ const CartasEmpresas = () => (
       </div>
 
       <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-        <CartasEmpresasItem imgSrc={Porta1} title="App 1" category="app" />
-        <CartasEmpresasItem imgSrc={Porta2} title="Web 3" category="web" />
-        <CartasEmpresasItem imgSrc={Porta3} title="App 2" category="app" />
+        <CartasEmpresasItem imgSrc={Porta1} title="IMR" category="Municipal" />
+        <CartasEmpresasItem imgSrc={Porta2} title="Coca Cola Andina" category="Privada" />
+        <CartasEmpresasItem imgSrc={Porta3} title="Ferreteria Generation" category="Privada" />
       </div>
 
     </div>

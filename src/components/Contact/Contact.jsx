@@ -18,7 +18,7 @@ const Contact = () => {
               <div className="address">
                 <i className="bi bi-geo-alt"></i>
                 <h4>Nuestra ubicación:</h4>
-                <p>Blanco Encalada 1335, Renca. Chile</p>
+                <p>Calle Blanco Encalada 1335 8650000, Renca, Región Metropolitana de Santiago</p>
               </div>
 
               <div className="email">
