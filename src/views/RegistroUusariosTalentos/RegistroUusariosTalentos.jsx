@@ -1,7 +1,11 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 export default function RegistroUusariosTalentos() {
   return (
+    <>
+    <Navbar/>
       <div>
           <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
               <form className="container position-relative">
@@ -55,10 +59,15 @@ export default function RegistroUusariosTalentos() {
                       </div>
                       {/* <!-- formulario de contacto-multiples Archivos para subir--> */}
                       <div className="row mb-3">
-                          <div className="col">
+                          <div className="col-6">
                               <label htmlFor="formFileMultiple" className="form-label">Certificado de estudios o cursos realizados con certificación</label>
                               <input className="form-control" type="file" id="formFileMultiple" multiple />
                           </div>
+                          <div className="col-6">
+                              <label htmlFor="formFileMultiple" className="form-label">Registro social de Hogares (opcional) </label>
+                              <input className="form-control" type="file" id="formFileMultiple" multiple />
+                          </div>
+
                       </div>
                       <div className="row">
                           <div className="col-6 mb-3">
@@ -84,6 +93,7 @@ export default function RegistroUusariosTalentos() {
               <img src="" className="img-fluid mx-auto d-block mb-2" alt="" />
           </div>
       </div>
-
+      <Footer/>
+    </>
     )
 }
