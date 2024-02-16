@@ -16,49 +16,49 @@ const Aliados = () => {
 
             <div className="col-lg-3 col-md-4 col-xs-6">
               <div className="client-logo" data-aos="zoom-in">
-                <img src="assets/img/clients/client-1.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 
             <div className="col-lg-3 col-md-4 col-xs-6">
               <div className="client-logo" data-aos="zoom-in" data-aos-delay="100">
-                <img src="assets/img/clients/client-2.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 
             <div className="col-lg-3 col-md-4 col-xs-6">
               <div className="client-logo" data-aos="zoom-in" data-aos-delay="150">
-                <img src="assets/img/clients/client-3.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 
             <div className="col-lg-3 col-md-4 col-xs-6">
               <div className="client-logo" data-aos="zoom-in" data-aos-delay="200">
-                <img src="assets/img/clients/client-4.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 
             <div className="col-lg-3 col-md-4 col-xs-6">
               <div className="client-logo" data-aos="zoom-in" data-aos-delay="250">
-                <img src="assets/img/clients/client-5.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 
             <div className="col-lg-3 col-md-4 col-xs-6">
               <div className="client-logo" data-aos="zoom-in" data-aos-delay="300">
-                <img src="assets/img/clients/client-6.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 
             <div className="col-lg-3 col-md-4 col-xs-6">
               <div className="client-logo" data-aos="zoom-in" data-aos-delay="350">
-                <img src="assets/img/clients/client-7.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 
             <div className="col-lg-3 col-md-4 col-xs-6" data-aos="zoom-in" data-aos-delay="400">
               <div className="client-logo">
-                <img src="assets/img/clients/client-8.png" className="img-fluid" alt="" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg" className="img-fluid" alt="" />
               </div>
             </div>
 

@@ -12,7 +12,7 @@ import PreguntasFrecuentes from '../../components/PreguntasFrecuentes/PreguntasF
 
 export default function Index2() {
   return (
-    <div>
+    <>
       <Hero />
       <Hero2 />
       <UneteANosotros />
@@ -22,6 +22,6 @@ export default function Index2() {
       <Aliados />
       <PreguntasFrecuentes />
       <Contact />
-    </div>
+    </>
   )
 }
