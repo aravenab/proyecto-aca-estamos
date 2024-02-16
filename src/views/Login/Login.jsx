@@ -1,4 +1,8 @@
 import React from 'react'
+import logUser   from '../../assets/images/iconos/logo_usuario.png'
+import logCont   from '../../assets/images/iconos/logo_contraseña.png'
+import logoGoo   from '../../assets/images/iconos/logo_google.png'
+import logoUser2   from '../../assets/images/iconos/logo_usuario2.png'
 
 export default function Login() {
   return (
@@ -6,7 +10,7 @@ export default function Login() {
         <div className="d-flex justify-content-center align-items-center vh-100">  {/*<!----------------------------LOGIN--> */}
             <div className="bg-white p-5 rounded-5 text-secondary" style={{width: '25rem'}}>
                 <div className="d-flex justify-content-center">
-                    <img src="../images/iconos/logo_usuario.png" alt="icono_login" style={{height: '7rem'}} />
+                    <img src={logUser} alt="icono_login" style={{height: '7rem'}} />
                 </div>
                 <div>
                     <div className="text-center fs-1 fw-bold fst-italic">Inicio de sesión</div>
@@ -14,7 +18,7 @@ export default function Login() {
                 <div>
                     <div className="input-group">
                         <div className="input-group-text bg-$orange-500">
-                            <img src="../images/iconos/logo_usuario2.png" alt="icono_nombredeusuario"
+                            <img src={logoUser2} alt="icono_nombredeusuario"
                                 style={{height: '1rem'}} />
                         </div>
                         <input className="form-control" type="text" placeholder="Nombre de usuario"/>
@@ -22,7 +26,7 @@ export default function Login() {
                     <div>
                         <div className="input-group mt-1">
                             <div className="input-group-text" style={{backgroundColor:'#FF571E'}}/>
-                                <img src="../images/iconos/logo_contraseña.png" alt="icono_contraseña"
+                                <img src={logCont} alt="icono_contraseña"
                                     style={{height: "1rem"}} />
                             </div>
                             <input className="form-control" type="password" placeholder="Contraseña" />
@@ -44,7 +48,7 @@ export default function Login() {
                     </div>
     
                     <div className="btn d-flex gap-2 justify-content-center border">
-                        <img src="../images/iconos/logo_google.png" alt="icono_google" style={{height: '1.6rem'}} />
+                        <img src={logoGoo} alt="icono_google" style={{height: '1.6rem'}} />
                         <div>Continuar con Google</div>
                     </div>
                 </div>
