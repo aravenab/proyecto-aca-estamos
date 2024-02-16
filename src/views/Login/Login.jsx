@@ -3,6 +3,8 @@ import logUser   from '../../assets/images/iconos/logo_usuario.png'
 import logCont   from '../../assets/images/iconos/logo_contraseña.png'
 import logoGoo   from '../../assets/images/iconos/logo_google.png'
 import logoUser2   from '../../assets/images/iconos/logo_usuario2.png'
+import Navbar from '../../components/Navbar/Navbar'
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
@@ -39,7 +41,7 @@ export default function Login() {
                     <div className="btn btn-info text-white w-100 mt-1">Solo quiero mirar</div>
                     <div className="d-flex gap-1 justify-content-center mt-1">
                         <div>¿No tienes una cuenta?</div>
-                        <a href="#" className="fw-semibold fst-italic" style={{fontsize: '0.9rem'}}>Regístrese</a>
+                        <i className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}><Link to="login">Regístrese</Link></i>
                     </div>
                     <div className="py-3">
                         <div className="border-bottom text-center" style={{height:'0.9rem'}}>
