@@ -24,13 +24,15 @@ const Contact = () => {
               <div className="email">
                 <i className="bi bi-envelope"></i>
                 <h4>Correo electrónico:</h4>
-                <p>info@example.com</p>
+                <p>contacto@renca.cl</p>
               </div>
 
               <div className="phone">
                 <i className="bi bi-phone"></i>
                 <h4>Teléfono:</h4>
-                <p>+562 00000000 </p>
+                <p>+56 2 2685 6600
+
+</p>
               </div>
               <div style={{ width: '100%' }}><iframe title="Mapa" width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Blanco%20Encalada%201335+(Municipalidad%20de%20Renca)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" allowFullScreen></iframe></div>
 
