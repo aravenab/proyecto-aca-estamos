@@ -12,8 +12,8 @@ import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      {/* <RouterProvider router ={router}/>  */}
+      <RouterProvider router ={router}/> 
       {/* <CartasEmpresas/> */}
-      <PerfilUsuario/>
+      {/* <PerfilUsuario/> */}
   </React.StrictMode>,
 )

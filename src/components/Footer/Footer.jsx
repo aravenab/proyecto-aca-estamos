@@ -59,11 +59,11 @@ export default function Footer() {
 
       <div className="container">
         <div className="copyright">
-          &copy;<strong><span>Acá Estamos</span></strong>. All Rights ReseTodos los derechos reservados.
+          &copy;<strong><span className='ms-2'>Acá Estamos. </span></strong>Todos los derechos reservados.
         </div>
-        <div className="credits">
+        {/* <div className="credits">
           Designed by <a href="">Equipo infinito</a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
