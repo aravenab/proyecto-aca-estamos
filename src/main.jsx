@@ -10,7 +10,7 @@ import CartasEmpresas from './components/CartasEmpresas/CartasEmpresas.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      {/* <RouterProvider router ={router}/>  */}
-      <CartasEmpresas/>
+      <RouterProvider router ={router}/> 
+      {/* <CartasEmpresas/> */}
   </React.StrictMode>,
 )

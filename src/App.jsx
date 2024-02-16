@@ -24,11 +24,6 @@ function App() {
    
       <Navbar />
       <Index2/>
-      <Team/>
-      <Testimonios/>
-      <Aliados/>
-      <PreguntasFrecuentes/>
-      <Contact/>
       <Footer/>
       {/* <Route/> */}
 
