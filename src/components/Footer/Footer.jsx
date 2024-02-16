@@ -12,7 +12,7 @@ export default function Footer() {
                 <h3>Acá Estamos</h3>
                 <p>
                   Municipalidad de Renca <br />
-                  Renca, Renca<br /><br />
+                  Calle Blanco Encalada 1335 8650000 Renca Región Metropolitana de Santiago<br /><br />
                   <strong>Phone:</strong> +562 0000000<br />
                   <strong>Email:</strong> info@example.com<br />
                 </p>
@@ -59,10 +59,10 @@ export default function Footer() {
 
       <div className="container">
         <div className="copyright">
-          &copy;<strong><span>Acá Estamos</span></strong>. All Rights ReseTodos los derechos reservados.
+          &copy;<strong><span>Acá Estamos</span></strong>.Todos los derechos reservados.
         </div>
         <div className="credits">
-          Designed by <a href="">Equipo infinito</a>
+         <a href="">Equipo infinito</a>
         </div>
       </div>
     </footer>

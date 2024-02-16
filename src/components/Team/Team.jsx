@@ -21,8 +21,8 @@ const Team = () => {
               <div className="member" data-aos="zoom-in">
                 <div className="pic"><img src={Team1} className="img-fluid" alt="" /></div>
                 <div className="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Walter Gonzalez</h4>
+                  <span>Constructor</span>
                   <div className="social">
                     <a href=""><i className="bi bi-twitter"></i></a>
                     <a href=""><i className="bi bi-facebook"></i></a>

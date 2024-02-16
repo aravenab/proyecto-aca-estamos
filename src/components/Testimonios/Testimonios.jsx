@@ -25,8 +25,8 @@ const Testimonios = () => {
                     <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                   <img src="assets/img/testimonials/testimonials-1.jpg" className="testimonial-img" alt="" />
-                  <h3>Saul Goodman</h3>
-                  <h4>Asistente &amp; logistica</h4>
+                  <h3>Saul Desvarieux</h3>
+                  <h4>Asistente logistica</h4>
                 </div>
               </div>
 
