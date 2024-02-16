@@ -12,9 +12,7 @@ const Team = () => {
 
           <div className="section-title" data-aos="fade-up">
             <h2>Nuestros Talentos</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-              consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in
-              iste officiis commodi quidem hic quas.</p>
+            <p>En "Acá Estamos" tenemos una gran variedad de talentos registrados en nuestra plataforma. Contamos con expertos en marketing digital, desarrolladores de software, diseñadores gráficos, profesionales de recursos humanos y muchos más. Cada uno de ellos tiene habilidades y experiencia únicas que los hacen destacar en sus áreas.</p>
           </div>
 
           <div className="row">

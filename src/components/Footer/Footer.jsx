@@ -9,11 +9,11 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-3 col-md-6">
               <div className="footer-info">
-                <h3>Scaffold</h3>
+                <h3>Acá Estamos</h3>
                 <p>
-                  A108 Adam Street <br />
-                  NY 535022, USA<br /><br />
-                  <strong>Phone:</strong> +1 5589 55488 55<br />
+                  Municipalidad de Renca <br />
+                  Renca, Renca<br /><br />
+                  <strong>Phone:</strong> +562 0000000<br />
                   <strong>Email:</strong> info@example.com<br />
                 </p>
                 <div className="social-links mt-3">
@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="col-lg-3 col-md-6 footer-links">
               <h4>Our Services</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Design</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#"></Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Web Development</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Product Management</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Marketing</Link></li>
@@ -61,10 +61,10 @@ export default function Footer() {
 
       <div className="container">
         <div className="copyright">
-          &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
+          &copy;<strong><span>Acá Estamos</span></strong>. All Rights ReseTodos los derechos reservados.
         </div>
         <div className="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="">Equipo infinito</a>
         </div>
       </div>
     </footer>
