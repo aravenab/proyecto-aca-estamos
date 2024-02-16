@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-top">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-4 col-md-6">
               <div className="footer-info">
                 <h3>Acá Estamos</h3>
                 <p>
@@ -26,7 +26,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="col-lg-2 col-md-6 footer-links">
+            <div className="col-lg-4 col-md-6 footer-links">
               <h4>Nuestras Paginas</h4>
               <ul>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Quienes somos</Link></li>
@@ -37,7 +37,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 footer-links">
+            <div className="col-lg-4 col-md-12 footer-links">
               <h4>Únete</h4>
               <ul>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Registrate como empresa</Link></li>
@@ -46,24 +46,24 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-lg-4 col-md-6 footer-newsletter">
+            {/* <div className="col-lg-4 col-md-6 footer-newsletter">
               <h4>Boletín informativo</h4>
               <p>Si quieres mantenerte actualizada con toda la información y novedades de "Acá Estamos!</p>
               <form action="" method="post">
                 <input type="email" name="email" /><input type="submit" value="Subscribe" />
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       <div className="container">
         <div className="copyright">
-          &copy;<strong><span>Acá Estamos</span></strong>.Todos los derechos reservados.
+          &copy;<strong><span className='ms-2'>Acá Estamos. </span></strong>Todos los derechos reservados.
         </div>
-        <div className="credits">
-         <a href="">Equipo infinito</a>
-        </div>
+        {/* <div className="credits">
+          Designed by <a href="">Equipo infinito</a>
+        </div> */}
       </div>
     </footer>
   );

@@ -18,16 +18,11 @@ function App() {
 
   return (
     
-    <div>
-
-   
-   
+    <>
       <Navbar />
       <Index2/>
       <Footer/>
-      {/* <Route/> */}
-
-    </div>
+    </>
   )
 }
 
