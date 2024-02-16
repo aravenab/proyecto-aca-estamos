@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
 import '../../assets/assets_index/css/style.css'
 import { Link } from 'react-router-dom';
+import logoAca from './aca_estamos.png'
 
 const Navbar = () => {
   
@@ -18,9 +19,9 @@ const Navbar = () => {
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
-        <div className="container d-flex align-items-center">
-          <div className="logo me-auto mt-5"  >
-            <h1><a href="index.html">Acá estamos</a></h1>
+        <div className="container d-flex align-items-center">   
+             <div className="logo me-auto mt-4"  >
+          <img src={logoAca} alt=" " style={{height: '100rem'}} />
             {/* Uncomment below if you prefer to use an image logo */}
             {/* <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
           </div>
