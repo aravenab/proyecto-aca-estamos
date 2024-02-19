@@ -2,14 +2,47 @@ import React from 'react';
 import '../../assets/assets_index/css/style.css'
 
 const Testimonios = () => {
+
+
+
+
+  new Swiper('.testimonials-slider', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }
+  });
+
+
+
+
+
+
   return (
+    
     <div>
       {/* ======= Testimonials Section ======= */}
       <section id="testimonials" className="testimonials">
         <div className="container">
-
-          
-
           <div className="section-title" data-aos="fade-up">
             <h2>Testimonios</h2>
             <p>A continuación, encontrarás testimonios de nuestros usuarios que han experimentado de primera mano la calidad y eficacia de nuestros servicios. Su satisfacción es nuestra mayor recompensa y estamos orgullosos de compartir sus palabras con todos ustedes.</p>
