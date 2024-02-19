@@ -10,7 +10,7 @@ import Contact from './components/Contact/Contact'
 import PreguntasFrecuentes from './components/PreguntasFrecuentes/PreguntasFrecuentes'
 import Aliados from './components/Aliados/Aliados'
 import Testimonios from './components/Testimonios/Testimonios'
-import Team from './components/Team/Team'
+import CartasTalentos from './components/CartasTalentos/CartasTalentos'
 // import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
 
 function App() {
