@@ -5,7 +5,35 @@ import Porta1 from "../../assets/img/portfolio/portfolio-1.jpg"
 import Porta2 from "../../assets/img/portfolio/portfolio-2.jpg"
 import Porta3 from "../../assets/img/portfolio/portfolio-3.jpg"
 
-const CartasEmpresas = () => (
+const CartasEmpresas = () => {
+  window.addEventListener('load', () => {
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer) {
+      let portfolioIsotope = new Isotope(portfolioContainer, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+      });
+
+      let portfolioFilters = select('#portfolio-flters li', true);
+
+      on('click', '#portfolio-flters li', function(e) {
+        e.preventDefault();
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        portfolioIsotope.on('arrangeComplete', function() {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
+  return (
   <section id="portfolio" className="portfolio">
     <div className="container">
 
@@ -32,6 +60,7 @@ const CartasEmpresas = () => (
 
     </div>
   </section>
-);
+
+ )};
 
 export default CartasEmpresas;

@@ -6,6 +6,7 @@ import CartasTalentosItem from './CartasTalentosItem';
 
 
 const CartasTalentos = () => {
+  
   return (
     <div>
       {/* ======= Team Section ======= */}
