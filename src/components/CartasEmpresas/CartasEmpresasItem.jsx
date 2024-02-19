@@ -1,7 +1,7 @@
 import React from 'react';
 
-const CartasEmpresasItem = ({ imgSrc, title, category }) => (
-  <div className={`col-lg-4 col-md-6 portfolio-item filter-${category}`}>
+const CartasEmpresasItem = ({ imgSrc, title, category, clase}) => (
+  <div className={`col-lg-4 col-md-6 portfolio-item ${clase}`}>
     <div className="portfolio-wrap">
       <img src={imgSrc} className="img-fluid" alt="" />
       <div className="portfolio-info">
