@@ -18,16 +18,16 @@ const CartasEmpresas = () => (
         <div className="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <ul id="portfolio-flters">
             <li data-filter="*" className="filter-active">Todo</li>
-            <li data-filter=".filter-app">Públicas</li>
-            <li data-filter=".filter-card">Privadas</li>
+            <li data-filter=".filter-publica">Públicas</li>
+            <li data-filter=".filter-privada">Privadas</li>
           </ul>
         </div>
       </div>
 
       <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-        <CartasEmpresasItem imgSrc={Porta1} title="IMR" category="Pública" />
-        <CartasEmpresasItem imgSrc={Porta2} title="Coca Cola Andina" category="Privada" />
-        <CartasEmpresasItem imgSrc={Porta3} title="Ferreteria Generation" category="Privada" />
+        <CartasEmpresasItem imgSrc={Porta1} title="IMR" category="publica" />
+        <CartasEmpresasItem imgSrc={Porta2} title="Coca Cola Andina" category="privada" />
+        <CartasEmpresasItem imgSrc={Porta3} title="Ferreteria Generation" category="privada" />
       </div>
 
     </div>
