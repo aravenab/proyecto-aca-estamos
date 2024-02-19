@@ -11,12 +11,12 @@ import Registro from '../views/Registro/Registro.jsx'
 const router = createBrowserRouter([
     {path:"/", element: <App/>},
     {path:"/contacto", element:<Contacto/>},
-    {path: "faq", element: <Faq />},
-    {path: "login", element: <Login />},
-    {path: "perfil_usuario", element: < PerfilUsuario/>},
-    {path: "registro", element: < Registro/>},
-    {path: "registro_usuarios_empresas", element: < RegistroUsuariosEmpresas/>},
-    {path: "registro_usuarios_talentos", element: < RegistroUusariosTalentos/>},
+    {path: "/faq", element: <Faq />},
+    {path: "/login", element: <Login />},
+    {path: "/perfil_usuario", element: < PerfilUsuario/>},
+    {path: "/registro", element: < Registro/>},
+    {path: "/registro_usuarios_empresas", element: < RegistroUsuariosEmpresas/>},
+    {path: "/registro_usuarios_talentos", element: < RegistroUusariosTalentos/>},
      
 
 ]);
