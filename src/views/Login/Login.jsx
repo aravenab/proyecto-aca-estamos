@@ -41,6 +41,15 @@ export default function Login() {
                         <div>¿No tienes una cuenta?</div>
                         <i className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}><Link to="/registro">Regístrese</Link></i>
                     </div>
+                    {/* <div className="row">
+                        <div className="col-6">
+                            <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Registro como TALENTO</Link>
+                        </div>
+                        <div className="col-6">
+                            <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registro como EMPRESA</Link>
+                        </div>
+                    </div> */}
+                    
                     <div className="py-3">
                         <div className="border-bottom text-center" style={{ height: '0.9rem' }}>
                             <span className="bg-white px-3">o</span>

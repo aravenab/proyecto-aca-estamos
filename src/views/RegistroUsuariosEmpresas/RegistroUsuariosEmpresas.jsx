@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 
 export default function RegistroUsuariosEmpresas() {
@@ -16,7 +17,21 @@ const formEnviado = () =>{
         <div>
             <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
                 <form className="container position-relative">
-                    <h1>Información Personal - Preguntas Usuario empresa</h1>
+                    <h1>Registro como EMPRESA</h1>
+                    <div className="row">
+                        <div className="col-3">
+
+                        </div>
+                          <div className="col-3">
+                              <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Registrate como TALENTO</Link>
+                          </div>
+                          <div className="col-3">
+                              <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registrate como EMPRESA</Link>
+                          </div>
+                          <div className="col-3">
+                            
+                            </div>
+                      </div>
                     <div className="row">
                         <div className="col-6 col-sm-6 mb-3">
                             <label className="col-12 form-label" htmlFor="name">Nombre de empresa</label>

@@ -67,18 +67,12 @@ const RegistrationForm = () => {
                                             </label>
                                         </div>
                                     </div>
-                                    <div className="col-12">
-                                        <div className="d-grid">
-                                        <Link to="/registro_usuarios_talentos" className="btn bsb-btn-xl btn-primary mb-3" onClick={handleRegisterTalento}><i className="tu-clase-icono"></i> Regístrate como Talento</Link>
-
-
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Registro como TALENTO</Link>
                                         </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="d-grid">
-                                        <Link to="/registro_usuarios_empresas" className="btn bsb-btn-xl btn-primary mb-3" onClick={handleRegisterEmpresa}><i className="tu-clase-icono"></i> Regístrate como Empresa</Link>
-
-
+                                        <div className="col-6">
+                                            <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registro como EMPRESA</Link>
                                         </div>
                                     </div>
                                 </div>

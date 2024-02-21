@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
+import { Link } from 'react-router-dom';
 
 export default function RegistroUusariosTalentos() {
   return (
@@ -9,9 +10,23 @@ export default function RegistroUusariosTalentos() {
       <div>
           <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
               <form className="container position-relative">
+                      <div className="row">
+                        <div className="col-3">
+
+                        </div>
+                          <div className="col-3">
+                              <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Registrate como TALENTO</Link>
+                          </div>
+                          <div className="col-3">
+                              <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registrate como EMPRESA</Link>
+                          </div>
+                          <div className="col-3">
+                            
+                            </div>
+                      </div>
 
                   <div className="col-12">
-                      <h1>Información Personal - Preguntas Usuario</h1>
+                      <h1>Registro como TALENTO</h1>
                       {/* <!-- formulario de contacto-nombre --> */}
                       <div className="row">
                           <div className="col-6 col-sm-6 mb-3">
