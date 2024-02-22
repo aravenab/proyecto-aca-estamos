@@ -8,12 +8,12 @@ export default function CartasTalentosItem({nombre_Talento, trabajo_Talento, img
                 <div className="member-info">
                     <h4>{nombre_Talento}</h4>
                     <span>{trabajo_Talento}</span>
-                    <div className="social">
+                    {/*<div className="social">
                         <a href=""><i className="bi bi-twitter"></i></a>
                         <a href=""><i className="bi bi-facebook"></i></a>
                         <a href=""><i className="bi bi-instagram"></i></a>
                         <a href=""><i className="bi bi-linkedin"></i></a>
-                    </div>
+    </div>*/}
                 </div>
             </div>
         </div>
