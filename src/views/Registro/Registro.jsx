@@ -24,7 +24,7 @@ const RegistrationForm = () => {
                     <div className="col-12 col-md-6 bsb-tpl-bg-platinum">
                         <div className="d-flex flex-column justify-content-between h-100 p-3 p-md-4 p-xl-5">
                             <h3 className="m-0">Bienvenido "Aca Estamos"</h3>
-                            <p className="mb-0">Solo quiero mirar? <a href="#!" className="link-secondary text-decoration-none">Mirar</a></p>
+                            <p className="mb-0">Solo quiero mirar<a href="#!" className="link-secondary text-decoration-none">Mirar</a></p>
                         </div>
                     </div>
                     <div className="col-12 col-md-6 bsb-tpl-bg-lotion">
@@ -33,7 +33,7 @@ const RegistrationForm = () => {
                                 <div className="row gy-3 gy-md-4 overflow-hidden">
                                     <div className="col-12">
                                         <h2 className="h3">Registro</h2>
-                                        <h3 className="fs-6 fw-normal text-secondary m-0">Aqui comienza el futuro laboral</h3>
+                                        <h3 className="fs-6 fw-normal text-secondary m-0">Aquí comienza tu futuro laboral</h3>
                                     </div>
                                     <div className="col-12">
                                         <label htmlFor="Usuario" className="form-label">Nombre Usuario<span className="text-danger">*</span></label>

@@ -15,10 +15,10 @@ export default function RegistroUusariosTalentos() {
 
                         </div>
                           <div className="col-3">
-                              <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Registrate como TALENTO</Link>
+                              <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Regístrate como TALENTO</Link>
                           </div>
                           <div className="col-3">
-                              <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registrate como EMPRESA</Link>
+                              <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Regístrate como EMPRESA</Link>
                           </div>
                           <div className="col-3">
                             
@@ -90,7 +90,7 @@ export default function RegistroUusariosTalentos() {
                               <input className="form-control" type="file" id="formFile" />
                           </div>
                           <div className="col-6 mb-3">
-                              <label htmlFor="cv" className="form-label">Curriculum Vitae en pdf o Word</label>
+                              <label htmlFor="cv" className="form-label">Currículum Vitae en pdf o Word</label>
                               <input className="form-control" type="file" id="cv" />
                           </div>
                       </div>
