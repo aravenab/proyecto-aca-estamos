@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logoAca from './aca_estamos.png'
 
 const Navbar = () => {
-  
+
   useEffect(() => {
     // Inicializar el popover cuando el componente se monte
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
@@ -19,14 +19,30 @@ const Navbar = () => {
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
-        <div className="container d-flex align-items-center">   
-             <div className="logo me-auto mt-4"  >
-          <img src={logoAca} alt=" " style={{height: '100rem'}} />
+        <div className="container d-flex align-items-center">
+          <div className="logo me-auto mt-4"  >
+            <img src={logoAca} alt=" " style={{ height: '100rem' }} />
             {/* Uncomment below if you prefer to use an image logo */}
             {/* <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
           </div>
           <nav id="navbar" className="navbar order-last order-lg-0">
             <ul>
+              <li>
+                <form className="mx-auto">
+                  <div className="p-1 bg-light rounded rounded-pill shadow-sm">
+                    <div className="input-group">
+                      <input type="search" placeholder="Talentos/empresas..."
+                        aria-describedby="button-addon1" className="form-control border-0 rounded-5 bg-light" />
+                      <div className="input-group-append">
+                        <button id="button-addon1" type="button" className="btn btn-link text-primary"
+                          onClick="window.location.href='buscador1.html'">
+                          <i className="bi bi-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </li>
               {/* Ícono de notificación a la derecha */}
               <li className="nav-link scrollto">
                 <button type="button" className="btn btn-lg" data-bs-toggle="popover" data-bs-title="Notificaciones"
@@ -39,9 +55,10 @@ const Navbar = () => {
                 <ul>
                   <li><a className="nav-link scrollto" href="#about">¿Quienes somos?</a></li>
                   <li><a className="nav-link scrollto" href="#testimonials">Testimonios</a></li>
+                  <li><a className="nav-link scrollto" href="#portfolio">Nuestras Empresas</a></li>
                   <li><a className="nav-link scrollto" href="#team">Nuestros Talentos</a></li>
                   <li><a className="nav-link scrollto" href="#clients">Marcas</a></li>
-                  <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
+                  {/* <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
                     <ul>
                       <li><a href="#">Deep Drop Down 1</a></li>
                       <li><a href="#">Deep Drop Down 2</a></li>
@@ -49,12 +66,12 @@ const Navbar = () => {
                       <li><a href="#">Deep Drop Down 4</a></li>
                       <li><a href="#">Deep Drop Down 5</a></li>
                     </ul>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li><i className="nav-link scrollto"></i> <Link to="login">¡Únete!</Link></li>
 
-              
+
               {/* <li><a className="nav-link scrollto " href="#portfolio">Nuestros perfiles</a></li>
                 <li><a className="nav-link scrollto" href="#clients">Nuestros clientes</a></li> */}
               <li><a className="nav-link scrollto" href="#contact">Contacto</a></li>
