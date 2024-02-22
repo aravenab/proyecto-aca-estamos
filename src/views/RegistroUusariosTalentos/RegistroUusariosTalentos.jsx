@@ -31,16 +31,16 @@ export default function RegistroUusariosTalentos() {
                       <div className="row">
                           <div className="col-6 col-sm-6 mb-3">
                               <label className="col-12 form-label" htmlFor="name">Nombre</label>
-                              <input className="form-control" id="name" type="text" placeholder="Nombre" />
+                              <input className="form-control" id="name" type="text" placeholder="Nombre" required/>
                               <div className="invalid-feedback"> Porfavor, tu nombre</div>
                             <div className='valid-feedback'> Gracias por ingresar tu nopmbre </div>
                           </div>
                           {/* <!-- formulario de contacto-email --> */}
                           <div className="col-6 col-sm-6 mb-3">
                               <label className="form-label" htmlFor="email">Email</label>
-                              <input className="form-control" id="email" type="email" placeholder="Email" />
-                              <div className="invalid-feedback"> Porfavor, tu Email</div>
-                            <div className='valid-feedback'> Gracias por ingresa tu Email</div>
+                              <input className="form-control" id="email" type="email" placeholder="Email" required/>
+                              <div className="invalid-feedback"> Porfavor,ingresa tu Email</div>
+                            <div className='valid-feedback'> Gracias por ingresar tu Email</div>
                           </div>
                       </div>
                       {/* <!-- formulario de contacto-rut --> */}
@@ -94,7 +94,7 @@ export default function RegistroUusariosTalentos() {
                               <input className="form-control" type="file" id="formFile" />
                           </div>
                           <div className="col-6 mb-3">
-                              <label htmlFor="cv" className="form-label">Currículum Vitae en pdf o Word</label>
+                              <label htmlFor="cv" className="form-label">Curriculum Vitae en pdf o Word</label>
                               <input className="form-control" type="file" id="cv" />
                           </div>
                       </div>
