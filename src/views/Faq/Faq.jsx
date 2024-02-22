@@ -37,7 +37,7 @@ export default function Faq() {
                   <div className="accordion-item">
                       <h2 className="accordion-header">
                           <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                              <strong> ¿Cómo puedo hacer para enviarles mis datos por si sale un trabajo para mí? </strong>
+                              <strong> ¿Cómo puedo enviarles mis datos para esperar alguna oferta de trabajo? </strong>
                           </button>
                       </h2>
                       <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
@@ -76,7 +76,7 @@ export default function Faq() {
                   <div className="accordion-item">
                       <h2 className="accordion-header">
                           <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-                              <strong>¿Cómo puedo encontrar trabajo rapido?</strong>
+                              <strong>¿Cómo puedo encontrar trabajo rápido?</strong>
                           </button>
                       </h2>
                       <div id="panelsStayOpen-collapseFive" className="accordion-collapse collapse">

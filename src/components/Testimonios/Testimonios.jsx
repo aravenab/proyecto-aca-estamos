@@ -45,7 +45,7 @@ const Testimonios = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>Testimonios</h2>
-            <p>A continuación, encontrarás testimonios de nuestros usuarios que han experimentado de primera mano la calidad y eficacia de nuestros servicios. Su satisfacción es nuestra mayor recompensa y estamos orgullosos de compartir sus palabras con todos ustedes.</p>
+            <p style={{textAlign: 'justify'}}>A continuación, encontrarás testimonios de nuestros usuarios que han experimentado de primera mano la calidad y eficacia de nuestros servicios. Su satisfacción es nuestra mayor recompensa y estamos orgullosos de compartir sus palabras con todos ustedes.</p>
           </div>
 
           <div className="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -55,13 +55,12 @@ const Testimonios = () => {
                 <div className="testimonial-item">
                   <p>
                     <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Regístrarme en "Acá Estamos" ha sido una experiencia increíble. No solo he encontrado oportunidades laborales cerca de mi hogar en la comuna de Renca, sino que también he descubierto un ambiente de trabajo cálido y acogedor. Gracias a esta plataforma, he podido encontrar un empleo que se ajusta perfectamente a mis necesidades y horarios. ¡Definitivamente recomendaría "Acá Estamos" a todas las personas que buscan una oportunidad laboral cercana y satisfactoria en la comuna de Renca
-
+                    Registrarme en "Acá Estamos" ha sido una experiencia increíble. No solo he encontrado oportunidades laborales cerca de mi hogar en la comuna de Renca, sino que también he descubierto un ambiente de trabajo cálido y acogedor. Gracias a esta plataforma, he podido encontrar un empleo que se ajusta perfectamente a mis necesidades y horarios. ¡Definitivamente recomendaría "Acá Estamos" a todas las personas que buscan una oportunidad laboral cercana y satisfactoria en la comuna de Renca.
                     <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                   <img src="assets/img/testimonials/testimonials-1.jpg" className="testimonial-img" alt="" />
                   <h3>Saul Desvarieux</h3>
-                  <h4>Asistente logistica</h4>
+                  <h4>Asistente de logística</h4>
                 </div>
               </div>
 
@@ -70,7 +69,6 @@ const Testimonios = () => {
                   <p>
                     <i className="bx bxs-quote-alt-left quote-icon-left"></i>
                     Trabajar cerca de casa ha sido una bendición para mí. No solo puedo evitar el tráfico y el estrés de los desplazamientos largos, sino que también puedo disfrutar de más tiempo con mi familia. Puedo levantarme un poco más tarde por las mañanas y tener desayuno en casa antes de comenzar mi jornada laboral. Además, si surge algún imprevisto o emergencia, puedo estar en casa en cuestión de minutos. Esto me brinda una tranquilidad y flexibilidad que no tenía antes. Estoy realmente agradecido por tener la oportunidad de trabajar cerca de casa.
-
                     <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                   <img src="assets/img/testimonials/testimonials-2.jpg" className="testimonial-img" alt="" />
@@ -103,7 +101,7 @@ const Testimonios = () => {
                   </p>
                   <img src="assets/img/testimonials/testimonials-4.jpg" className="testimonial-img" alt="" />
                   <h3>Matt Brandon</h3>
-                  <h4>Guardiar</h4>
+                  <h4>Guardia</h4>
                 </div>
               </div>
 
@@ -111,7 +109,7 @@ const Testimonios = () => {
                 <div className="testimonial-item">
                   <p>
                     <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Regístrarme en "Acá Estamos" ha sido una experiencia increíble. No solo he encontrado oportunidades laborales cerca de mi hogar en la comuna de Renca, sino que también he descubierto un ambiente de trabajo cálido y acogedor. Gracias a esta plataforma, he podido encontrar un empleo que se ajusta perfectamente a mis necesidades y horarios. ¡Definitivamente recomendaría "Acá Estamos" a todas las personas que buscan una oportunidad laboral cercana y satisfactoria en la comuna de Renca
+                    Registrarme en "Acá Estamos" ha sido una experiencia increíble. No solo he encontrado oportunidades laborales cerca de mi hogar en la comuna de Renca, sino que también he descubierto un ambiente de trabajo cálido y acogedor. Gracias a esta plataforma, he podido encontrar un empleo que se ajusta perfectamente a mis necesidades y horarios. ¡Definitivamente recomendaría "Acá Estamos" a todas las personas que buscan una oportunidad laboral cercana y satisfactoria en la comuna de Renca
 
                     <i className="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>

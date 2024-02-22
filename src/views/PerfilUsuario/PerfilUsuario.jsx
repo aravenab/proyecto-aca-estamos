@@ -137,7 +137,7 @@ export default function PerfilUsuario() {
                                 <div className="col-12">
                                     <button type="button" className="btn btn-warning rounded-5 align-self-center mt-3" id="subirCurriculum">(+)
                                         Subir
-                                        Curriculum</button>
+                                        Currículum</button>
                                 </div>
                             </div>
                         </div>
