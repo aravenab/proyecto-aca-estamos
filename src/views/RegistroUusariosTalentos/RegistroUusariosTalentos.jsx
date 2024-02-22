@@ -32,11 +32,15 @@ export default function RegistroUusariosTalentos() {
                           <div className="col-6 col-sm-6 mb-3">
                               <label className="col-12 form-label" htmlFor="name">Nombre</label>
                               <input className="form-control" id="name" type="text" placeholder="Nombre" />
+                              <div className="invalid-feedback"> Porfavor, tu nombre</div>
+                            <div className='valid-feedback'> Gracias por ingresar tu nopmbre </div>
                           </div>
                           {/* <!-- formulario de contacto-email --> */}
                           <div className="col-6 col-sm-6 mb-3">
                               <label className="form-label" htmlFor="email">Email</label>
                               <input className="form-control" id="email" type="email" placeholder="Email" />
+                              <div className="invalid-feedback"> Porfavor, tu Email</div>
+                            <div className='valid-feedback'> Gracias por ingresa tu Email</div>
                           </div>
                       </div>
                       {/* <!-- formulario de contacto-rut --> */}
