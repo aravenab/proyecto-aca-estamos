@@ -21,7 +21,10 @@ const Navbar = () => {
       <header id="header" className="fixed-top d-flex align-items-center">
         <div className="container d-flex align-items-center">
           <div className="logo me-auto mt-4"  >
+          <Link to="/" className="btn-get-started scrollto ms-4">
             <img src={logoAca} alt=" " style={{ height: '100rem' }} />
+            </Link>
+            
             {/* Uncomment below if you prefer to use an image logo */}
             {/* <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
           </div>
