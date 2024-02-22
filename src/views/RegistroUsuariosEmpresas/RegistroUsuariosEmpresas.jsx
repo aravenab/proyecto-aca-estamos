@@ -23,10 +23,10 @@ const formEnviado = () =>{
 
                         </div>
                           <div className="col-3">
-                              <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Registrate como TALENTO</Link>
+                              <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Regístrate como TALENTO</Link>
                           </div>
                           <div className="col-3">
-                              <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registrate como EMPRESA</Link>
+                              <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Regístrate como EMPRESA</Link>
                           </div>
                           <div className="col-3">
                             
@@ -42,7 +42,7 @@ const formEnviado = () =>{
                         <div className="col-6 col-sm-6 mb-3">
                             <label className="form-label" htmlFor="email">Email Corporativo</label>
                             <input className="form-control" id="email" type="email" placeholder="Email corporativo" required/>
-                            <div className="invalid-feedback"> Porfavor, ingresa el Email corporativo</div>
+                            <div className="invalid-feedback"> Por favor, ingresa el Email corporativo</div>
                             <div className='valid-feedback'> Email corporativo ingresado correctamente </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const formEnviado = () =>{
                         <div className="col-6 col-sm-6 mb-3">
                             <label className="col-12 form-label" htmlFor="giro">Giro o rubro</label>
                             <input className="form-control" id="giro" type="text" placeholder="Giro o rubro"required />
-                            <div className="invalid-feedback"> Porfavor, ingresa el Giro o rubro</div>
+                            <div className="invalid-feedback"> Por favor, ingresa el Giro o rubro</div>
                             <div className='valid-feedback'> Gracias por ingresar el Giro o rubro </div>
                         </div>
                     </div>
@@ -84,14 +84,14 @@ const formEnviado = () =>{
                             </div>
                         </div>
                         <div className="col-6">
-                            <label className="col-12 form-label" htmlFor="contratar">¿Cuantas personas piensas contratar?</label>
+                            <label className="col-12 form-label" htmlFor="contratar">¿Cuántas personas necesitas contratar?</label>
                             <input className="form-control" id="contratar" type="number" placeholder="Nº de colaboradores que buscas" />
                         </div>
                     </div>
                     
                     <div className="mb-3">
-                        <label className="form-label" htmlFor="acerca">Cuentanos más acerca de tu empresa</label>
-                        <textarea className="form-control" id="acerca" type="text" placeholder="Cuentanos más acerca de tu empresa" style={{ height: '10rem' }}></textarea>
+                        <label className="form-label" htmlFor="acerca">Cuéntanos más acerca de tu empresa</label>
+                        <textarea className="form-control" id="acerca" type="text" placeholder="Cuéntanos más acerca de tu empresa" style={{ height: '10rem' }}></textarea>
                     </div>
                     <div className="d-grid">
                         <button  onClick={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>

@@ -15,27 +15,27 @@ const UneteANosotros = () => {
             iconClass="bx bxl-dribbble text-info"
             title="1. Regístrate como Talento o Empresa"
             link=""
-            description=" Si eres una empresa y estás buscando talento, puedes registrarte en Acá Estamos como empresa. Solo necesitas completar el formulario de registro en nuestra página web y seguir los pasos indicados. Si eres un talento en busca de oportunidades laborales, también puedes registrarte en nuestra plataforma como talento. ¡Es muy sencillo! Solo sigue los pasos de registro y completa tu perfil. "
+            description="Si tienes una empresa y estás buscando talento, puedes registrarte en Acá Estamos como empresa. Solo necesitas completar el formulario de registro en nuestra página web y seguir los pasos indicados. Si eres un talento en busca de oportunidades laborales, también puedes registrarte en nuestra plataforma como talento. ¡Es muy sencillo! Solo sigue los pasos de registro y completa tu perfil. "
           />
           <UneteItem
             iconClass="bx bx-file text-info"
-            title="2. Presentate ante el mundo"
+            title="2. Preséntate ante el mundo"
             link=""
-            description="Podrás ver otros perfiles para inspirarte y destacar."
+            description="Podrás ver otros perfiles para inspirarte y destacar. Llena todos los campos de información y procura describirte de una manera precisa para que podamos conocerte mejor."
             delay={100}
           />
           <UneteItem
             iconClass="bx bx-tachometer text-info"
             title="3. Espera el llamado"
             link=""
-            description="Las empresas te encontrarán y contactarán."
+            description="Las empresas te encontrarán, evaluarán tu perfil y te contactarán para continuar con el proceso de contratación."
             delay={200}
           />
           <UneteItem
             iconClass="bx bx-world text-info"
             title="4. ¡Disfruta!"
             link=""
-            description="Trabajando en tu propia comuna"
+            description="Trabajando en tu propia comuna."
             delay={300}
           />
         </div>

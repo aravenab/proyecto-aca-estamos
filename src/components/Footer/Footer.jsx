@@ -12,7 +12,7 @@ export default function Footer() {
                 <h3>Acá Estamos</h3>
                 <p>
                   Municipalidad de Renca <br />
-                  Calle Blanco Encalada 1335 8650000 Renca Región Metropolitana de Santiago<br /><br />
+                  Calle Blanco Encalada 1335 8650000, Renca. Región Metropolitana de Santiago<br /><br />
                   <strong>Phone:</strong> +562 0000000<br />
                   <strong>Email:</strong> info@example.com<br />
                 </p>
@@ -27,10 +27,10 @@ export default function Footer() {
             </div>
 
             <div className="col-lg-4 col-md-6 footer-links">
-              <h4>Nuestras Paginas</h4>
+              <h4>Nuestras Páginas</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quienes somos</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonnios</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quiénes somos</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonios</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestras empresas</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros talentos</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros aliados</Link></li>
@@ -40,8 +40,8 @@ export default function Footer() {
             <div className="col-lg-4 col-md-12 footer-links">
               <h4>Únete</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Registrate como empresa</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Registrate como talento</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como empresa</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como talento</Link></li>
                 
               </ul>
             </div>

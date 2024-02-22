@@ -15,7 +15,7 @@ const CartasTalentos = () => {
 
           <div className="section-title" data-aos="fade-up">
             <h2>Nuestros Talentos</h2>
-            <p>En "Acá Estamos" tenemos una gran variedad de talentos registrados en nuestra plataforma. Contamos con expertos en marketing digital, desarrolladores de software, diseñadores gráficos, profesionales de recursos humanos y muchos más. Cada uno de ellos tiene habilidades y experiencia únicas que los hacen destacar en sus áreas.</p>
+            <p style={{textAlign: 'justify'}}>En "Acá Estamos" tenemos una gran variedad de talentos registrados en nuestra plataforma. Contamos con expertos en marketing digital, desarrolladores de software, diseñadores gráficos, profesionales de recursos humanos y muchos más. Cada uno de ellos tiene habilidades y experiencia únicas que los hacen destacar en sus áreas.</p>
           </div>
 
           <div className="row">

@@ -39,7 +39,7 @@ const CartasEmpresas = () => {
 
       <div className="section-title" data-aos="fade-up">
         <h2>Nuestras Empresas</h2>
-        <p>Contamos con una lista de empresas registradas que están buscando personal talentoso. Son algunas de las empresas destacadas en nuestra comunidad. Estas empresas están ansiosas por encontrar nuevos talentos y ofrecerles oportunidades laborales emocionantes. ¡Únete a "Acá Estamos" y descubre las increíbles oportunidades que estas empresas tienen para ofrecerte!</p>
+        <p style={{textAlign: 'justify'}}>Contamos con una vasta lista de empresas destacadas en nuestra comunidad que se han registrado que están buscando personal talentoso. Estas empresas están ansiosas por encontrar nuevos talentos y ofrecerles oportunidades laborales emocionantes. ¡Únete a "Acá Estamos" y descubre las increíbles oportunidades que estas empresas tienen para ofrecerte!</p>
       </div>
 
       <div className="row">
