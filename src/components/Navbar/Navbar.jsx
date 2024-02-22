@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
 import '../../assets/assets_index/css/style.css'
 import { Link } from 'react-router-dom';
@@ -16,6 +16,8 @@ const Navbar = () => {
       popoverList.forEach(popover => popover.dispose());
     };
   }, []); // [] como segundo argumento para que solo se ejecute una vez al montar el componente
+
+
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
