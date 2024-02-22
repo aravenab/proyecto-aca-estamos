@@ -41,7 +41,7 @@ export default function Footer() {
               <h4>Únete</h4>
               <ul>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como empresa</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como talento</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="/registro_usuarios_talentos">Regístrate como talento</Link></li>
                 
               </ul>
             </div>
