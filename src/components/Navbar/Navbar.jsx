@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
 import '../../assets/assets_index/css/style.css'
 import { Link } from 'react-router-dom';
@@ -16,12 +16,17 @@ const Navbar = () => {
       popoverList.forEach(popover => popover.dispose());
     };
   }, []); // [] como segundo argumento para que solo se ejecute una vez al montar el componente
+
+
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
         <div className="container d-flex align-items-center">
           <div className="logo me-auto mt-4"  >
+          <Link to="/" className="btn-get-started scrollto ms-4">
             <img src={logoAca} alt=" " style={{ height: '100rem' }} />
+            </Link>
+            
             {/* Uncomment below if you prefer to use an image logo */}
             {/* <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
           </div>
@@ -57,7 +62,7 @@ const Navbar = () => {
                   <li><a className="nav-link scrollto" href="#testimonials">Testimonios</a></li>
                   <li><a className="nav-link scrollto" href="#portfolio">Nuestras Empresas</a></li>
                   <li><a className="nav-link scrollto" href="#team">Nuestros Talentos</a></li>
-                  <li><a className="nav-link scrollto" href="#clients">Marcas</a></li>
+                  <li><a className="nav-link scrollto" href="#clients">Nuestras Aliados</a></li>
                   {/* <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
                     <ul>
                       <li><a href="#">Deep Drop Down 1</a></li>
@@ -79,10 +84,10 @@ const Navbar = () => {
             <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>{/* .navbar */}
           <div className="header-social-links d-flex align-items-center">
-            <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>
-            <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
-            <a href="#" className="instagram"><i className="bi bi-instagram"></i></a>
-            <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/Muni_Renca/with_replies" className="twitter"><i className="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/MuniRenca/" className="facebook"><i className="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/muni_renca/" className="instagram"><i className="bi bi-instagram"></i></a>
+            <a href="https://cl.linkedin.com/company/municipalidad-de-renca" className="linkedin"><i className="bi bi-linkedin"></i></a>
           </div>
         </div>
       </header>

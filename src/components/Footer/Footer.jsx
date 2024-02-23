@@ -12,25 +12,25 @@ export default function Footer() {
                 <h3>Acá Estamos</h3>
                 <p>
                   Municipalidad de Renca <br />
-                  Calle Blanco Encalada 1335 8650000, Renca. Región Metropolitana de Santiago<br /><br />
-                  <strong>Phone:</strong> +562 0000000<br />
-                  <strong>Email:</strong> info@example.com<br />
+                  Calle Blanco Encalada 1335 8650000 Renca Región Metropolitana de Santiago<br /><br />
+                  <strong>Phone:</strong>(2) 2685 6600<br />
+                  <strong>Email:</strong> contacto@renca.cl <br />
                 </p>
                 <div className="social-links mt-3">
-                  <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
-                  <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
-                  <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
-                  <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
-                  <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+                  <a href="https://twitter.com/Muni_Renca/with_replies" className="twitter"><i className="bx bxl-twitter"></i></a>
+                  <a href="https://www.facebook.com/MuniRenca/" className="facebook"><i className="bx bxl-facebook"></i></a>
+                  <a href="https://www.instagram.com/muni_renca/" className="instagram"><i className="bx bxl-instagram"></i></a>
+                  <a href="https://renca.cl/" className="google-plus"><i className="bx bxl-skype"></i></a>
+                  <a href="https://cl.linkedin.com/company/municipalidad-de-renca" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6 footer-links">
-              <h4>Nuestras Páginas</h4>
+              <h4>Nuestras Paginas</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quiénes somos</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonios</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quienes somos</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonnios</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestras empresas</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros talentos</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros aliados</Link></li>
