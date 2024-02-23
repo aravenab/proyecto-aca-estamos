@@ -14,7 +14,7 @@ export default function Footer() {
                   Municipalidad de Renca <br />
                   Calle Blanco Encalada 1335 8650000 Renca Región Metropolitana de Santiago<br /><br />
                   <strong>Phone:</strong>(2) 2685 6600<br />
-                  <strong>Email:</strong> contacto@renca.cl <br />
+                  <strong>Email:</strong> contactorenca.cl<br />
                 </p>
                 <div className="social-links mt-3">
                   <a href="https://twitter.com/Muni_Renca/with_replies" className="twitter"><i className="bx bxl-twitter"></i></a>
@@ -26,25 +26,30 @@ export default function Footer() {
               </div>
             </div>
 
+
+            <div className="col-lg-4 col-md-12 footer-links">
+              <h4>Únete</h4>
+              <ul>
+                <li><i className="bx bx-chevron-right"></i> <Link to="/registro_usuarios_empresas">Registrate como empresa</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="/registro_usuarios_talentos">Registrate como talento</Link></li>
+                
+              </ul>
+            </div>
+
+
+
             <div className="col-lg-4 col-md-6 footer-links">
               <h4>Nuestras Páginas</h4>
               <ul>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">¿Quiénes somos?</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonios</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestras empresas</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros talentos</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="perfil_usuario">Nuestros talentos</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros aliados</Link></li>
               </ul>
             </div>
 
-            <div className="col-lg-4 col-md-12 footer-links">
-              <h4>Únete</h4>
-              <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como empresa</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como talento</Link></li>
-                
-              </ul>
-            </div>
+           
 
             {/* <div className="col-lg-4 col-md-6 footer-newsletter">
               <h4>Boletín informativo</h4>
