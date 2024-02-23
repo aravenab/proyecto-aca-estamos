@@ -22,7 +22,7 @@ export default function Login() {
                             <div className="input-group-text bg-$orange-500">
                                 <img src={logoUser2} alt="icono_nombredeusuario" style={{ height: '1rem' }} />
                             </div>
-                            <input className="form-control" type="text" placeholder="Nombre de usuario" />
+                            <input className="form-control" type="text" placeholder="Correo electrónico" />
                         </div>
                         <div className="input-group mt-1">
                             {/* style={{ backgroundColor: '#FF571E' }} */}
