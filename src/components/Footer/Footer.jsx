@@ -40,8 +40,8 @@ export default function Footer() {
             <div className="col-lg-4 col-md-12 footer-links">
               <h4>Únete</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="/registro_usuarios_empresas">Registrate como empresa</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="/registro_usuarios_talentos">Registrate como talento</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como empresa</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Regístrate como talento</Link></li>
                 
               </ul>
             </div>

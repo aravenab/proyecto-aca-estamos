@@ -25,7 +25,7 @@ export default function Login() {
                             <input className="form-control" type="text" placeholder="Nombre de usuario" />
                         </div>
                         <div className="input-group mt-1">
-                        {/* style={{ backgroundColor: '#FF571E' }} */}
+                            {/* style={{ backgroundColor: '#FF571E' }} */}
                             <div className="input-group-text bg-$orange-500">
                                 <img src={logCont} alt="icono_contraseña" style={{ height: '1rem' }} />
                             </div>
@@ -35,11 +35,24 @@ export default function Login() {
                     <div className='text-start'>
                         <Link to="" className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}>¿Ha olvidado su contraseña?</Link>
                     </div>
-                    <div className="btn btn-info text-white w-100 mt-4">Login</div>
-                    <div className="btn btn-info text-white w-100 mt-1">Solo quiero mirar</div>
+                    <div className="btn btn-info text-white w-100 mt-4">
+                        <Link to="/perfil_usuario">
+                            Login
+                        </Link>
+                    </div>
+                    {/* <div className="btn btn-info text-white w-100 mt-1">Solo quiero mirar</div> */}
                     <div className="d-flex gap-1 justify-content-center mt-1">
                         <div>¿No tienes una cuenta?</div>
-                        <i className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}><Link to="/registro">Regístrese</Link></i>
+                        {/* <i className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}><Link to="/registro">Regístrese</Link></i> */}
+                    </div>
+                    {/* <!-- botones talentos/empresas --> */}
+                    <div className="row">
+                        <div className="col-6">
+                            <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Regístrate como TALENTO</Link>
+                        </div>
+                        <div className="col-6">
+                            <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Regístrate como EMPRESA</Link>
+                        </div>
                     </div>
                     {/* <div className="row">
                         <div className="col-6">
@@ -49,7 +62,7 @@ export default function Login() {
                             <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registro como EMPRESA</Link>
                         </div>
                     </div> */}
-                    
+
                     <div className="py-3">
                         <div className="border-bottom text-center" style={{ height: '0.9rem' }}>
                             <span className="bg-white px-3">o</span>

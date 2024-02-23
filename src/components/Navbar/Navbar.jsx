@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css'; // Asumiendo que estás importando un archivo CSS para estilos
 import '../../assets/assets_index/css/style.css'
 import { Link } from 'react-router-dom';
@@ -16,12 +16,17 @@ const Navbar = () => {
       popoverList.forEach(popover => popover.dispose());
     };
   }, []); // [] como segundo argumento para que solo se ejecute una vez al montar el componente
+
+
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
         <div className="container d-flex align-items-center">
           <div className="logo me-auto mt-4"  >
+          <Link to="/" className="btn-get-started scrollto ms-4">
             <img src={logoAca} alt=" " style={{ height: '100rem' }} />
+            </Link>
+            
             {/* Uncomment below if you prefer to use an image logo */}
             {/* <a href="index.html"><img src="assets/img/logo.png" alt="" className="img-fluid"></a>*/}
           </div>
