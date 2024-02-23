@@ -57,7 +57,7 @@ const Navbar = () => {
                   <li><a className="nav-link scrollto" href="#testimonials">Testimonios</a></li>
                   <li><a className="nav-link scrollto" href="#portfolio">Nuestras Empresas</a></li>
                   <li><a className="nav-link scrollto" href="#team">Nuestros Talentos</a></li>
-                  <li><a className="nav-link scrollto" href="#clients">Marcas</a></li>
+                  <li><a className="nav-link scrollto" href="#clients">Nuestras Aliados</a></li>
                   {/* <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
                     <ul>
                       <li><a href="#">Deep Drop Down 1</a></li>
@@ -79,10 +79,10 @@ const Navbar = () => {
             <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>{/* .navbar */}
           <div className="header-social-links d-flex align-items-center">
-            <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>
-            <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
-            <a href="#" className="instagram"><i className="bi bi-instagram"></i></a>
-            <a href="#" className="linkedin"><i className="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/Muni_Renca/with_replies" className="twitter"><i className="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/MuniRenca/" className="facebook"><i className="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/muni_renca/" className="instagram"><i className="bi bi-instagram"></i></a>
+            <a href="https://cl.linkedin.com/company/municipalidad-de-renca" className="linkedin"><i className="bi bi-linkedin"></i></a>
           </div>
         </div>
       </header>

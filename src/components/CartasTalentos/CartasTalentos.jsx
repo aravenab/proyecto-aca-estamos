@@ -20,8 +20,8 @@ const CartasTalentos = () => {
 
           <div className="row">
             <CartasTalentosItem nombre_Talento={"Walter Gonzalez"} trabajo_Talento={"Constructor"} imgSrc={Team1}/>
-            <CartasTalentosItem nombre_Talento={"Sarah Jhonson"} trabajo_Talento={"Developer"} imgSrc={Team2}/>
-            <CartasTalentosItem nombre_Talento={"William Anderson"} trabajo_Talento={"Marketing"} imgSrc={Team3}/>
+            <CartasTalentosItem nombre_Talento={"Sarah Jhonson"} trabajo_Talento={"Jadinero"} imgSrc={Team2}/>
+            <CartasTalentosItem nombre_Talento={"William Anderson"} trabajo_Talento={"Empresario"} imgSrc={Team3}/>
           </div>
         </div>
       </section>
