@@ -5,10 +5,12 @@ import logoGoo from '../../assets/images/iconos/logo_google.png'
 import logoUser2 from '../../assets/images/iconos/logo_usuario2.png'
 import Navbar from '../../components/Navbar/Navbar'
 import { Link } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer'
 
 export default function Login() {
     return (
         <div>
+            <Navbar/>
             <div className="d-flex justify-content-center align-items-center vh-100">  {/*<!----------------------------LOGIN--> */}
                 <div className="bg-white p-5 rounded-5 text-secondary" style={{ width: '25rem' }}>
                     <div className="d-flex justify-content-center">
@@ -75,6 +77,7 @@ export default function Login() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

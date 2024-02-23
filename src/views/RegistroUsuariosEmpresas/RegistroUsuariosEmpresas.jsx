@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 
 export default function RegistroUsuariosEmpresas() {
@@ -26,6 +28,7 @@ const formEnviado = () =>{
 
   return (
     <div>
+        <Navbar />
             <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
                 <form className="container position-relative needs-validation" noValidate>
                     <h1>Registro como EMPRESA</h1>
@@ -132,6 +135,7 @@ const formEnviado = () =>{
                         <h3>{formularioEnviado ? "Has enviado exitosamente el formulario" : "No has enviado el Formulario"}</h3>
                     </div>
                 </form>
+                <Footer/>
             </div>
             <img src="" className="img-fluid mx-auto d-block mb-2" alt="" />
             <script>

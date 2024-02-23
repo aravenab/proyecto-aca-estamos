@@ -1521,7 +1521,7 @@ section {
   color: #576971;
 }
 
-#footer .footer-top .social-links a {
+/* #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #e9ecee;
@@ -1534,7 +1534,7 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.3s;
-}
+} */
 
 #footer .footer-top .social-links a:hover {
   background: #009cea;
