@@ -9,7 +9,7 @@ export default function RegistroUusariosTalentos() {
     <Navbar/>
       <div>
           <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
-              <form className="container position-relative">
+              <form className="container position-relative was-validated">
                       <div className="row">
                         <div className="col-3">
 
@@ -105,11 +105,11 @@ export default function RegistroUusariosTalentos() {
                       </div>
                       {/* <!-- formulario de contacto-boton --> */}
                       <div className="d-grid">
-                          <button className="btn btn-primary btn-lg m-4" type="submit">Enviar</button>
+                          <button className="btn btn-primary btn-lg m-4" type="submit" id=''>Enviar</button>
                       </div>
                   </div>
               </form>
-              <img src="" className="img-fluid mx-auto d-block mb-2" alt="" />
+              <img src="" className="img-fluid mx-auto d-block mb-2" disabled alt="" />
           </div>
       </div>
       <Footer/>

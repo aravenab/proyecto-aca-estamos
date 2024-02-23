@@ -6,17 +6,27 @@ export default function RegistroUsuariosEmpresas() {
 
 // declarar state
 const[enviar, setEnviar] = useState(false)
+const [formularioEnviado, setFormularioEnviado] = useState(false);
+
+const enviarFormulario = () => {
+    setFormularioEnviado(true);
+};
 
 const formEnviado = () =>{
     setEnviar( preEnvio => !preEnvio);
-
 };
+
 
 
   return (
         <div>
             <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
-                <form className="container position-relative needs-validation" noValidate>
+                <form className="container position-relative needs-validation" noValidate
+          onSubmit={(e) => {
+            
+            enviarFormulario();
+          }}
+        >
                     <h1>Registro como EMPRESA</h1>
                     <div className="row">
                         <div className="col-3">
@@ -95,7 +105,7 @@ const formEnviado = () =>{
                     </div>
                     <div className="d-grid">
                         <button  onClick={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>
-                        <h3>{enviar ? "Has enviado exitosamente el formulario":"No has enviado el Formulario" }</h3>
+                        <h3>{formularioEnviado ? "Has enviado exitosamente el formulario" : "No has enviado el Formulario"}</h3>
                     </div>
                 </form>
             </div>
