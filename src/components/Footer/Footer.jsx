@@ -27,10 +27,10 @@ export default function Footer() {
             </div>
 
             <div className="col-lg-4 col-md-6 footer-links">
-              <h4>Nuestras Paginas</h4>
+              <h4>Nuestras Páginas</h4>
               <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Quienes somos</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonnios</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">¿Quiénes somos?</Link></li>
+                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonios</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestras empresas</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros talentos</Link></li>
                 <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros aliados</Link></li>
