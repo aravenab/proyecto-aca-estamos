@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 
 export default function RegistroUsuariosEmpresas() {
@@ -19,15 +21,21 @@ const enviarFormulario = () => {
 };
 
 const formEnviado = () =>{
-    setEnviar( preEnvio => !preEnvio);
+    setFormularioEnviado( preEnvio => !preEnvio);
 };
 
 
 
   return (
+    <>
+    <Navbar/>
     <div>
+        
             <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
-                <form className="container position-relative needs-validation" noValidate>
+                <form className="container position-relative needs-validation" noValidate  onSubmit={(e) => {
+              e.preventDefault(); // Evita que el formulario se envíe por defecto
+              formEnviado();
+            }}>
                     <h1>Registro como EMPRESA</h1>
                     <div className="row">
                         <div className="col-3">
@@ -128,33 +136,39 @@ const formEnviado = () =>{
                     </div>
 
                     <div className="d-grid">
-                        <button  onClick={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>
-                        <h3>{formularioEnviado ? "Has enviado exitosamente el formulario" : "No has enviado el Formulario"}</h3>
+                        <button  onSubmit={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>
+                        <h3>{formularioEnviado
+                  ? "Has enviado exitosamente el formulario"
+                  : "No has enviado el Formulario"}</h3>
                     </div>
                 </form>
+                
             </div>
+           
             <img src="" className="img-fluid mx-auto d-block mb-2" alt="" />
             <script>
-                {(() => {
-                    'use strict';
+          {(() => {
+            'use strict';
 
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    const forms = document.querySelectorAll('.needs-validation');
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation');
 
-                    // Loop over them and prevent submission
-                    Array.from(forms).forEach(form => {
-                        form.addEventListener('submit', event => {
-                            if (!form.checkValidity()) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                                form.classList.add('was-validated');
-                            }
-                        }, false);
-                    });
-                })()}
-            </script>
+            // Loop over them and prevent submission
+            Array.from(forms).forEach((form) => {
+              form.addEventListener('submit', (event) => {
+                if (!form.checkValidity()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  form.classList.add('was-validated');
+                }
+              }, false);
+            });
+          })()}
+        </script>
 
         </div>
+        <Footer/>
+        </>
     )
 }
 
