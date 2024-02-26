@@ -4,6 +4,7 @@ import '../../assets/assets_index/css/style.css'
 import Porta1 from "../../assets/img/portfolio/portfolio-1.jpg"
 import Porta2 from "../../assets/img/portfolio/portfolio-2.jpg"
 import Porta3 from "../../assets/img/portfolio/portfolio-3.jpg"
+import { Isotope } from "../../assets/assets_index/vendor/isotope-layout/isotope.pkgd"
 
 const CartasEmpresas = () => {
 
