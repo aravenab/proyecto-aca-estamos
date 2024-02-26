@@ -38,12 +38,12 @@ const Navbar = () => {
                     <div className="input-group">
                       <input type="search" placeholder="Talentos/empresas..."
                         aria-describedby="button-addon1" className="form-control border-0 rounded-5 bg-light" />
-                      <div className="input-group-append">
+                      {/* <div className="input-group-append">
                         <button id="button-addon1" type="button" className="btn btn-link text-primary"
                           onClick="window.location.href='buscador1.html'">
                           <i className="bi bi-search"></i>
                         </button>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </form>

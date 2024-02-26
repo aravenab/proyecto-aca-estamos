@@ -6,6 +6,17 @@ import Porta2 from "../../assets/img/portfolio/portfolio-2.jpg"
 import Porta3 from "../../assets/img/portfolio/portfolio-3.jpg"
 
 const CartasEmpresas = () => {
+
+
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+  
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {

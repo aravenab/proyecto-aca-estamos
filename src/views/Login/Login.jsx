@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logUser from '../../assets/images/iconos/logo_usuario.png'
 import logCont from '../../assets/images/iconos/logo_contraseña.png'
 import logoGoo from '../../assets/images/iconos/logo_google.png'
@@ -8,6 +8,32 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer'
 
 export default function Login() {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            if (response.ok) {
+                console.log('Datos enviados correctamente');
+            } else {
+                console.error('Error al enviar los datos');
+            }
+        } catch (error) {
+            console.error('Error al enviar los datos:', error);
+        }
+    };
+
     return (
         <div>
             <Navbar/>
@@ -24,23 +50,28 @@ export default function Login() {
                             <div className="input-group-text bg-$orange-500">
                                 <img src={logoUser2} alt="icono_nombredeusuario" style={{ height: '1rem' }} />
                             </div>
-                            <input className="form-control" type="text" placeholder="Correo electrónico" />
+                            <input className="form-control" type="text" placeholder="Correo electrónico" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+
                         </div>
                         <div className="input-group mt-1">
                             {/* style={{ backgroundColor: '#FF571E' }} */}
                             <div className="input-group-text bg-$orange-500">
                                 <img src={logCont} alt="icono_contraseña" style={{ height: '1rem' }} />
                             </div>
-                            <input className="form-control" type="password" placeholder="Contraseña" />
+                            <input className="form-control" type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
                     </div>
                     <div className='text-start'>
                         <Link to="" className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}>¿Ha olvidado su contraseña?</Link>
                     </div>
-                    <div className="btn btn-info text-white w-100 mt-4">
-                        <Link to="/perfil_usuario">
-                            Login
-                        </Link>
+                    <div className="w-100 mt-4">
+                        <button className='btn btn-info text-white' onClick={handleSubmit}>
+                            {/* <Link to="/perfil_usuario">
+                               
+                            </Link> */}
+                             Login
+                        </button>
                     </div>
                     {/* <div className="btn btn-info text-white w-100 mt-1">Solo quiero mirar</div> */}
                     <div className="d-flex gap-1 justify-content-center mt-1">
