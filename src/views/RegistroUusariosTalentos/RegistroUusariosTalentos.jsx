@@ -9,8 +9,50 @@ export default function RegistroUusariosTalentos() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [rut, setRut] = useState('');
+    const[ name,setName ] = useState('');
+    const[ email,setEmail ] = useState('');
+
+
+
+
+
     const [formularioEnviado, setFormularioEnviado] = useState(false);
+
     
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:3000/crear_usuario_talento', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name , email , password, rut})
+            });
+
+            if (response.ok) {
+                console.log(`Datos enviados correctamente:
+                
+                Nombre: ${name}
+                Email: ${email}
+                Contraseña: ${password}
+                Rut: ${rut}
+               
+                `);
+                // agregar esto aqui arriba
+                //Tipo: ${kind}
+                //  Estado Civil: ${estado_civil}
+                //Cumpleaños: ${bday}
+                //Teléfono: ${phone_num}
+                //Mensaje del admin: ${adm_msg}
+            } else {
+                console.error('Error al enviar los datos');
+            }
+        } catch (error) {
+            console.error('Error al enviar los datos:', error);
+        }
+    };
 
     return (
         <>
@@ -40,14 +82,14 @@ export default function RegistroUusariosTalentos() {
                             <div className="row">
                                 <div className="col-6 col-sm-6 mb-3">
                                     <label className="col-12 form-label" htmlFor="name">Nombre</label>
-                                    <input className="form-control" id="name" type="text" placeholder="Nombre" required />
+                                    <input className="form-control" id="name" type="text" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} required />
                                     <div className="invalid-feedback"> Porfavor, tu nombre</div>
                                     <div className='valid-feedback'> Gracias por ingresar tu nopmbre </div>
                                 </div>
                                 {/* <!-- formulario de contacto-email --> */}
                                 <div className="col-6 col-sm-6 mb-3">
                                     <label className="form-label" htmlFor="email">Email</label>
-                                    <input className="form-control" id="email" type="email" placeholder="Email" required />
+                                    <input className="form-control" id="email" type="email" placeholder="Email"value={email} onChange={(e) => setEmail(e.target.value)} required />
                                     <div className="invalid-feedback"> Porfavor,ingresa tu Email</div>
                                     <div className='valid-feedback'> Gracias por ingresar tu Email</div>
                                 </div>
@@ -70,7 +112,7 @@ export default function RegistroUusariosTalentos() {
                             <div className="row">
                                 <div className="col-6 ">
                                     <label className="col-12 form-label" htmlFor="rut">Rut</label>
-                                    <input className="form-control" id="rut" type="number" placeholder="Rut" />
+                                    <input className="form-control" id="rut" type="number" placeholder="Rut" value={rut} onChange={(e) => setRut(e.target.value)} required />
                                 </div>
                                 {/* <!-- formulario de contacto-menu desplegable-estado civil --> */}
                                 <div className="col-6">
@@ -137,7 +179,7 @@ export default function RegistroUusariosTalentos() {
                             </div>
                             {/* <!-- formulario de contacto-boton --> */}
                             <div className="d-grid">
-                                <button className="btn btn-primary btn-lg m-4" type="submit">Enviar</button>
+                                <button className="btn btn-primary btn-lg m-4" type="submit" onClick={handleSubmit}>Enviar</button>
                             </div>
                         </div>
                     </form>
