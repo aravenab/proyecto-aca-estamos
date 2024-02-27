@@ -14,7 +14,7 @@ export default function BuscadorTalentos() {
     return (
         <div>
             <Navbar/>
-            <section className="section">
+            <section className="section mt-4">
                 <div className="container">
                     {/*--------------------------------------Filtros de arriba-*/}
                     <div className="justify-content-center row">
