@@ -8,6 +8,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
         <div className="container d-flex align-items-center">
+          {/* Logo */}
           <div className="logo me-auto mt-4">
             <Link to="/" className="btn-get-started scrollto ms-4">
               <img src={logoAca} alt=" " style={{ height: '100rem' }} />
@@ -31,7 +32,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                           type="button"
                           className="btn btn-link text-primary"
                           onClick={() => {
-                            window.location.href = 'buscador1.html';
+                            window.location.href = '/buscador_talentos';
                           }}
                         >
                           <i className="bi bi-search"></i>
