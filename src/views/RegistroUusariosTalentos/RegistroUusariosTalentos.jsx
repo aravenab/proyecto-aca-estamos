@@ -13,8 +13,8 @@ export default function RegistroUusariosTalentos() {
     const[ email,setEmail ] = useState('');
     const[ kind,setKind] = useState('Talento');
      const[ estado_civil,setEstado_civil ] = useState('');
-    // const[ email,setEmail ] = useState('');
-    // const[ email,setEmail ] = useState('');
+     const[ bday,setBday ] = useState('');
+    const[ phone_num,setPhone_num ] = useState('');
     const[ adm_msg,setAdm_msg ] = useState('En proceso de confirmación');
     
 
@@ -45,10 +45,12 @@ export default function RegistroUusariosTalentos() {
                 Contraseña: ${password}
                 Rut: ${rut}
                 Estado Civil: ${estado_civil}
-                
+                Fecha de Nacimiento: ${bday}
+                Teléfono: ${phone_num}
+
                 `);
-                // Cumpleaños: ${bday}
-                // Teléfono: ${phone_num}
+                // 
+                // 
                 // Mensaje del admin: ${adm_msg}
             } else {
                 console.error('Error al enviar los datos');
@@ -132,7 +134,7 @@ export default function RegistroUusariosTalentos() {
                             {/* <!-- formulario de contacto-fecha de nacimiento --> */}
                             <div className="col_one_third col_last c-azul">
                                 <label htmlFor="nacimiento">Fecha de nacimiento</label>
-                                <input type="date" id="nacimiento" name="nacimiento" className="sm-form-control" />
+                                <input type="date" id="nacimiento" name="nacimiento" className="sm-form-control" value={bday} onChange={(e) => setBday(e.target.value)}/>
                             </div>
                             {/* <!-- formulario de contacto- Edad y Número de Teléfono--> */}
                             <div className="row">
@@ -142,7 +144,7 @@ export default function RegistroUusariosTalentos() {
                                 </div>
                                 <div className="col-6 col-sm-6 mb-3">
                                     <label className="col-12 form-label" htmlFor="telefono">Número de Teléfono</label>
-                                    <input className="form-control" id="telefono" type="number" placeholder="Teléfono" />
+                                    <input className="form-control" id="telefono" type="number" placeholder="Teléfono" value={phone_num} onChange={(e) => setPhone_num(e.target.value)}/>
                                 </div>
                             </div>
                             {/* <!-- formulario de contacto-multiples Archivos para subir--> */}
