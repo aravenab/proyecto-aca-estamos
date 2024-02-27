@@ -7,6 +7,7 @@ import RegistroUsuariosEmpresas from "../views/RegistroUsuariosEmpresas/Registro
 import RegistroUusariosTalentos from "../views/RegistroUusariosTalentos/RegistroUusariosTalentos.jsx";
 import App from "../App.jsx";
 import Registro from '../views/Registro/Registro.jsx'
+import BuscadorTalentos from "../views/BuscadorTalentos/BuscadorTalentos.jsx";
 
 const router = createBrowserRouter([
     {path:"/", element: <App/>},
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     {path: "/registro", element: < Registro/>},
     {path: "/registro_usuarios_empresas", element: < RegistroUsuariosEmpresas/>},
     {path: "/registro_usuarios_talentos", element: < RegistroUusariosTalentos/>},
+    {path: "/buscador_talentos", element: < BuscadorTalentos/>},
      
 
 ]);

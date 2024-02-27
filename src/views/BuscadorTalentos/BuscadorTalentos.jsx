@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import "./BuscadorTalentos.css"
+import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 export default function BuscadorTalentos() {
 
@@ -10,6 +13,7 @@ export default function BuscadorTalentos() {
     };
     return (
         <div>
+            <Navbar/>
             <section className="section">
                 <div className="container">
                     {/*--------------------------------------Filtros de arriba-*/}
@@ -694,6 +698,7 @@ export default function BuscadorTalentos() {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </div>
     )
 }
