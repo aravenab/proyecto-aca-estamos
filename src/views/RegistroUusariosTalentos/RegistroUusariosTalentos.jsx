@@ -11,6 +11,12 @@ export default function RegistroUusariosTalentos() {
     const [rut, setRut] = useState('');
     const[ name,setName ] = useState('');
     const[ email,setEmail ] = useState('');
+    const[ kind,setKind] = useState('Talento');
+     const[ estado_civil,setEstado_civil ] = useState('');
+    // const[ email,setEmail ] = useState('');
+    // const[ email,setEmail ] = useState('');
+    const[ adm_msg,setAdm_msg ] = useState('En proceso de confirmación');
+    
 
 
 
@@ -28,24 +34,22 @@ export default function RegistroUusariosTalentos() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ name , email , password, rut})
+                body: JSON.stringify({kind, name , email , password, rut})
             });
 
             if (response.ok) {
                 console.log(`Datos enviados correctamente:
-                
+                Tipo: ${kind}
                 Nombre: ${name}
                 Email: ${email}
                 Contraseña: ${password}
                 Rut: ${rut}
-               
+                Estado Civil: ${estado_civil}
+                
                 `);
-                // agregar esto aqui arriba
-                //Tipo: ${kind}
-                //  Estado Civil: ${estado_civil}
-                //Cumpleaños: ${bday}
-                //Teléfono: ${phone_num}
-                //Mensaje del admin: ${adm_msg}
+                // Cumpleaños: ${bday}
+                // Teléfono: ${phone_num}
+                // Mensaje del admin: ${adm_msg}
             } else {
                 console.error('Error al enviar los datos');
             }
@@ -116,12 +120,12 @@ export default function RegistroUusariosTalentos() {
                                 </div>
                                 {/* <!-- formulario de contacto-menu desplegable-estado civil --> */}
                                 <div className="col-6">
-                                    <label className="col-12 form-label" htmlFor="estadoCivil">Estado Civil</label>
-                                    <select className="form-select col-6" aria-label="Default select example" id="estadoCivil">
-                                        <option value="1">Soltero/a</option>
-                                        <option value="2">Casado/a</option>
-                                        <option value="3">Viudo/a</option>
-                                        <option value="4">Separado/a</option>
+                                    <label className="col-12 form-label" htmlFor="estadoCivil" >Estado Civil</label>
+                                    <select className="form-select col-6" aria-label="Default select example" id="estadoCivil" value={estado_civil} onChange={(e) => setEstado_civil(e.target.value)}>
+                                        <option value="Soltero/a">Soltero/a</option>
+                                        <option value="Casado/a">Casado/a</option>
+                                        <option value="Viudo/a">Viudo/a</option>
+                                        <option value="Separado/a">Separado/a</option>
                                     </select>
                                 </div>
                             </div>
@@ -190,22 +194,22 @@ export default function RegistroUusariosTalentos() {
         </>
     )
 }
-<script>
-{(() => {
-    'use strict';
-
-   
-    const forms = document.querySelectorAll('.needs-validation');
-
-    
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-                form.classList.add('was-validated');
-            }
-        }, false);
-    });
-})()}
-</script>
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
