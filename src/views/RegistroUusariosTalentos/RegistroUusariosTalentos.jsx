@@ -58,8 +58,8 @@ export default function RegistroUusariosTalentos() {
         <>
             <Navbar />
             <div>
-                <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
-                    <form className="container position-relative">
+                <div className="container-fluid m-5 bg-light shadow border-5 pt-3 needs-validation" noValidate>
+                    <form className="container position-relative" >
                          {/* <!-- botones talentos/empresas --> */}
                         <div className="row">
                             <div className="col-3">
@@ -194,10 +194,10 @@ export default function RegistroUusariosTalentos() {
 {(() => {
     'use strict';
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+   
     const forms = document.querySelectorAll('.needs-validation');
 
-    // Loop over them and prevent submission
+    
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
             if (!form.checkValidity()) {
