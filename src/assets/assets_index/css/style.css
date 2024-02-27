@@ -9,6 +9,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+@import url('../../../components/modoOscuro/var.css');
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -52,13 +56,13 @@ h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: var(--background);
   line-height: 0;
 }
 
 .back-to-top:hover {
   background: #14b1ff;
-  color: #fff;
+  color: var(--background);
 }
 
 .back-to-top.active {
@@ -83,7 +87,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #fff;
+  background: var(--background);
 }
 
 #header.header-scrolled {
@@ -1394,7 +1398,7 @@ section {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: var(--background);
   text-align: center;
   padding: 15px;
 }

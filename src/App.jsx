@@ -1,6 +1,3 @@
-//import { useState } from 'react'
-
-
 import Navbar from './components/Navbar/Navbar'
 import './App.css'
 import Footer from './components/Footer/Footer'
@@ -12,6 +9,7 @@ import Aliados from './components/Aliados/Aliados'
 import Testimonios from './components/Testimonios/Testimonios'
 import CartasTalentos from './components/CartasTalentos/CartasTalentos'
 // import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
+// import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
 
 function App() {
   
@@ -19,11 +17,14 @@ function App() {
   return (
     
     <>
+    
       <Navbar />
-      <Index2/>
-      <Footer/>
+      <Index2 />
+      <Footer />
     </>
   )
 }
 
 export default App
+
+
