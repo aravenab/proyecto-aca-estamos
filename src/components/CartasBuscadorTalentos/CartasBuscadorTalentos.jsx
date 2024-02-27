@@ -1,9 +1,8 @@
 import React from 'react'
 
-export default function CartasBuscadorTalentos(user, nombre, foto, descripcion) {
+export default function CartasBuscadorTalentos(user, Nombre, Foto, Descripcion) {
 
-    const properties = Object.entries(user).filter(
-        ([key]) => key !== 'nombre' && key !== 'foto' && key !== 'descripcion');
+    const properties = Object.entries(user).filter(([key]) => key !== 'Nombre' && key !== 'Foto' && key !== 'Descripcion');
 
     // propiedades
     // {nombre, foto, descripción, nota, estado, renta, ubicacion, hashtags}
@@ -13,30 +12,29 @@ export default function CartasBuscadorTalentos(user, nombre, foto, descripcion) 
             <div className="candidate-list-box card mt-4">
                 <div className="p-4 card-body">
                     <div className="align-items-center row">
-                        <div className="col-auto">
+                        {/* <div className="col-auto">
                             <div className="candidate-list-images">
-                                <a href="#"><img
-                                    src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                    alt="" className="avatar-md img-thumbnail rounded-circle" /></a>
+                                <a href="#">
+                                    <img src={Foto} alt="" className="avatar-md img-thumbnail rounded-circle" />
+                                </a>
+                                {Foto}
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-5">
                             <div className="candidate-list-content mt-3 mt-lg-0">
                                 <h5 className="fs-19 mb-0">
-                                    <a className="primary-link" href="#">{nombre}</a><span
+                                    <a className="primary-link" href="#">{user.Nombre}</a><span
                                         className="badge bg-success ms-1"><i
                                             className="mdi mdi-star align-middle"></i>4.8</span>
                                 </h5>
-                                <p className="text-muted mb-2">{descripcion}</p>
+                                <p className="text-muted mb-2">{Descripcion}</p>
                                 <ul>
                                     {properties.map(([key, value]) => {
                                         
                                                 <div key={key} className="user-card__detail">
                                                     <span className="user-card__detail-key">{key}: </span>
                                                     <span className="user-card__detail-value">{value}</span>
-                                                </div>
-                                            
-                                        
+                                                </div>                    
                                     })
                                     }
                                 </ul>

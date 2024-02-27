@@ -14,10 +14,10 @@ import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBu
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-       {/* <RouterProvider router ={router}/> */}
+       <RouterProvider router ={router}/>
       {/* <CartasEmpresas/> */}
       {/* <PerfilUsuario/> */}
       {/* <BuscadorTalentos/> */}
-      <CartasBuscadorTalentos/>
+      {/* <BuscadorTalentos/> */}
   </React.StrictMode>,
 )
