@@ -38,9 +38,9 @@ const Navbar = () => {
                     <div className="input-group">
                       <input type="search" placeholder="Talentos/empresas..."
                         aria-describedby="button-addon1" className="form-control border-0 rounded-5 bg-light" />
-                      <div class="input-group-append">
-                        <Link to="/buscador_talentos" id="button-addon1" type="button" class="btn btn-link text-primary" onClick="">
-                          <i class="bi bi-search"></i>
+                      <div className="input-group-append">
+                        <Link to="/buscador_talentos" id="button-addon1" type="button" className="btn btn-link text-primary" onClick="">
+                          <i className="bi bi-search"></i>
                         </Link>
                       </div>
                       {/* <div className="input-group-append">
