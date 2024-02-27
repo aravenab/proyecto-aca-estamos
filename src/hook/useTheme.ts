@@ -1,20 +1,18 @@
 import { useEffect, useState } from 'react';
 
-type ChangeEvent = React.ChangeEvent<HTMLInputElement>
+type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
+type Theme = 'light' | 'dark';
+type UseThemeReturn = [string, (e: ChangeEvent) => void];
 
-type Theme = 'dark' | 'light'
+export const useTheme = (): UseThemeReturn => {
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useState<Theme>(prefersDarkMode ? 'dark' : 'light');
 
-type useThemeReturn = [ string, (e: ChangeEvent) => void ];
-
-export const useTheme = (initialTheme:Theme): useThemeReturn => {
-
-    const [theme, setTheme] = useState<Theme>(initialTheme)
-
-    const handleChange = (e: ChangeEvent) => setTheme(e.target.checked ? 'dark' : 'light')
+    const handleChange = (e: ChangeEvent) => setTheme(e.target.checked ? 'dark' : 'light');
 
     useEffect(() => {
         document.body.setAttribute('data-theme', theme);
-    }, [theme])
+    }, [theme]);
 
-    return [theme, handleChange]
-}
+    return [theme, handleChange];
+};
