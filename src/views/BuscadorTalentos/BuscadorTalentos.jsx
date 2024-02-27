@@ -14,7 +14,7 @@ export default function BuscadorTalentos() {
     };
 
     const users = [
-        { Nombre: 'Usuario 1', Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Developer' },
+        { Nombre: 'Carlos Silva', Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Project Manager', Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", Habilidades: "Html, CSS, Javascript"},
         { Nombre: 'Usuario 2', Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Developer' }
     ];
 
@@ -139,6 +139,7 @@ export default function BuscadorTalentos() {
                                                     Nombre={user.Nombre}
                                                     Foto={user.Foto}
                                                     Descripcion={user.Descripcion}
+                                                    Renta_minima={user.Renta_minima}
                                                 />
                                             ))}
                                         </div>
