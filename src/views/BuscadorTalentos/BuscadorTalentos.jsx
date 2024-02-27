@@ -110,8 +110,8 @@ export default function BuscadorTalentos() {
                                                         name="choices-candidate-page" id="choices-candidate-page"
                                                         aria-label="Default select example">
                                                         <option value="df">Todos</option>
-                                                        <option value="ne">8 por página</option>
-                                                        <option value="ne">12 por página</option>
+                                                        <option value="ne">Talentos</option>
+                                                        <option value="ne">Empresas</option>
                                                     </select>
                                                 </div>
                                             </div>
