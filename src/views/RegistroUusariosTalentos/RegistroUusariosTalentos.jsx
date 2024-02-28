@@ -88,7 +88,6 @@ export default function RegistroUusariosTalentos() {
                             </div>
                         </div>
 
-                        <div className="col-12">
                             <h1>Registro como TALENTO</h1>
                             {/* <!-- formulario de contacto-nombre --> */}
                             <div className="row">
@@ -193,7 +192,6 @@ export default function RegistroUusariosTalentos() {
                             <div className="d-grid">
                                 <button className="btn btn-primary btn-lg m-4" type="submit" onClick={handleSubmit}>Enviar</button>
                             </div>
-                        </div>
                     </form>
                     <img src="" className="img-fluid mx-auto d-block mb-2" alt="" />
                 </div>

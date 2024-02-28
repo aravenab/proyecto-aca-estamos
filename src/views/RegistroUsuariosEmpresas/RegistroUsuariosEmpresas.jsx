@@ -44,7 +44,7 @@ const formEnviado = () =>{
               e.preventDefault(); // Evita que el formulario se envíe por defecto
               formEnviado();
             }}>
-                    <h1>Registro como EMPRESA</h1>
+                    
                     <div className="row">
                         <div className="col-3">
 
@@ -59,6 +59,7 @@ const formEnviado = () =>{
 
                         </div>
                     </div>
+                    <h1>Registro como EMPRESA</h1>
                     <div className="row">
                         <div className="col-6 col-sm-6 mb-3">
                             <label className="col-12 form-label" htmlFor="name">Nombre de la empresa</label>
