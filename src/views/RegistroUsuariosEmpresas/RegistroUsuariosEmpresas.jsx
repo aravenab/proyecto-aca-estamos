@@ -51,7 +51,7 @@ export default function RegistroUsuariosEmpresas() {
 
                             </div>
                             <div className="col-3">
-                                <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">
+                                <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4" style={{opacity: "0.5"}}>
                                     <h1><i class="bi bi-person-add"></i></h1>
                                     Regístrate como <b>TALENTO</b>
                                 </Link>
