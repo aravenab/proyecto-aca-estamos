@@ -3,6 +3,12 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { validate, format } from "rut.js";
+
+const rut = "12345678-9";
+const isValid = validate(rut); // Devuelve true o false
+const formattedRut = format(rut); // Formatea el RUT (XX.XXX.XXX-X)
+
 
 export default function RegistroUusariosTalentos() {
 
