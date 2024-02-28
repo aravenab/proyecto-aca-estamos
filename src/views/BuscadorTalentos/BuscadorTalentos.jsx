@@ -136,10 +136,10 @@ export default function BuscadorTalentos() {
                                                 <CartasBuscadorTalentos
                                                     key={index}
                                                     user={user}
-                                                    Nombre={user.Nombre}
-                                                    Foto={user.Foto}
-                                                    Descripcion={user.Descripcion}
-                                                    Renta_minima={user.Renta_minima}
+                                                    // Nombre={user.Nombre}
+                                                    // Foto={user.Foto}
+                                                    // Descripcion={user.Descripcion}
+                                                    // Renta_minima={user.Renta_minima}
                                                 />
                                             ))}
                                         </div>
