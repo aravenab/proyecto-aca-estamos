@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import "./BuscadorTalentos.css"
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
@@ -7,6 +7,33 @@ import Footer from '../../components/Footer/Footer';
 export default function BuscadorTalentos() {
 
     const [isVisible, setIsVisible] = useState(false);
+    //admin
+    const[usuarios, setUsuarios] = useState([]);
+    const [empresas,setEmpresas] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await fetch('http://localhost:3000/');
+            const data = await response.json();
+    
+            // Aquí puedes manejar los datos y establecer los estados
+            if (data.data) {
+              setUsuarios(data.data.usuarios || []);
+              setEmpresas(data.data.empresas || []);
+            }
+    
+           
+          } catch (error) {
+            console.log('Error:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
+      console.log(usuarios)
+      console.log(empresas)
+    //admin fin
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
@@ -137,7 +164,7 @@ export default function BuscadorTalentos() {
                                                     <div className="col-lg-5">
                                                         <div className="candidate-list-content mt-3 mt-lg-0">
                                                             <h5 className="fs-19 mb-0">
-                                                                <a className="primary-link" href="#">Carlos Silva</a><span
+                                                                <a className="primary-link" href="#">{usuarios[0].name}</a><span
                                                                     className="badge bg-success ms-1"><i
                                                                         className="mdi mdi-star align-middle"></i>4.8</span>
                                                             </h5>
