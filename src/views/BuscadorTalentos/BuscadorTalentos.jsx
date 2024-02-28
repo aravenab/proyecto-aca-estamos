@@ -14,8 +14,8 @@ export default function BuscadorTalentos() {
     };
 
     const users = [
-        { Nombre: 'Carlos Silva', Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Project Manager', Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", Habilidades: "Html, CSS, Javascript"},
-        { Nombre: 'Usuario 2', Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Developer' }
+        { Nombre: 'Carlos Silva', Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Project Manager',Estado: "en-busqueda", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", Habilidades: "Html, CSS, Javascript"},
+        { Nombre: 'Gabriel Palmer', Foto: "https://bootdey.com/img/Content/avatar/avatar2.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", Habilidades: "Html, CSS, Javascript" }
     ];
 
     return (
@@ -136,10 +136,6 @@ export default function BuscadorTalentos() {
                                                 <CartasBuscadorTalentos
                                                     key={index}
                                                     user={user}
-                                                    // Nombre={user.Nombre}
-                                                    // Foto={user.Foto}
-                                                    // Descripcion={user.Descripcion}
-                                                    // Renta_minima={user.Renta_minima}
                                                 />
                                             ))}
                                         </div>

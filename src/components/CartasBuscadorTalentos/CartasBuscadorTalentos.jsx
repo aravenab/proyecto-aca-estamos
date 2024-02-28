@@ -1,4 +1,5 @@
 import React from 'react'
+import Estado from '../Estado/Estado';
 
 export default function CartasBuscadorTalentos({ user }) {
 
@@ -41,8 +42,8 @@ export default function CartasBuscadorTalentos({ user }) {
                                     <li className="list-inline-item"><i className="mdi mdi-map-marker"></i>
                                         Renca, Santiago de
                                         Chile</li>
-                                    <li className="list-inline-item"><i className="mdi mdi-wallet"></i> $ {user.Renta_minima}
-                                        / mes</li>
+                                    <li className="list-inline-item"><i className="mdi mdi-wallet"></i> $ {user.Renta_minima + " "}
+                                         / mes</li>
                                 </ul>
                             </div>
                         </div>
@@ -55,8 +56,14 @@ export default function CartasBuscadorTalentos({ user }) {
                         </div>
                     </div>
                     <div className="favorite-icon">
-                        <i className="bi bi-circle-fill text-warning"><p className="fw-bold" style={{ display: "inline" }}>          En búsqueda</p></i>
+                    <Estado status={user.Estado}/>
                     </div>
+                        
+                    
+                    {/* <div className="favorite-icon">
+                        <i className="bi bi-circle-fill text-warning m-2"></i>
+                        <p className="fw-bold text-warning" style={{ display: "inline" }}>En búsqueda</p>
+                    </div> */}
                 </div>
             </div>
         </div>
