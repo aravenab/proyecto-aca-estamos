@@ -136,17 +136,21 @@ export default function RegistroUusariosTalentos() {
                                     </select>
                                 </div>
                             </div>
-                            {/* <!-- formulario de contacto-fecha de nacimiento --> */}
-                            <div className="col_one_third col_last c-azul">
-                                <label htmlFor="nacimiento">Fecha de nacimiento</label>
-                                <input type="date" id="nacimiento" name="nacimiento" className="sm-form-control" value={bday} onChange={(e) => setBday(e.target.value)}/>
-                            </div>
+                           
                             {/* <!-- formulario de contacto- Edad y Número de Teléfono--> */}
                             <div className="row">
-                                <div className="col-6 col-sm-6 mb-3">
+                                {/* --------------------------------------edad */}
+                                {/* <div className="col-6 col-sm-6 mb-3">
                                     <label className="col-12 form-label" htmlFor="edad">¿Cuántos años tienes?</label>
                                     <input className="form-control" id="edad" type="number" placeholder="Edad" />
-                                </div>
+                                </div> */}
+
+                                 {/* <!--------------------------------------fecha de nacimiento --> */}
+                            <div className="col-6 col-sm-6 ">
+                                <label htmlFor="nacimiento" className='me-3 mb-2 col-12'>Fecha de nacimiento</label>
+                                <input type="date" id="nacimiento" name="nacimiento" className="sm-form-control col-12 p-1" value={bday} onChange={(e) => setBday(e.target.value)}/>
+                            </div>
+                                {/* --------------------------------------telefono */}
                                 <div className="col-6 col-sm-6 mb-3">
                                     <label className="col-12 form-label" htmlFor="telefono">Número de Teléfono</label>
                                     <input className="form-control" id="telefono" type="number" placeholder="Teléfono" value={phone_num} onChange={(e) => setPhone_num(e.target.value)}/>
