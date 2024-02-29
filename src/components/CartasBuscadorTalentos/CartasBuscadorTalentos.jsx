@@ -3,7 +3,7 @@ import Estado from '../Estado/Estado';
 
 export default function CartasBuscadorTalentos({ user }) {
 
-    const properties = Object.entries(user).filter(([key]) => key !== 'Nombre' && key !== 'Foto' && key !== 'Descripcion' && key !== 'Renta_minima');
+    const properties = Object.entries(user).filter(([key]) => key !== 'Nombre' && key !== 'Foto' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'Tecnologias');
 
     // propiedades
     // {nombre, foto, descripción, nota, estado, renta, ubicacion, hashtags}
@@ -32,7 +32,6 @@ export default function CartasBuscadorTalentos({ user }) {
                                 {properties.map(([key, value]) => (
                                     <div key={key} className="user-card__detail">
                                         <li className="user-card__detail-key">{key}: {value}</li>
-
                                     </div>
                                 ))
                                 }
@@ -48,16 +47,16 @@ export default function CartasBuscadorTalentos({ user }) {
                             </div>
                         </div>
                         <div className="col-lg-4">
-                            {/* <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
+                            <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
                                 <span className="badge bg-soft-secondary fs-14 mt-1">Html</span>
                                 <span className="badge bg-soft-secondary fs-14 mt-1">CSS</span>
                                 <span className="badge bg-soft-secondary fs-14 mt-1">Developer</span>
-                            </div> */}
-                            <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
+                            </div>
+                            {/* <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
                                 {user.Tecnologias && Object.values(user.Tecnologias).map((value, index) => (
                                     <span key={index} className="badge bg-soft-secondary fs-14 mt-1">{value}</span>
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="favorite-icon">
