@@ -9,6 +9,7 @@ import CartasEmpresas from './components/CartasEmpresas/CartasEmpresas.jsx'
 import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario.jsx'
 import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
+import BusquedaEmergente from './components/BusquedaEmergente/BusquedaEmergente.jsx'
 
 
 
@@ -19,5 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <PerfilUsuario/> */}
       {/* <BuscadorTalentos/> */}
       {/* <BuscadorTalentos/> */}
+      {/* <BusquedaEmergente/> */}
   </React.StrictMode>,
 )
