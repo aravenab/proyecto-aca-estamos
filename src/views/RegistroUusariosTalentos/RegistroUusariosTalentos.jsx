@@ -40,7 +40,7 @@ export default function RegistroUusariosTalentos() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ kind, name, email, password, rut })
+                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num })
             });
 
             if (response.ok) {
