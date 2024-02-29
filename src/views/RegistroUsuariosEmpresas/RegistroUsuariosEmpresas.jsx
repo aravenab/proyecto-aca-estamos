@@ -37,6 +37,8 @@ export default function RegistroUsuariosEmpresas() {
     return (
         <>
             <Navbar />
+            <br />
+            <br />
             <div>
 
                 <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
