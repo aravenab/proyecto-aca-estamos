@@ -27,7 +27,9 @@ export default function CartasBuscadorTalentos({ user }) {
                                         className="badge bg-success ms-1"><i
                                             className="mdi mdi-star align-middle"></i>4.8</span>
                                 </h5>
+                                {/* ---------------------------------------------------------------DESCRIPCIÓN */}
                                 <p className="text-muted mb-2">{user.Descripcion}</p>
+                                {/* ---------------------------------------------------------PROPIEDADES EXTRAS */}
                                 <ul>
                                 {properties.map(([key, value]) => (
                                     <div key={key} className="user-card__detail">
@@ -36,7 +38,7 @@ export default function CartasBuscadorTalentos({ user }) {
                                 ))
                                 }
                                 </ul>
-
+                                {/* ------------------------------------------------UBICACION */}
                                 <ul className="list-inline mb-0 text-muted">
                                     <li className="list-inline-item"><i className="mdi mdi-map-marker"></i>
                                         Renca, Santiago de
@@ -46,6 +48,7 @@ export default function CartasBuscadorTalentos({ user }) {
                                 </ul>
                             </div>
                         </div>
+                        {/* --------------------------------------------- KEYWORDS */}
                         <div className="col-lg-4">
                             <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
                                 <span className="badge bg-soft-secondary fs-14 mt-1">Html</span>
