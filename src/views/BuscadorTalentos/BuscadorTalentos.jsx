@@ -164,7 +164,9 @@ export default function BuscadorTalentos() {
                                                     <div className="col-lg-5">
                                                         <div className="candidate-list-content mt-3 mt-lg-0">
                                                             <h5 className="fs-19 mb-0">
-                                                                <a className="primary-link" href="#">{usuarios[0].name}</a><span
+                                                                <a className="primary-link" href="#">{usuarios.length > 0 && usuarios[0].name && (
+    <a className="primary-link" href="#">{usuarios[0].name}</a>
+)}</a><span
                                                                     className="badge bg-success ms-1"><i
                                                                         className="mdi mdi-star align-middle"></i>4.8</span>
                                                             </h5>
