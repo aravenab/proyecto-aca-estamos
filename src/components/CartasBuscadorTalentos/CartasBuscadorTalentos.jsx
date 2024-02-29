@@ -3,7 +3,7 @@ import Estado from '../Estado/Estado';
 
 export default function CartasBuscadorTalentos({ user }) {
 
-    const properties = Object.entries(user).filter(([key]) => key !== 'name' && key !== '_id' && key !== 'kind' && key !== 'email' && key !== 'password' && key !== 'Nota');
+    const properties = Object.entries(user).filter(([key]) => key !== 'name' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota' && key !== 'rut' && key !== 'estado_civil' && key !== 'bday' && key !== 'phone_num' && key !== 'adm_msg' && key !== 'Foto' && key !== "__v" && key !== "_id" && key !== "email" && key !== "password");
 
     const StrongsHab = user.StrongsHab || '';
     const StrongsHabArray = StrongsHab.split(", ");

@@ -4,7 +4,7 @@ import "./CartasAutorizarUsuario.css";
 
 export default function CartasAutorizarUsuarios({ user }) {
 
-    const properties = Object.entries(user).filter(([key]) => key !== 'Nombre' && key !== 'Foto' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota');
+    const properties = Object.entries(user).filter(([key]) => key !== 'Nombre' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota' && key !== 'rut' && key !== 'estado_civil' && key !== 'bday' && key !== 'phone_num' && key !== 'adm_msg' && key !== 'Foto' && key !== "__v");
 
     const StrongsHab = user.StrongsHab || '';
     const StrongsHabArray = StrongsHab.split(", ");
