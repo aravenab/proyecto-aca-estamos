@@ -1,61 +1,34 @@
-import React, {useEffect, useState} from 'react'
-import "./BuscadorTalentos.css"
+import React, { useState } from 'react'
+import "./AutorizarUsuarios.css"
 // import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-import CartasBuscadorTalentos from '../../components/CartasBuscadorTalentos/CartasBuscadorTalentos';
 import BusquedaEmergente from '../../components/BusquedaEmergente/BusquedaEmergente';
+import CartasAutorizarUsuarios from '../../components/CartasAutorizarUsuarios/CartasAutorizarUsuarios';
 
-export default function BuscadorTalentos() {
+export default function AutorizarUsuarios() {
 
     const [isVisible, setIsVisible] = useState(false);
-    //admin
-    const[usuarios, setUsuarios] = useState([]);
-    const [empresas,setEmpresas] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await fetch('http://localhost:3000/');
-            const data = await response.json();
-    
-            // Aquí puedes manejar los datos y establecer los estados
-            if (data.data) {
-              setUsuarios(data.data.usuarios || []);
-              setEmpresas(data.data.empresas || []);
-            }
-    
-           
-          } catch (error) {
-            console.log('Error:', error);
-          }
-        };
-    
-        fetchData();
-      }, []);
-      console.log(usuarios)
-      console.log(empresas)
-    //admin fin
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
     };
 
-    // const users = [
-    //     { Nombre: 'Carlos Silva', Nota: 4.8, Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Project Manager',Estado: "en-busqueda", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Trabajo en equipo, Adaptabilidad, Liderazgo"},
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar2.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar3.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar4.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar5.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar6.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar7.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar8.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" }
+    const users = [
+        { Nombre: 'Carlos Silva', Nota: 4.8, Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Project Manager',Estado: "en-busqueda", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Trabajo en equipo, Adaptabilidad, Liderazgo"},
+        { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar2.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
+        { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar3.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
+        { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar4.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
+        { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar5.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
+        { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar6.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
+        { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar7.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
+        { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar8.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" }
 
-    // ];
+    ];
 
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <section className="section mt-4">
                 <div className="container">
                     {/*--------------------------------------Filtros de arriba-*/}
@@ -167,8 +140,8 @@ export default function BuscadorTalentos() {
                                 <div className="col-8">
                                     <div className="candidate-list">
                                         <div className="Cartas">
-                                            {usuarios.map((user, index) => (
-                                                <CartasBuscadorTalentos
+                                            {users.map((user, index) => (
+                                                <CartasAutorizarUsuarios
                                                     key={index}
                                                     user={user}
                                                 />
@@ -176,20 +149,7 @@ export default function BuscadorTalentos() {
                                         </div>
                                     </div>
                                 </div>
-                                {/*-----------------------------------------------------Busqueda emergente-*/}
-                                <div className="col-4">
 
-                                    {/*-----------------------------------------------------Busqueda emergente---- BOTON*/}
-                                    <div className="text-center">
-                                        <button type="submit" className="btn btn-warning rounded-3 mt-4" id="mostrarBtn" onClick={toggleVisibility}>{isVisible ? '' : ''} BÚSQUEDA
-                                            EMERGENTE</button>
-                                    </div>
-                                    {/*-----------------------------------------------------Busqueda emergente---- APARECER*/}
-                                    {isVisible && <div>
-                                        <BusquedaEmergente/>
-                                    </div>}
-
-                                </div>
                             </div>
                         </div>
                         {/*--------------------------------------Paginacion-*/}
@@ -215,7 +175,7 @@ export default function BuscadorTalentos() {
                     </div>
                 </div>
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

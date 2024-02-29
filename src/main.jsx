@@ -9,6 +9,7 @@ import CartasEmpresas from './components/CartasEmpresas/CartasEmpresas.jsx'
 import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario.jsx'
 import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
+import AutorizarUsuarios from './views/AutorizarUsuarios/AutorizarUsuarios.jsx'
 
 
 
