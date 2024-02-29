@@ -48,10 +48,15 @@ export default function CartasBuscadorTalentos({ user }) {
                             </div>
                         </div>
                         <div className="col-lg-4">
-                            <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
+                            {/* <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
                                 <span className="badge bg-soft-secondary fs-14 mt-1">Html</span>
                                 <span className="badge bg-soft-secondary fs-14 mt-1">CSS</span>
                                 <span className="badge bg-soft-secondary fs-14 mt-1">Developer</span>
+                            </div> */}
+                            <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
+                                {user.Tecnologias && Object.values(user.Tecnologias).map((value, index) => (
+                                    <span key={index} className="badge bg-soft-secondary fs-14 mt-1">{value}</span>
+                                ))}
                             </div>
                         </div>
                     </div>
