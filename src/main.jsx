@@ -9,17 +9,15 @@ import CartasEmpresas from './components/CartasEmpresas/CartasEmpresas.jsx'
 import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario.jsx'
 import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
-import BusquedaEmergente from './components/BusquedaEmergente/BusquedaEmergente.jsx'
+import AutorizarUsuarios from './views/AutorizarUsuarios/AutorizarUsuarios.jsx'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-       <RouterProvider router ={router}/>
+       {/* <RouterProvider router ={router}/> */}
       {/* <CartasEmpresas/> */}
       {/* <PerfilUsuario/> */}
-      {/* <BuscadorTalentos/> */}
-      {/* <BuscadorTalentos/> */}
-      {/* <BusquedaEmergente/> */}
+      <AutorizarUsuarios/>
   </React.StrictMode>,
 )
