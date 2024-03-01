@@ -23,6 +23,15 @@ export default function RegistroUusariosTalentos() {
     const [phone_num, setPhone_num] = useState('');
     const [adm_msg, setAdm_msg] = useState('En proceso de confirmación');
 
+    const Foto= "https://bootdey.com/img/Content/avatar/avatar1.png";
+    const Nota= "";
+    const Descripcion= "";
+    const Disponibilidad= "";
+    const Horarios= "";
+    const Habilidades= "";
+    const Renta_minima= "";
+    const Estado= "";
+    const StrongsHab= "";
 
 
 
@@ -40,7 +49,7 @@ export default function RegistroUusariosTalentos() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num })
+                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num, Foto, Nota, Descripcion, Disponibilidad, Horarios, Habilidades, Renta_minima, Estado, StrongsHab })
             });
 
             if (response.ok) {
