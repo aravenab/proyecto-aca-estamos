@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Contact = () => {
   return (
     <div>
@@ -45,20 +46,25 @@ const Contact = () => {
               <div className="row">
                 <div className="form-group col-md-6">
                   <label forhtml="name">Tu nombre</label>
-                  <input type="text" name="name" className="form-control" id="name" required/>
+                  <input style={{backgroundColor: 'var(--container2)', color: 'var(--tith3)'}} type="text" name="name" className="form-control" id="name" required/>
                 </div>
-                <div className="form-group col-md-6 mt-3 mt-md-0">
+                <div className="form-group col-md-6 mt-3 mt-md-0" style={{backgroundColor: 'var(--container)'}}>
                   <label forhtml="name">Tu correo</label>
-                  <input type="email" className="form-control" name="email" id="email" required/>
+                  <input style={{backgroundColor: 'var(--container2)', color: 'var(--tith3)'}} type="email" className="form-control" name="email" id="email" required/>
                 </div>
               </div>
               <div className="form-group mt-3">
+
+
                 <label forhtml="name">Asunto</label>
-                <input type="text" className="form-control" name="subject" id="subject" required/>
-              </div>
-              <div className="form-group mt-3">
+                <input  style={{backgroundColor: 'var(--container2)', color: 'var(--tith3)'}} type="text" className="form-control" name="subject" id="subject" required/>
+              </div >
+              <div className="form-group mt-3" style={{backgroundColor: 'var(--container)'}}>
+
+
+
                 <label forhtml="name">Tu mensaje</label>
-                <textarea className="form-control" name="message" rows="10" required></textarea>
+                <textarea style={{backgroundColor: 'var(--container2)', color: 'var(--tith3)'}} className="form-control" name="message" rows="10" required></textarea>
               </div>
               <div className="my-3">
                 <div className="loading">Cargando</div>
