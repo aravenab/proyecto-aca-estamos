@@ -64,6 +64,8 @@ export default function RegistroUusariosTalentos() {
                 Teléfono: ${phone_num}
 
                 `);
+
+
                 // 
                 // 
                 // Mensaje del admin: ${adm_msg}
