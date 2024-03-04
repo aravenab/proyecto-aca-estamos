@@ -176,7 +176,7 @@ export default function RegistroUusariosTalentos() {
                         <div className="row mb-3">
                             {/* <!----------------------------------------Cert. estudios--> */}
                             <div className="col-6">
-                                <label htmlFor="formFileMultiple" className="form-label">Certificado de estudios o cursos realizados con certificación</label>
+                                <label htmlFor="formFileMultiple" className="form-label">Certificado de estudios</label>
                                 <input className="form-control" type="file" id="formFileMultiple" multiple />
                             </div>
                             {/* <!----------------------------------------RSH--> */}

@@ -10,6 +10,7 @@ import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario.jsx'
 import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
 import AutorizarUsuarios from './views/AutorizarUsuarios/AutorizarUsuarios.jsx'
+import CompletarPerfil from './components/CompletarPerfil/CompletarPerfil.jsx'
 
 
 
@@ -20,5 +21,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <PerfilUsuario/> */}
       {/* <BuscadorTalentos/> */}
       {/* <CartasBuscadorTalentos/> */}
+      {/* <CompletarPerfil/> */}
   </React.StrictMode>,
 )
