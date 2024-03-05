@@ -8,11 +8,14 @@ import CartasTalentos from '../../components/CartasTalentos/CartasTalentos'
 import Testimonios from '../../components/Testimonios/Testimonios'
 import Aliados from '../../components/Aliados/Aliados'
 import PreguntasFrecuentes from '../../components/PreguntasFrecuentes/PreguntasFrecuentes'
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 
 export default function Index2() {
   return (
     <>
+      <Navbar/>
       <Hero />
       <Hero2 />
       <UneteANosotros />
@@ -22,6 +25,8 @@ export default function Index2() {
       <Aliados />
       <PreguntasFrecuentes />
       <Contact />
+      <Footer tipoLink="index"/>
+      
     </>
   )
 }

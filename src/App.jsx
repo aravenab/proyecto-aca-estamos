@@ -17,10 +17,7 @@ function App() {
   return (
     
     <>
-    
-      <Navbar />
       <Index2 />
-      <Footer />
     </>
   )
 }
