@@ -3,6 +3,8 @@ import ExperienciaLaboral from '../../components/PerfilUsuarioComponents/UserExp
 import Educacion from '../../components/PerfilUsuarioComponents/UserEducacion'
 import CertificacionLicencia from '../../components/PerfilUsuarioComponents/UserCertificaciones'
 import FormularioExperiencia from '../../components/PerfilUsuarioComponents/FormularioExperiencia'
+import FormularioEducacion from '../../components/PerfilUsuarioComponents/FormularioEducacion'
+import FormularioCertificaciones from '../../components/PerfilUsuarioComponents/FormularioCertificaciones'
 
 export default function PerfilUsuario() {
 
@@ -247,13 +249,13 @@ export default function PerfilUsuario() {
                                 />
 
                                 <div className="row mb-4">
-                                    <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#experienciaModal">
                                         (+) Añadir experiencia
                                     </button>
 
                                 </div>
-                                {/* <!-- Modal de FORMULAIRO EXPERIENCIA --> */}
-                                <div className="modal modal-xl fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                {/* <!-- Modal de FORMULARIO EXPERIENCIA --> */}
+                                <div className="modal modal-xl fade" id="experienciaModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div className="modal-dialog">
                                         <div className="modal-content">
                                             <div className="modal-header">
@@ -295,8 +297,28 @@ export default function PerfilUsuario() {
 
 
                                 <div className="row mb-4">
-                                    <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir
-                                        edudación</button>
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#educacionModal">
+                                        (+) Añadir edudación
+                                    </button>
+                                </div>
+
+                                {/* <!-- Modal de FORMULARIO EDUCACION --> */}
+                                <div className="modal modal-xl fade" id="educacionModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <FormularioEducacion/>
+                                            </div>
+                                            <div className="modal-footer">
+                                                <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                                <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 {/* CERTIFICACIONES Y LICENCIAS */}
@@ -321,10 +343,31 @@ export default function PerfilUsuario() {
                                 />
 
 
-                                <div className="row mb-4">
-                                    <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir certificaciones y
-                                        licencias</button>
+<div className="row mb-4">
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#certificacionModal">
+                                        (+) Añadir Licencia o Certificación
+                                    </button>
                                 </div>
+
+                                {/* <!-- Modal de FORMULARIO EDUCACION --> */}
+                                <div className="modal modal-xl fade" id="certificacionModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <FormularioCertificaciones/>
+                                            </div>
+                                            <div className="modal-footer">
+                                                <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                                <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

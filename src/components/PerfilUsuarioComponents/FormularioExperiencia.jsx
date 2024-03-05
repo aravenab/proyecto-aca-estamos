@@ -16,7 +16,7 @@ const FormularioExperiencia = ({actividad, lugar, fecha, descripcion}) => {
           Lugar:
         </div>
         <div className="col-12 col-md-8 col-lg-9 text-start">
-        <input className="form-control" id="lugar" type="text" placeholder="Lugar" />
+        <input className="form-control" id="lugar" type="text" placeholder="LugarExperiencia" />
         </div>
       </div>
       <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
