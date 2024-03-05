@@ -7,6 +7,7 @@ import FormularioEducacion from '../../components/PerfilUsuarioComponents/Formul
 import FormularioCertificaciones from '../../components/PerfilUsuarioComponents/FormularioCertificaciones'
 import CompletarPerfil from '../../components/CompletarPerfil/CompletarPerfil'
 import ContactarTalento from '../../components/ContactarTalento/ContactarTalento'
+import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
 
 export default function PerfilUsuario() {
 
@@ -148,9 +149,31 @@ export default function PerfilUsuario() {
                                 {/*-----------------------------------------AGREGAR MAS REDES*/}
                                 <div className="row text-center align-middle my-4">
                                     <div className="col-12">
-                                        <a href="https://http.cat/status/102">(+) Agregar más redes</a>
+                                        {/* <a href="https://http.cat/status/102">(+) Agregar más redes</a> */}
+                                        <button type="button" className="btn btn-info rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#agregarRedesModal">
+                                        (+) Agregar más redes
+                                    </button>
                                     </div>
                                 </div>
+
+                                <div className="modal modal-xl fade" id="agregarRedesModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Agregar redes</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <AgregarRedes />
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                            <button type="button" className="btn btn-info rounded-5">Guardar cambios</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             </div>
 
                             {/*---------------------------------------------REDES VISIBLES EN PANTAllA PEQUEÑA*/}
