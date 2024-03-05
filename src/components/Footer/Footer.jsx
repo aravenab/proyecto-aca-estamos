@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Footer() {
+export default function Footer({tipoLink}) {
+
   return (
     <footer id="footer">
       <div className="footer-top">
@@ -36,18 +37,32 @@ export default function Footer() {
               </ul>
             </div>
 
-
-
-            <div className="col-lg-4 col-md-6 footer-links">
-              <h4>Nuestras Páginas</h4>
-              <ul>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">¿Quiénes somos?</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Testimonios</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestras empresas</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="perfil_usuario">Nuestros talentos</Link></li>
-                <li><i className="bx bx-chevron-right"></i> <Link to="#">Nuestros aliados</Link></li>
-              </ul>
-            </div>
+            {tipoLink === "index" ?
+              (<div className="col-lg-4 col-md-6 footer-links">
+                <h4>Nuestras Páginas</h4>
+                <ul>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#about">¿Quiénes somos?</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#testimonials">Testimonios</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#portfolio">Nuestras empresas</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#team">Nuestros talentos</a></li>
+                  <li><i className="bx bx-chevron-right"></i> <a href="#clients">Nuestros aliados</a></li>
+                </ul>
+              </div>)
+              :
+              (
+                <div className="col-lg-4 col-md-6 footer-links">
+                  <h4>Nuestras Páginas</h4>
+                  <ul>
+                    <li><i className="bx bx-chevron-right"></i> <Link to="/#about">¿Quiénes somos?</Link></li>
+                    <li><i className="bx bx-chevron-right"></i> <Link to="/#testimonials">Testimonios</Link></li>
+                    <li><i className="bx bx-chevron-right"></i> <Link to="/#portfolio">Nuestras empresas</Link></li>
+                    <li><i className="bx bx-chevron-right"></i> <Link to="/#team">Nuestros talentos</Link></li>
+                    <li><i className="bx bx-chevron-right"></i> <Link to="/#clients">Nuestros aliados</Link></li>
+                  </ul>
+                </div>
+              )
+            }
+           
 
            
 
