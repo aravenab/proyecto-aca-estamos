@@ -15,14 +15,19 @@ const formattedRut = format(rut); // Formatea el RUT (XX.XXX.XXX-X)
 export default function RegistroUsuariosEmpresas() {
 
     // declarar state
+    const [kind, setKind] = useState('Empresa');
+    const [name_company, setName_company] = useState('');
     const [enviar, setEnviar] = useState(false)
     const [formularioEnviado, setFormularioEnviado] = useState(false);
-    const [usuario, setUsuario] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    const [url_company, setUrl_company] = useState('');
+   
     const [email, setEmail] = useState('');
-    const [rut, setRut] = useState('');
-    const [telefono, setTelefono] = useState('');
+    const [rut_empresa, setRut_empresa] = useState('');
+    const [rubro, setRubro] = useState('');
+    const [necesidad_personal, setNecesidad_personal] = useState('');
+
+    //value={email} onChange={(e) => setEmail(e.target.value)}
+
 
     const enviarFormulario = () => {
         setFormularioEnviado(true);
@@ -32,6 +37,42 @@ export default function RegistroUsuariosEmpresas() {
         setFormularioEnviado(preEnvio => !preEnvio);
     };
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch('http://localhost:3000/crear_usuario_empresa', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ kind, name_company, email, rut_empresa, rubro, url_company, necesidad_personal })
+            });
+
+            if (response.ok) {
+                console.log(`Datos enviados correctamente:
+                Tipo: ${kind}
+                Nombre de la empresa: ${name_company}
+                Email Corporativo: ${email}             
+                Rut empresa: ${rut_empresa}
+                Rubro ó Giro: ${rubro}
+                Url empresa: ${url_company}
+                Necesidad personal: ${necesidad_personal}
+                Adm_msg
+
+                `);
+
+
+                // 
+                // 
+                // Mensaje del admin: ${adm_msg}
+            } else {
+                console.error('Error al enviar los datos');
+            }
+        } catch (error) {
+            console.error('Error al enviar los datos:', error);
+        }
+    };
 
 
     return (
@@ -80,7 +121,7 @@ export default function RegistroUsuariosEmpresas() {
                                 </div>
                                 <div className="col-6 col-sm-6 mb-3">
                                     <label className="form-label" htmlFor="email">Email Corporativo</label>
-                                    <input className="form-control" id="email" type="email" placeholder="Email corporativo" required />
+                                    <input className="form-control" id="email" type="email" placeholder="Email corporativo" value={email} onChange={(e) => setEmail(e.target.value)} required />
                                     <div className="invalid-feedback"> Por favor, ingresa el Email corporativo</div>
                                     <div className='valid-feedback'> Email corporativo ingresado correctamente </div>
                                 </div>
@@ -89,26 +130,26 @@ export default function RegistroUsuariosEmpresas() {
                             <div className="row">
                                 <div className="col-6 ">
                                     <label htmlFor="password" className="form-label">Contraseña <span className="text-danger">*</span></label>
-                                    <input type="password" className="form-control" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                                    <input type="password" className="form-control" name="password" id="password"  required />
 
                                 </div>
                                 {/* <!-- Confirmar contraseña --> */}
                                 <div className="col-6">
                                     <label htmlFor="confirmPassword" className="form-label">Confirmar Contraseña <span className="text-danger">*</span></label>
-                                    <input type="password" className="form-control" name="confirmPassword" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+                                    <input type="password" className="form-control" name="confirmPassword" id="confirmPassword"  required />
 
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-6">
                                     <label className="col-12 form-label" htmlFor="rut">Rut de la empresa</label>
-                                    <input className="form-control" id="rut" type="number" placeholder="Rut de la empresa" required />
+                                    <input className="form-control" id="rut" type="number" placeholder="Rut de la empresa" value={rut_empresa} onChange={(e) => setRut_empresa(e.target.value)} required />
                                     <div className="invalid-feedback"> Ingresa el Rut de la empresa </div>
                                     <div className='valid-feedback'> Rut de la empresa correcto</div>
                                 </div>
                                 <div className="col-6 col-sm-6 mb-3">
                                     <label className="col-12 form-label" htmlFor="giro">Giro o rubro</label>
-                                    <input className="form-control" id="giro" type="text" placeholder="Giro o rubro" required />
+                                    <input className="form-control" id="giro" type="text" placeholder="Giro o rubro" value={rubro} onChange={(e) => setRubro(e.target.value)} required />
                                     <div className="invalid-feedback"> Por favor, ingresa el Giro o rubro</div>
                                     <div className='valid-feedback'> Gracias por ingresar el Giro o rubro </div>
                                 </div>
@@ -116,7 +157,7 @@ export default function RegistroUsuariosEmpresas() {
                             <div className="row">
                                 <div className="col-6">
                                     <label className="col-12 form-label" htmlFor="empleados">Cantidad de empleados</label>
-                                    <select className="form-select col-6" aria-label="Default select example" id="empleados">
+                                    <select className="form-select col-6" aria-label="Default select example" id="empleados" value={necesidad_personal} onChange={(e) => setNecesidad_personal(e.target.value)} required >
                                         <option value="1">1 a 5 empleados</option>
                                         <option value="2">6 a 10 empleados</option>
                                         <option value="3">11 a 99 empleados</option>
@@ -159,9 +200,7 @@ export default function RegistroUsuariosEmpresas() {
 
                         <div className="d-grid">
                             <button onSubmit={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>
-                            <h3>{formularioEnviado
-                                ? "Has enviado exitosamente el formulario"
-                                : "No has enviado el Formulario"}</h3>
+                            
                         </div>
                     </form>
 
