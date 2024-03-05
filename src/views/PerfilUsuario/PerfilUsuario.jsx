@@ -47,7 +47,7 @@ export default function PerfilUsuario() {
                             {/*---------------------------------------------------CONTACTO*/}
                             <div className="row align-items-end my-3 mt-md-2 mb-lg-4">
                                 <div className="col-12 col-sm-12 col-md-2 col-lg-2">
-                                    <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#contactarTalentoModal">
+                                    <button type="button" className="btn btn-success rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#contactarTalentoModal">
                                         Contactar
                                     </button>
                                 </div>
@@ -156,6 +156,7 @@ export default function PerfilUsuario() {
                                     </div>
                                 </div>
 
+                                {/*-----------------------------------------MODAL AGREGAR MAS REDES*/}
                                 <div className="modal modal-xl fade" id="agregarRedesModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div className="modal-dialog">
                                     <div className="modal-content">
