@@ -16,11 +16,11 @@ import CompletarPerfil from './components/CompletarPerfil/CompletarPerfil.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-       <RouterProvider router ={router}/> 
+       {/* <RouterProvider router ={router}/>  */}
       {/* <CartasEmpresas/> */}
       {/* <PerfilUsuario/> */}
       {/* <BuscadorTalentos/> */}
       {/* <CartasBuscadorTalentos/> */}
-      {/* <CompletarPerfil/> */}
+      <PerfilUsuario/>
   </React.StrictMode>,
 )

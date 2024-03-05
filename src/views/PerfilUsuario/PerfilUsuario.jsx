@@ -1,6 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
+import ExperienciaLaboral from '../../components/PerfilUsuarioComponents/UserExperiencia'
+import Educacion from '../../components/PerfilUsuarioComponents/UserEducacion'
+import CertificacionLicencia from '../../components/PerfilUsuarioComponents/UserCertificaciones'
+import FormularioExperiencia from '../../components/PerfilUsuarioComponents/FormularioExperiencia'
+import '../../components/PerfilUsuarioComponents/modal.css'
 
 export default function PerfilUsuario() {
+
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const handleAddExperience = () => {
+        setModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setModalOpen(false);
+    };
+
     return (
         <div>
             <div className="container-fluid" style={{marginTop: "5rem;"}}> {/*Container de la pagina en general*/}
@@ -192,104 +208,37 @@ export default function PerfilUsuario() {
                             </div>
 
                             {/* EXPERIENCIA 1 */}
-                            <div className="container-fluid pe-4 pb-1 border rounded-3">
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold fs-5">
-                                        Actividad:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
-                                        Consultora Senior de Gestión de Proyectos
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Lugar:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        ABC Consulting, Ciudad de México
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Fecha:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        Octubre 2019 - Presente
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Descripción:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <ul>
-                                            <li>Dirijo proyectos de consultoría estratégica para clientes de diversos sectores, desde la
-                                                planificación hasta
-                                                la implementación y el seguimiento.</li>
-                                            <li>Colaboro con equipos internos y clientes para identificar oportunidades de mejora y desarrollar
-                                                soluciones
-                                                personalizadas que impulsen el crecimiento y la eficiencia operativa.</li>
-                                            <li>Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los
-                                                plazos y el
-                                                presupuesto.</li>
-                                            <li>Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y
-                                                recomendar acciones
-                                                correctivas cuando sea necesario.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <ExperienciaLaboral
+  actividad="Consultora Senior de Gestión de Proyectos"
+  lugar="ABC Consulting, Ciudad de México"
+  fecha="Octubre 2019 - Presente"
+  descripcion={[
+    "Dirijo proyectos de consultoría estratégica para clientes de diversos sectores, desde la planificación hasta la implementación y el seguimiento.",
+    "Colaboro con equipos internos y clientes para identificar oportunidades de mejora y desarrollar soluciones personalizadas que impulsen el crecimiento y la eficiencia operativa.",
+    "Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los plazos y el presupuesto.",
+    "Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y recomendar acciones correctivas cuando sea necesario."
+  ]}
+/>
+
 
                             {/* EXPERIENCIA 2 */}
-                            <div className="container-fluid pe-4 pb-1 border rounded-3">
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Actividad:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
-                                        Analista de Procesos
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Lugar:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        ABC Consulting, Ciudad de México
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Fecha:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        Febrero 2016 - Septiembre 2019
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Descripción:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <ul>
-                                            <li>Analicé y optimicé los procesos empresariales para aumentar la eficiencia operativa y reducir los
-                                                costos.
-                                            </li>
-                                            <li>Colaboré con equipos interfuncionales para implementar cambios y mejoras en los procesos.</li>
-                                            <li>Lideré la capacitación del personal en nuevas metodologías y herramientas para mejorar la
-                                                productividad y la
-                                                calidad del trabajo.</li>
-                                            <li>Participé en la elaboración de informes y análisis para la alta dirección, proporcionando
-                                                información clave
-                                                para la toma de decisiones estratégicas.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <ExperienciaLaboral
+  actividad="Analista de Procesos"
+  lugar="ABC Consulting, Ciudad de México"
+  fecha="Febrero 2016 - Septiembre 2019"
+  descripcion={[
+    "Analicé y optimicé los procesos empresariales para aumentar la eficiencia operativa y reducir los costos.",
+    "Colaboré con equipos interfuncionales para implementar cambios y mejoras en los procesos.",
+    "Lideré la capacitación del personal en nuevas metodologías y herramientas para mejorar la productividad y la calidad del trabajo.",
+    "Participé en la elaboración de informes y análisis para la alta dirección, proporcionando información clave para la toma de decisiones estratégicas."
+  ]}
+/>
 
                             <div className="row mb-4">
-                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir
-                                    experiencia</button>
+                                {/* <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir
+                                    experiencia</button> */}
+                                 <button onClick={handleAddExperience}>Añadir experiencia</button>
+            <FormularioExperiencia isOpen={modalOpen} onClose={handleCloseModal} />
                             </div>
 
                             {/* EDUCACION */}
@@ -299,56 +248,20 @@ export default function PerfilUsuario() {
                                 </div>
                             </div>
 
-                            {/* EDUCACION 1 */}
-                            <div className="container-fluid pe-4 pb-1 border rounded-3">
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold fs-5">
-                                        Título:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
-                                        Licenciatura en Administración de Empresas
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Lugar:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        Universidad Nacional Autónoma de México (UNAM), Ciudad de México
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Fecha:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        Septiembre 2008 - Junio 2012
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Descripción:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <ul>
-                                            <li>Titulada con distinción máxima</li>
-                                            <li>Participé activamente en actividades estudiantiles, incluyendo la organización de eventos académicos y voluntariado comunitario.</li>
-                                            <li>Desarrollé habilidades de liderazgo, trabajo en equipo y comunicación</li>
-                                            <li>Miembro activo de la sociedad de estudiantes de administración, donde colaboré en la organización
-                                                de eventos académicos y actividades de networking que enriquecieron la experiencia estudiantil de
-                                                mis compañeros.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Link:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <a href="https://www.unam.mx">Universidad Autónoma de México (UNAM)</a>
-                                    </div>
-                                </div>
-                            </div>
+
+                            <Educacion
+  titulo="Licenciatura en Administración de Empresas"
+  lugar="Universidad Nacional Autónoma de México (UNAM), Ciudad de México"
+  fecha="Septiembre 2008 - Junio 2012"
+  descripcion={[
+    "Titulada con distinción máxima",
+    "Participé activamente en actividades estudiantiles, incluyendo la organización de eventos académicos y voluntariado comunitario.",
+    "Desarrollé habilidades de liderazgo, trabajo en equipo y comunicación",
+    "Miembro activo de la sociedad de estudiantes de administración, donde colaboré en la organización de eventos académicos y actividades de networking que enriquecieron la experiencia estudiantil de mis compañeros."
+  ]}
+  link="https://www.unam.mx"
+/>
+
 
                             <div className="row mb-4">
                                 <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir
@@ -363,57 +276,19 @@ export default function PerfilUsuario() {
                             </div>
 
                             {/* CERTIFICACIONES Y LICENCIAS 1 */}
-                            <div className="container-fluid pe-4 pb-1 border rounded-3">
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold fs-5">
-                                        Actividad:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 fs-5 text-start">
-                                        Scrum Foundation Professional Certification - SFPC™
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Lugar:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        CertiProf International
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Fecha:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        Diciembre 2023
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Descripción:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <ul>
-                                            <li>Conocimiento general de metodologías Ágiles</li>
-                                            <li>Trabajo dentro del marco de trabajo SCRUM.</li>
-                                            <li>Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los
-                                                plazos y el
-                                                presupuesto.</li>
-                                            <li>Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y
-                                                recomendar acciones
-                                                correctivas cuando sea necesario.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2" style={{backgroundColor: "#eee"}}>
-                                    <div className="col-12 col-md-4 col-lg-3 text-start text-lg-end fw-bold">
-                                        Link:
-                                    </div>
-                                    <div className="col-12 col-md-8 col-lg-9 text-start">
-                                        <a href="https://www.unam.mx">CertiProf International</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <CertificacionLicencia
+  actividad="Scrum Foundation Professional Certification - SFPC™"
+  lugar="CertiProf International"
+  fecha="Diciembre 2023"
+  descripcion={[
+    "Conocimiento general de metodologías Ágiles",
+    "Trabajo dentro del marco de trabajo SCRUM.",
+    "Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los plazos y el presupuesto.",
+    "Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y recomendar acciones correctivas cuando sea necesario."
+  ]}
+  link="https://www.unam.mx"
+/>
+
 
                             <div className="row mb-4">
                                 <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir certificaciones y
