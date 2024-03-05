@@ -56,6 +56,22 @@ function CompletarPerfil() {
                         </div>
                     </div>
 
+                    {/* Habilidades técnicas*/}
+                    <div className="row">
+                        <div className="col-12 col-sm-12 mb-3">
+                            <label className="col-12 form-label text-start fw-bold" htmlFor="Habilidades">Habilidades técnicas</label>
+                            <input className="form-control" id="Habilidades" type="text" placeholder="Español (Nativo), Inglés (Avanzado)" />
+                        </div>
+                    </div>
+
+                    {/* Habilidades extras*/}
+                    <div className="row">
+                        <div className="col-12 col-sm-12 mb-3">
+                            <label className="col-12 form-label text-start fw-bold" htmlFor="StrongsHab">Habilidades carta</label>
+                            <input className="form-control" id="StrongsHab" type="text" placeholder="Separadas por coma (,) máximo 3." />
+                        </div>
+                    </div>
+
                     {/* Idiomas */}
                     <div className="row">
                         <div className="col-12 col-sm-12 mb-3">
