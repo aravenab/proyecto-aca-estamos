@@ -8,6 +8,8 @@ import FormularioCertificaciones from '../../components/PerfilUsuarioComponents/
 import CompletarPerfil from '../../components/CompletarPerfil/CompletarPerfil'
 import ContactarTalento from '../../components/ContactarTalento/ContactarTalento'
 import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
+import { Link } from 'react-router-dom';
+
 
 export default function PerfilUsuario() {
 

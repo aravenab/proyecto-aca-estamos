@@ -1,7 +1,7 @@
 // import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import React, { useState } from 'react';
 import { validate, format } from "rut.js";
 
@@ -38,6 +38,11 @@ export default function RegistroUusariosTalentos() {
 
 
     const [formularioEnviado, setFormularioEnviado] = useState(false);
+    const navigate = useNavigate();
+
+    const [mostrarError, setMostrarError] = useState(false); // Estado para mostrar la alerta de error
+
+
 
 
     const handleSubmit = async (e) => {
@@ -61,9 +66,10 @@ export default function RegistroUusariosTalentos() {
                 Rut: ${rut}
                 Estado Civil: ${estado_civil}
                 Fecha de Nacimiento: ${bday}
-                Teléfono: ${phone_num}
+                Teléfono: ${phone_num}`);
 
-                `);
+                setFormularioEnviado(true);
+                
 
 
                 // 
@@ -71,14 +77,20 @@ export default function RegistroUusariosTalentos() {
                 // Mensaje del admin: ${adm_msg}
             } else {
                 console.error('Error al enviar los datos');
+                setMostrarError(true); // Mostrar la alerta de error si los datos no se envían correctamente
+
             }
         } catch (error) {
             console.error('Error al enviar los datos:', error);
+            setMostrarError(true); // Mostrar la alerta de error si los datos no se envían correctamente
+
         }
     };
 
     return (
         <>
+            {formularioEnviado ? navigate('/perfil_usuario') : null}
+
             <Navbar />
             <div>
                 <div className="container-fluid m-5 bg-light shadow border-5 pt-3 needs-validation" noValidate>
@@ -107,6 +119,11 @@ export default function RegistroUusariosTalentos() {
                         {/* ----------------------------------------------------------------------CONTAINER TOTAL */}
                         <div className="container-fluid mt-4">
                         <h1>Registro como TALENTO</h1>
+                        {mostrarError && ( // Mostrar la alerta de error si mostrarError es true
+                        <div className="alert alert-danger text-center" role="alert">
+                            Datos no enviados
+                        </div>
+                    )}
                         {/* <!-- ---------------------------nombre --> */}
                         <div className="row">
                             <div className="col-6 col-sm-6 mb-3">
