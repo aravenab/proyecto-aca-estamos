@@ -6,6 +6,7 @@ import FormularioExperiencia from '../../components/PerfilUsuarioComponents/Form
 import FormularioEducacion from '../../components/PerfilUsuarioComponents/FormularioEducacion'
 import FormularioCertificaciones from '../../components/PerfilUsuarioComponents/FormularioCertificaciones'
 import CompletarPerfil from '../../components/CompletarPerfil/CompletarPerfil'
+import ContactarTalento from '../../components/ContactarTalento/ContactarTalento'
 
 export default function PerfilUsuario() {
 
@@ -45,8 +46,30 @@ export default function PerfilUsuario() {
                             {/*---------------------------------------------------CONTACTO*/}
                             <div className="row align-items-end my-3 mt-md-2 mb-lg-4">
                                 <div className="col-12 col-sm-12 col-md-2 col-lg-2">
-                                    <button type="button" className="btn btn-info rounded-5">Contactar</button>
+                                    <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#contactarTalentoModal">
+                                        Contactar
+                                    </button>
                                 </div>
+
+                                {/*----------------------------------------------------MODAL COMPLETAR PERFIL*/}
+                                <div className="modal modal-xl fade" id="contactarTalentoModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Completar perfil</h1>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <ContactarTalento />
+                                            </div>
+                                            <div className="modal-footer">
+                                                <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                                <button type="button" className="btn btn-info rounded-5">Guardar cambios</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div className="col-12 col-sm-12 col-md-10 col-lg-10 text-start">
                                     <button type="button" className="btn btn-warning rounded-5 ms-3">(+) Seguir</button>
                                 </div>
@@ -80,23 +103,24 @@ export default function PerfilUsuario() {
                                 </div>
                             </div>
 
+                            {/*----------------------------------------------------MODAL COMPLETAR PERFIL*/}
                             <div className="modal modal-xl fade" id="completarPerfilModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div className="modal-dialog">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Completar perfil</h1>
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div className="modal-body">
-                                                <CompletarPerfil/>
-                                            </div>
-                                            <div className="modal-footer">
-                                                <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Descartar</button>
-                                                <button type="button" className="btn btn-info rounded-5">Guardar cambios</button>
-                                            </div>
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Completar perfil</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <CompletarPerfil />
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                            <button type="button" className="btn btn-info rounded-5">Guardar cambios</button>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
                             <div className='row border-top mt-4 m-2 border-2'> {/*separador*/}
                             </div>

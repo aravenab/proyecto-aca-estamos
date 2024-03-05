@@ -3,16 +3,16 @@ import React from 'react'
 export default function ContactarTalento() {
   return (
       <div className='container-fluid'>
-          <div className='container-fluid'>
+          <div className='container-fluid text-start'>
 
                 {/* <!-- BOTON CERRAR --> */}
-              <div className='row text-end'>
+              {/* <div className='row text-end'>
                   <div className='col-11'>
                   </div>
                   <div className='col-1 '>
                       <button type="button" className="btn-close fs-2" aria-label="Close"></button>
                   </div>
-              </div>
+              </div> */}
 
                {/* <!-- TITULOS --> */}
             <div className='row mt-3'>
@@ -53,19 +53,19 @@ export default function ContactarTalento() {
               </div>
 
                {/* <!-- CONTACTAR --> */}
-              <div className="col-12 mb-4 text-end">
+              {/* <div className="col-12 mb-4 text-end">
                   <button type="button" className="btn btn-success">Contactar</button>
-              </div>
+              </div> */}
           </div>
 
            {/* <!-- BOTON VOLVER --> */}
-          <div className="container-fluid-fluid h-100 mt-4">
+          {/* <div className="container-fluid-fluid h-100 mt-4">
               <div className="row w-100 align-items-center">
                   <div className="col text-center">
                       <button className="btn btn-info regular-button mb-4"> Volver </button>
                   </div>
               </div>
-          </div>
+          </div> */}
           
       </div>
   )
