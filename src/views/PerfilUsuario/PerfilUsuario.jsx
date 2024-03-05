@@ -7,19 +7,9 @@ import '../../components/PerfilUsuarioComponents/modal.css'
 
 export default function PerfilUsuario() {
 
-    const [modalOpen, setModalOpen] = useState(false);
-
-    const handleAddExperience = () => {
-        setModalOpen(true);
-    };
-
-    const handleCloseModal = () => {
-        setModalOpen(false);
-    };
-
     return (
         <div>
-            <div className="container-fluid" style={{marginTop: "5rem;"}}> {/*Container de la pagina en general*/}
+            <div className="container-fluid" style={{marginTop: "5rem"}}> {/*Container de la pagina en general*/}
 
                 <div className="container-fluid"> {/*TITULOS DE LA PÁGINA*/}
                     <div className="row mt-2"> {/*FOTO PERFIL*/}
@@ -237,8 +227,31 @@ export default function PerfilUsuario() {
                             <div className="row mb-4">
                                 {/* <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2">(+) Añadir
                                     experiencia</button> */}
-                                 <button onClick={handleAddExperience}>Añadir experiencia</button>
-            <FormularioExperiencia isOpen={modalOpen} onClose={handleCloseModal} />
+                                {/* <button onClick={handleAddExperience}>Añadir experiencia</button>
+                                <FormularioExperiencia isOpen={modalOpen} onClose={handleCloseModal} /> */}
+                                {/* <!-- Button trigger modal --> */}
+                                <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Launch demo modal
+                                </button>
+
+                                {/* <!-- Modal --> */}
+                                <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                ...
+                                            </div>
+                                            <div className="modal-footer">
+                                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" className="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* EDUCACION */}
