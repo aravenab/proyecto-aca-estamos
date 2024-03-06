@@ -56,7 +56,6 @@ export default function Login() {
 
     return (
         <div>
-            {/* {formularioEnviado ? navigate('/perfil_usuario') : (null)} */}
             <Navbar />
             
             <div className="d-flex justify-content-center align-items-center vh-100">  {/*<!----------------------------LOGIN--> */}
@@ -82,7 +81,6 @@ export default function Login() {
 
                         </div>
                         <div className="input-group mt-1">
-                            {/* style={{ backgroundColor: '#FF571E' }} */}
                             <div className="input-group-text bg-$orange-500">
                                 <img src={logCont} alt="icono_contraseña" style={{ height: '1rem' }} />
                             </div>
@@ -94,16 +92,11 @@ export default function Login() {
                     </div>
                     <div className="w-100 mt-4">
                         <button className='btn btn-info text-white' onClick={handleSubmit}>
-                            {/* <Link to="/perfil_usuario">
-                               
-                            </Link> */}
                             Login
                         </button>
                     </div>
-                    {/* <div className="btn btn-info text-white w-100 mt-1">Solo quiero mirar</div> */}
                     <div className="d-flex gap-1 justify-content-center mt-1">
                         <div style={{color: 'var(--check1'}}>¿No tienes una cuenta?</div>
-                        {/* <i className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}><Link to="/registro">Regístrese</Link></i> */}
                     </div>
                     {/* <!-- botones talentos/empresas --> */}
                     <div className="row">
@@ -114,14 +107,6 @@ export default function Login() {
                             <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Regístrate como EMPRESA</Link>
                         </div>
                     </div>
-                    {/* <div className="row">
-                        <div className="col-6">
-                            <Link to="/registro_usuarios_talentos" className="btn btn-success text-white w-100 mt-4">Registro como TALENTO</Link>
-                        </div>
-                        <div className="col-6">
-                            <Link to="/registro_usuarios_empresas" className="btn btn-primary text-white w-100 mt-4">Registro como EMPRESA</Link>
-                        </div>
-                    </div> */}
 
                     <div className="py-3">
                         <div className="border-bottom text-center" style={{ height: '0.9rem' }}>
