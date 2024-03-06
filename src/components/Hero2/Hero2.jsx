@@ -1,5 +1,9 @@
 import React from 'react';
 import About1 from '../../assets/img/testimonials/about.jpg'
+import img1 from "../../assets/img/features-1.png"
+import img2 from "../../assets/img/features-2.png"
+import img3 from "../../assets/img/features-3.png"
+import img4 from "../../assets/img/features-4.png"
 
 const Hero2 = () => {
   return (
@@ -77,22 +81,22 @@ const Hero2 = () => {
               <div className="tab-content">
                 <div className="tab-pane active show" id="tab-1">
                   <figure>
-                    <img src="assets/img/features-1.png" alt="" className="img-fluid"/>
+                    <img src={img1} alt="" className="img-fluid"/>
                   </figure>
                 </div>
                 <div className="tab-pane" id="tab-2">
                   <figure>
-                    <img src="assets/img/features-2.png" alt="" className="img-fluid"/>
+                    <img src={img2} alt="" className="img-fluid"/>
                   </figure>
                 </div>
                 <div className="tab-pane" id="tab-3">
                   <figure>
-                    <img src="assets/img/features-3.png" alt="" className="img-fluid"/>
+                    <img src={img3} alt="" className="img-fluid"/>
                   </figure>
                 </div>
                 <div className="tab-pane" id="tab-4">
                   <figure>
-                    <img src="assets/img/features-4.png" alt="" className="img-fluid"/>
+                    <img src={img4} alt="" className="img-fluid"/>
                   </figure>
                 </div>
               </div>
