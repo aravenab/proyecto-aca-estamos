@@ -10,12 +10,13 @@ import ContactarTalento from '../../components/ContactarTalento/ContactarTalento
 import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
+import jwt_decode from 'jwt-decode';
 
 
 export default function PerfilUsuarioTalento() {
 
     const[usuarios, setUsuarios] = useState([]);
-    const [empresas,setEmpresas] = useState([]);
+    // const [empresas,setEmpresas] = useState([]);
     const token = localStorage.getItem('token');
       console.log(token)
 
@@ -29,9 +30,16 @@ export default function PerfilUsuarioTalento() {
             // Aquí puedes manejar los datos y establecer los estados
             if (data.data) {
               setUsuarios(data.data.usuarios || []);
-              setEmpresas(data.data.empresas || []);
             }
-    
+
+             // Parsea el token para obtener el ID del usuario
+             const decodedToken = jwt_decode(token);
+             const userId = decodedToken.id;
+
+             // Busca el usuario con el mismo ID
+             const currentUser = usuarios.find(user => user.id === userId);
+             setCurrentUser(currentUser);
+
            
           } catch (error) {
             console.log('Error:', error);
