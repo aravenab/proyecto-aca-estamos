@@ -6,18 +6,19 @@ import Switch from '../modoOscuro/Switch'
 const Navbar = ({ theme, handleChangeTheme }) => {
 
 
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
-        const response = await fetch('http://tu-backend.com/api/verify-login', {
+        const token = localStorage.getItem('token');
+        const response = await fetch('http://localhost:3000/verify-login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             // Aquí deberías enviar el JWT almacenado en el frontend para que el backend pueda verificarlo
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            'token': token // Incluir el token en el encabezado de autorización,
           },
         });
 
@@ -34,6 +35,13 @@ const Navbar = ({ theme, handleChangeTheme }) => {
 
     checkLoginStatus();
   }, []);
+
+  // Función para manejar el logout
+  const handleLogout = () => {
+    // Realiza cualquier lógica de logout necesaria, como eliminar el token del almacenamiento local
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+  };
 
   return (
     <>
@@ -100,7 +108,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 </a>
                 <ul>
                   <li>
-                    <a className="nav-link scrollto" href="#about">
+                    <a className="nav-link scrollto active" href="#about">
                       ¿Quienes somos?
                     </a>
                   </li>
@@ -124,20 +132,27 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                       Marcas
                     </a>
                   </li>
+                  {isLoggedIn && (
+                <li>
+                  <a className="nav-link scrollto" onClick={handleLogout} href='#'>
+                    Logout
+                    </a>
+                </li>
+              )}
                 </ul>
               </li>
               {/* <li>
                 <Link to="login">¡Únete!</Link>
               </li> */}
-              {/* {isLoggedIn ? (
+              {isLoggedIn ? (
                 <li>
-                  <Link to="perfil">Mi perfil</Link>
+                  <Link to="/perfil">Mi perfil</Link>
                 </li>
-              ) : ( */}
+              ) : (
                 <li>
-                  <Link to="login">¡Únete!</Link>
+                  <Link to="/login">¡Únete!</Link>
                 </li>
-              {/* )} */}
+              )} 
               <li>
                 <a className="nav-link scrollto" href="#contact">
                   Contacto
