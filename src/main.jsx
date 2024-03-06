@@ -6,6 +6,7 @@ import { RouterProvider } from 'react-router-dom' //Esto es para rutear
 import router from './router/routes.jsx' // importamos nuestro router
 import UneteANosotros from './components/UneteANosotros/UneteANosotros.jsx'
 import CartasEmpresas from './components/CartasEmpresas/CartasEmpresas.jsx'
+import PerfilEmpresa from './views/PerfilUsuarioEmpresa/PerfilUsuarioEmpresa.jsx'
 import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
 import AutorizarUsuarios from './views/AutorizarUsuarios/AutorizarUsuarios.jsx'
@@ -19,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <RouterProvider router ={router}/>
       {/* <CartasEmpresas/> */}
       {/* <PerfilUsuario/> */}
-      {/* <PerfilEmpresa/>  */}
+       {/* <PerfilEmpresa/>   */}
       {/* <BuscadorTalentos/> */}
       {/* <CartasBuscadorTalentos/> */}
       {/* <PerfilUsuario/> */}

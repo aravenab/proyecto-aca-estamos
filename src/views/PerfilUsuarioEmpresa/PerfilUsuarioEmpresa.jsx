@@ -31,7 +31,7 @@ export default function PerfilUsuarioEmpresa() {
             <div className="col-sm-12 col-md-8 col-lg-7 col-xl-7">
               <div className="row text-start">
                 <div className="col-12 mt-4">
-                  <h2 className="fw-bold">EMBOTELLADORA ANDINA S.A</h2>{" "}
+                  <h2 className="fw-bold" style = {{color: 'var(--tith4)'}}>EMBOTELLADORA ANDINA S.A</h2>{" "}
                   {/*razon social*/}
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function PerfilUsuarioEmpresa() {
               <div className="row mt-lg-2">
                 {" "}
                 {/*COMPLETAR PERFIL*/}
-                <div className="col-12 text-center">Redes Sociales</div>
+                <div className="col-12 text-center" style = {{color: 'var(--tith4)'}}>Redes Sociales</div>
               </div>
               <div className="row border-top mt-4 m-2 border-2">
                 {" "}
@@ -217,7 +217,8 @@ export default function PerfilUsuarioEmpresa() {
                 className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold text-start"
                 style={{backgroundColor: 'var(--container2)'}}>
                   {/* contiene css de principal rubro  */}
-                <div className="col-4">Principal rubro:</div>
+                <div className="col-4" style = {{color: 'var(--tith4)'}}>
+                 Principal rubro:</div>
                 <div className="col-8 text-start">
                   ELABORACION DE BEBIDAS NO ALCOHOLICAS{" "}
                   {/* rubro de la empresa*/}
@@ -226,7 +227,7 @@ export default function PerfilUsuarioEmpresa() {
               <div
                 className="row rounded-2 ms-1 my-1 py-1 pb-2 text-start"
                 style={{backgroundColor: 'var(--container2)'}}>
-                <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold">
+                <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold" style = {{color: 'var(--tith4)'}}>
                   Acerca de:
                 </div>
                 <div className="col-sm-12 col-lg-8 lh-1 py-1">
@@ -248,9 +249,9 @@ export default function PerfilUsuarioEmpresa() {
               </div>
               <div
                 className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start"
-                style={{ backgroundColor: "#eee" }}
+                style={{ backgroundColor: 'var(--container2)' }}
               >
-                <div className="col-sm-12 col-lg-4 fw-bold">
+                <div className="col-sm-12 col-lg-4 fw-bold" style = {{color: 'var(--tith4)'}}>
                   Habilidades y virtudes Necesarias:
                 </div>
                 <div className="col-sm-12 col-lg-8">
@@ -260,9 +261,9 @@ export default function PerfilUsuarioEmpresa() {
               </div>
               <div
                 className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start"
-                style={{ backgroundColor: "#eee" }}
+                style={{ backgroundColor: 'var(--container2)' }}
               >
-                <div className="col-sm-12 col-lg-4 fw-bold">
+                <div className="col-sm-12 col-lg-4 fw-bold" style = {{color: 'var(--tith4)'}}>
                   Requisitos minimos:
                 </div>
                 <div className="col-sm-12 col-lg-8">
