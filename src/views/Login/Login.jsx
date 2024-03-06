@@ -4,13 +4,18 @@ import logCont from '../../assets/images/iconos/logo_contraseña.png'
 import logoGoo from '../../assets/images/iconos/logo_google.png'
 import logoUser2 from '../../assets/images/iconos/logo_usuario2.png'
 import Navbar from '../../components/Navbar/Navbar'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer'
 
 export default function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const [formularioEnviado, setFormularioEnviado] = useState(false);
+    const [mostrarError, setMostrarError] = useState(false); // Estado para mostrar la alerta de error
+    const navigate = useNavigate();
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -26,19 +31,33 @@ export default function Login() {
 
             if (response.ok) {
                 console.log('Datos enviados correctamente');
+                const data = await response.json();
+                localStorage.setItem('token', data.token); // Almacena el token en el localStorage
+                setFormularioEnviado(true);
+                
             } else {
                 console.error('Error al enviar los datos');
+                setMostrarError(true); // Mostrar la alerta de error si los datos no se envían correctamente
             }
         } catch (error) {
             console.error('Error al enviar los datos:', error);
+            setMostrarError(true); // Mostrar la alerta de error si hay un error al enviar los datos
         }
     };
 
     return (
         <div>
-            <Navbar/>
+            {formularioEnviado ? navigate('/perfil_usuario') : (null)}
+            <Navbar />
+            
             <div className="d-flex justify-content-center align-items-center vh-100">  {/*<!----------------------------LOGIN--> */}
+
                 <div className="bg-white p-5 rounded-5 text-secondary" style={{ width: '25rem' }}>
+                    {mostrarError && ( // Mostrar la alerta de error si mostrarError es true
+                        <div className="alert alert-danger text-center" role="alert">
+                            Datos malos
+                        </div>
+                    )}
                     <div className="d-flex justify-content-center">
                         <img src={logUser} alt="icono_login" style={{ height: '7rem' }} />
                     </div>
@@ -70,7 +89,7 @@ export default function Login() {
                             {/* <Link to="/perfil_usuario">
                                
                             </Link> */}
-                             Login
+                            Login
                         </button>
                     </div>
                     {/* <div className="btn btn-info text-white w-100 mt-1">Solo quiero mirar</div> */}
@@ -108,7 +127,7 @@ export default function Login() {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

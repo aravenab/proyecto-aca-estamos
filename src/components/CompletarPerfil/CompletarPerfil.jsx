@@ -151,7 +151,7 @@ function CompletarPerfil() {
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value=""
                                                 id="visible_civil" />
-                                            <label className="form-check-label" for="visible_civil">
+                                            <label className="form-check-label" forhtml="visible_civil">
                                                 Visible
                                             </label>
                                         </div>
@@ -183,7 +183,7 @@ function CompletarPerfil() {
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value=""
                                                 id="visible_civil" />
-                                            <label className="form-check-label" for="visible_civil">
+                                            <label className="form-check-label" forhtml="visible_civil">
                                                 Visible
                                             </label>
                                         </div>

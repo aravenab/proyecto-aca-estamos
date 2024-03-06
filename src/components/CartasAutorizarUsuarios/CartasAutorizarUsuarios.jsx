@@ -98,7 +98,7 @@ export default function CartasAutorizarUsuarios({ user }) {
                                 <div class="popup" id="popupForm">
                                     <form>
                                         {/* <!-- Contenido del formulario --> */}
-                                        <label for="motivo">¿Seguro que deseas rechazar a este candidato? (Si estás seguro escribe "SI"):</label>
+                                        <label forHtml="motivo">¿Seguro que deseas rechazar a este candidato? (Si estás seguro escribe "SI"):</label>
                                         <input type="text" id="motivo" name="motivo" />
                                         <button type="submit">Enviar</button>
                                     </form>
