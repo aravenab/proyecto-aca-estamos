@@ -8,7 +8,6 @@ import FormularioCertificaciones from '../../components/PerfilUsuarioComponents/
 import CompletarPerfil from '../../components/CompletarPerfil/CompletarPerfil'
 import ContactarTalento from '../../components/ContactarTalento/ContactarTalento'
 import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
-import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 
@@ -17,7 +16,7 @@ export default function PerfilUsuarioTalento() {
 
     return (
         <div>
-            <Navbar/>
+            <Navbar />
             <div className="container-fluid" style={{ marginTop: "5rem" }}> {/*Container de la pagina en general*/}
                 {/*-------------------------------------------------------------TITULOS DE LA PÁGINA*/}
                 <div className="container-fluid">
@@ -103,7 +102,7 @@ export default function PerfilUsuarioTalento() {
                             {/*----------------------------------------------------COMPLETAR PERFIL*/}
                             <div className="row mt-lg-2">
                                 <div className="col-12 text-center">
-                                <button type="button" className="btn btn-info rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#completarPerfilModal">
+                                    <button type="button" className="btn btn-info rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#completarPerfilModal">
                                         (+) Completar perfil
                                     </button>
                                 </div>
@@ -156,29 +155,29 @@ export default function PerfilUsuarioTalento() {
                                     <div className="col-12">
                                         {/* <a href="https://http.cat/status/102">(+) Agregar más redes</a> */}
                                         <button type="button" className="btn btn-info rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#agregarRedesModal">
-                                        (+) Agregar más redes
-                                    </button>
+                                            (+) Agregar más redes
+                                        </button>
                                     </div>
                                 </div>
 
                                 {/*-----------------------------------------MODAL AGREGAR MAS REDES*/}
                                 <div className="modal modal-xl fade" id="agregarRedesModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div className="modal-dialog">
-                                    <div className="modal-content">
-                                        <div className="modal-header">
-                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Agregar redes</h1>
-                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div className="modal-body">
-                                            <AgregarRedes />
-                                        </div>
-                                        <div className="modal-footer">
-                                            <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Descartar</button>
-                                            <button type="button" className="btn btn-info rounded-5">Guardar cambios</button>
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Agregar redes</h1>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div className="modal-body">
+                                                <AgregarRedes />
+                                            </div>
+                                            <div className="modal-footer">
+                                                <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                                <button type="button" className="btn btn-info rounded-5">Guardar cambios</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
                             </div>
 
@@ -241,214 +240,200 @@ export default function PerfilUsuarioTalento() {
                     </div>
 
                     {/*----------------------------------------------------------------------------Info perfil*/}
-                        <div className="col-sm-12 col-md-8 col-lg-7 col-xl-7"> 
-                            <div className="container-fluid">
-                                {/* -----------------------------------------DESCRIPCION */}
-                                <div className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold text-start" style={{ backgroundColor: "#eee" }}>
-                                    <div className="col-4">
-                                        Descripción:
-                                    </div>
-                                    <div className="col-8 text-start">
-                                        Consultora Senior de Gestión de Proyectos
-                                    </div>
+                    <div className="col-sm-12 col-md-8 col-lg-7 col-xl-7">
+                        <div className="container-fluid">
+                            {/* -----------------------------------------DESCRIPCION */}
+                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold text-start" style={{ backgroundColor: "#eee" }}>
+                                <div className="col-4">
+                                    Descripción:
                                 </div>
-                                {/* -----------------------------------------ACERCA DE */}
-
-                                <div className="row rounded-2 ms-1 my-1 py-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
-                                    <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold">
-                                        Acerca de:
-                                    </div>
-                                    <div className="col-sm-12 col-lg-8 lh-1 py-1">
-                                        Soy una profesional comprometida y orientada a resultados con más de 8 años de experiencia en el campo de
-                                        la gestión de proyectos y la consultoría empresarial. Mi enfoque se centra en la optimización de procesos,
-                                        la mejora continua y el desarrollo de soluciones innovadoras para desafíos empresariales. Poseo
-                                        habilidades excepcionales de comunicación y liderazgo, lo que me permite colaborar eficazmente con equipos
-                                        multidisciplinarios y motivar a los miembros del equipo hacia el logro de objetivos comunes.
-                                    </div>
+                                <div className="col-8 text-start">
+                                    Consultora Senior de Gestión de Proyectos
                                 </div>
+                            </div>
+                            {/* -----------------------------------------ACERCA DE */}
 
-                                {/* -----------------------------------------HABILIDADES Y VIRTUDES */}
-
-                                <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
-                                    <div className="col-sm-12 col-lg-4 fw-bold">
-                                        Habilidades y virtudes:
-                                    </div>
-                                    <div className="col-sm-12 col-lg-8">
-                                        Javascript (Avanzado), HTML (Avanzado), CSS (Avanzado), SQL (Avanzado), Python (Avanzado)
-                                    </div>
+                            <div className="row rounded-2 ms-1 my-1 py-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
+                                <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold">
+                                    Acerca de:
                                 </div>
-                                {/* ---------------------------------------IDIOMAS */}
-
-                                <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
-                                    <div className="col-sm-12 col-lg-4 fw-bold">
-                                        Idiomas:
-                                    </div>
-                                    <div className="col-sm-12 col-lg-8">
-                                        Español (Nativo), Inglés (Avanzado), Coreano (Básico)
-                                    </div>
+                                <div className="col-sm-12 col-lg-8 lh-1 py-1">
+                                    Soy una profesional comprometida y orientada a resultados con más de 8 años de experiencia en el campo de
+                                    la gestión de proyectos y la consultoría empresarial. Mi enfoque se centra en la optimización de procesos,
+                                    la mejora continua y el desarrollo de soluciones innovadoras para desafíos empresariales. Poseo
+                                    habilidades excepcionales de comunicación y liderazgo, lo que me permite colaborar eficazmente con equipos
+                                    multidisciplinarios y motivar a los miembros del equipo hacia el logro de objetivos comunes.
                                 </div>
+                            </div>
 
-                                {/* EXPERIENCIA LABORAL */}
-                                <div className="row text-start">
-                                    <div className="col-12">
-                                        <h3>Experiencia</h3>
-                                    </div>
+                            {/* -----------------------------------------HABILIDADES Y VIRTUDES */}
+
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
+                                <div className="col-sm-12 col-lg-4 fw-bold">
+                                    Habilidades y virtudes:
                                 </div>
-
-                                {/* EXPERIENCIA 1 */}
-                                <ExperienciaLaboral
-                                    actividad="Consultora Senior de Gestión de Proyectos"
-                                    lugar="ABC Consulting, Ciudad de México"
-                                    fecha="Octubre 2019 - Presente"
-                                    descripcion={[
-                                        "Dirijo proyectos de consultoría estratégica para clientes de diversos sectores, desde la planificación hasta la implementación y el seguimiento.",
-                                        "Colaboro con equipos internos y clientes para identificar oportunidades de mejora y desarrollar soluciones personalizadas que impulsen el crecimiento y la eficiencia operativa.",
-                                        "Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los plazos y el presupuesto.",
-                                        "Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y recomendar acciones correctivas cuando sea necesario."
-                                    ]}
-                                />
-
-
-                                {/* EXPERIENCIA 2 */}
-                                <ExperienciaLaboral
-                                    actividad="Analista de Procesos"
-                                    lugar="ABC Consulting, Ciudad de México"
-                                    fecha="Febrero 2016 - Septiembre 2019"
-                                    descripcion={[
-                                        "Analicé y optimicé los procesos empresariales para aumentar la eficiencia operativa y reducir los costos.",
-                                        "Colaboré con equipos interfuncionales para implementar cambios y mejoras en los procesos.",
-                                        "Lideré la capacitación del personal en nuevas metodologías y herramientas para mejorar la productividad y la calidad del trabajo.",
-                                        "Participé en la elaboración de informes y análisis para la alta dirección, proporcionando información clave para la toma de decisiones estratégicas."
-                                    ]}
-                                />
-
-                                <div className="row mb-4">
-                                    <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#experienciaModal">
-                                        (+) Añadir experiencia
-                                    </button>
-
+                                <div className="col-sm-12 col-lg-8">
+                                    Javascript (Avanzado), HTML (Avanzado), CSS (Avanzado), SQL (Avanzado), Python (Avanzado)
                                 </div>
-                                {/* <!-- Modal de FORMULARIO EXPERIENCIA --> */}
-                                <div className="modal modal-xl fade" id="experienciaModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div className="modal-dialog">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div className="modal-body">
-                                                <FormularioExperiencia />
-                                            </div>
-                                            <div className="modal-footer">
-                                                <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
-                                                <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            {/* ---------------------------------------IDIOMAS */}
+
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
+                                <div className="col-sm-12 col-lg-4 fw-bold">
+                                    Idiomas:
                                 </div>
-
-                                
-                                {/* EDUCACION */}
-                                <div className="row">
-                                    <div className="col-12">
-                                        <h3>Educación</h3>
-                                    </div>
+                                <div className="col-sm-12 col-lg-8">
+                                    Español (Nativo), Inglés (Avanzado), Coreano (Básico)
                                 </div>
+                            </div>
 
-
-                                <Educacion
-                                    titulo="Licenciatura en Administración de Empresas"
-                                    lugar="Universidad Nacional Autónoma de México (UNAM), Ciudad de México"
-                                    fecha="Septiembre 2008 - Junio 2012"
-                                    descripcion={[
-                                        "Titulada con distinción máxima",
-                                        "Participé activamente en actividades estudiantiles, incluyendo la organización de eventos académicos y voluntariado comunitario.",
-                                        "Desarrollé habilidades de liderazgo, trabajo en equipo y comunicación",
-                                        "Miembro activo de la sociedad de estudiantes de administración, donde colaboré en la organización de eventos académicos y actividades de networking que enriquecieron la experiencia estudiantil de mis compañeros."
-                                    ]}
-                                    link="https://www.unam.mx"
-                                />
-
-
-                                <div className="row mb-4">
-                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#educacionModal">
-                                        (+) Añadir edudación
-                                    </button>
+                            {/* EXPERIENCIA LABORAL */}
+                            <div className="row text-start">
+                                <div className="col-12">
+                                    <h3>Experiencia</h3>
                                 </div>
+                            </div>
 
-                                {/* <!-- Modal de FORMULARIO EDUCACION --> */}
-                                <div className="modal modal-xl fade" id="educacionModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div className="modal-dialog">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div className="modal-body">
-                                                <FormularioEducacion/>
-                                            </div>
-                                            <div className="modal-footer">
-                                                <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
-                                                <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            {/* EXPERIENCIA 1 */}
+                            <ExperienciaLaboral
+                                actividad="Consultora Senior de Gestión de Proyectos"
+                                lugar="ABC Consulting, Ciudad de México"
+                                fecha="Octubre 2019 - Presente"
+                                descripcion={[
+                                    "Dirijo proyectos de consultoría estratégica para clientes de diversos sectores, desde la planificación hasta la implementación y el seguimiento.",
+                                    "Colaboro con equipos internos y clientes para identificar oportunidades de mejora y desarrollar soluciones personalizadas que impulsen el crecimiento y la eficiencia operativa.",
+                                    "Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los plazos y el presupuesto.",
+                                    "Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y recomendar acciones correctivas cuando sea necesario."
+                                ]}
+                            />
 
-                                {/* CERTIFICACIONES Y LICENCIAS */}
-                                <div className="row">
-                                    <div className="col-12">
-                                        <h3>Certificaciones y Licencias</h3>
-                                    </div>
-                                </div>
-
-                                {/* CERTIFICACIONES Y LICENCIAS 1 */}
-                                <CertificacionLicencia
-                                    actividad="Scrum Foundation Professional Certification - SFPC™"
-                                    lugar="CertiProf International"
-                                    fecha="Diciembre 2023"
-                                    descripcion={[
-                                        "Conocimiento general de metodologías Ágiles",
-                                        "Trabajo dentro del marco de trabajo SCRUM.",
-                                        "Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los plazos y el presupuesto.",
-                                        "Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y recomendar acciones correctivas cuando sea necesario."
-                                    ]}
-                                    link="https://www.unam.mx"
-                                />
-
-
-<div className="row mb-4">
-                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#certificacionModal">
-                                        (+) Añadir Licencia o Certificación
-                                    </button>
-                                </div>
-
-                                {/* <!-- Modal de FORMULARIO EDUCACION --> */}
-                                <div className="modal modal-xl fade" id="certificacionModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div className="modal-dialog">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div className="modal-body">
-                                                <FormularioCertificaciones/>
-                                            </div>
-                                            <div className="modal-footer">
-                                                <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
-                                                <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="row mb-4">
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#experienciaModal">
+                                    (+) Añadir experiencia
+                                </button>
 
                             </div>
+                            {/* <!-- Modal de FORMULARIO EXPERIENCIA --> */}
+                            <div className="modal modal-xl fade" id="experienciaModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <FormularioExperiencia />
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                            <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            {/* EDUCACION */}
+                            <div className="row">
+                                <div className="col-12">
+                                    <h3>Educación</h3>
+                                </div>
+                            </div>
+
+
+                            <Educacion
+                                titulo="Licenciatura en Administración de Empresas"
+                                lugar="Universidad Nacional Autónoma de México (UNAM), Ciudad de México"
+                                fecha="Septiembre 2008 - Junio 2012"
+                                descripcion={[
+                                    "Titulada con distinción máxima",
+                                    "Participé activamente en actividades estudiantiles, incluyendo la organización de eventos académicos y voluntariado comunitario.",
+                                    "Desarrollé habilidades de liderazgo, trabajo en equipo y comunicación",
+                                    "Miembro activo de la sociedad de estudiantes de administración, donde colaboré en la organización de eventos académicos y actividades de networking que enriquecieron la experiencia estudiantil de mis compañeros."
+                                ]}
+                                link="https://www.unam.mx"
+                            />
+
+
+                            <div className="row mb-4">
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#educacionModal">
+                                    (+) Añadir edudación
+                                </button>
+                            </div>
+
+                            {/* <!-- Modal de FORMULARIO EDUCACION --> */}
+                            <div className="modal modal-xl fade" id="educacionModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <FormularioEducacion />
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                            <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* CERTIFICACIONES Y LICENCIAS */}
+                            <div className="row">
+                                <div className="col-12">
+                                    <h3>Certificaciones y Licencias</h3>
+                                </div>
+                            </div>
+
+                            {/* CERTIFICACIONES Y LICENCIAS 1 */}
+                            <CertificacionLicencia
+                                actividad="Scrum Foundation Professional Certification - SFPC™"
+                                lugar="CertiProf International"
+                                fecha="Diciembre 2023"
+                                descripcion={[
+                                    "Conocimiento general de metodologías Ágiles",
+                                    "Trabajo dentro del marco de trabajo SCRUM.",
+                                    "Gestiono múltiples proyectos simultáneamente, garantizando la calidad, el cumplimiento de los plazos y el presupuesto.",
+                                    "Desarrollo y presento informes ejecutivos para informar sobre el progreso del proyecto y recomendar acciones correctivas cuando sea necesario."
+                                ]}
+                                link="https://www.unam.mx"
+                            />
+
+
+                            <div className="row mb-4">
+                                <button type="button" className="btn btn-warning rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#certificacionModal">
+                                    (+) Añadir Licencia o Certificación
+                                </button>
+                            </div>
+
+                            {/* <!-- Modal de FORMULARIO EDUCACION --> */}
+                            <div className="modal modal-xl fade" id="certificacionModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-header">
+                                            <h1 className="modal-title fs-5" id="exampleModalLabel">Añadir experiencia</h1>
+                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div className="modal-body">
+                                            <FormularioCertificaciones />
+                                        </div>
+                                        <div className="modal-footer">
+                                            <button type="button" className="btn btn-danger rounded-5" data-bs-dismiss="modal">Descartar</button>
+                                            <button type="button" className="btn btn-warning rounded-5">(+) Añadir experiencia</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+                </div>
 
             </div>
-            <Footer/>
+            <Footer />
         </div>
-        
+
     )
 }
