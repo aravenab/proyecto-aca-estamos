@@ -31,7 +31,10 @@ export default function Login() {
 
             if (response.ok) {
                 console.log('Datos enviados correctamente');
+                const data = await response.json();
+                localStorage.setItem('token', data.token); // Almacena el token en el localStorage
                 setFormularioEnviado(true);
+                
             } else {
                 console.error('Error al enviar los datos');
                 setMostrarError(true); // Mostrar la alerta de error si los datos no se envían correctamente

@@ -10,10 +10,13 @@ const FormularioExperiencia = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const token = localStorage.getItem('token');
+      console.log(token)
       const response = await fetch('http://localhost:3000/experienciasLaborales', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}` // Incluir el token en el encabezado de autorización
         },
         body: JSON.stringify({ actividad, lugar, fecha, descripcion })
       });

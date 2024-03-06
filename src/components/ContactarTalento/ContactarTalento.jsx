@@ -39,16 +39,16 @@ export default function ContactarTalento() {
                {/* <!-- CHECK --> */}
               <div className="form-check form-check-inline my-2">
                   <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-                  <label className="form-check-label" forHtml="inlineCheckbox1">Teléfono (Whatsapp)</label>
+                  <label className="form-check-label" forhtml="inlineCheckbox1">Teléfono (Whatsapp)</label>
               </div>
               <div className="form-check form-check-inline">
                   <input className="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-                  <label className="form-check-label" forHtml="inlineCheckbox2">Correo</label>
+                  <label className="form-check-label" forhtml="inlineCheckbox2">Correo</label>
               </div>
 
                {/* <!--FORM --> */}
               <div className="form-group">
-                  <label className='mb-2' forHtml="exampleFormControlTextarea1">Escribe tu mensaje</label>
+                  <label className='mb-2' forhtml="exampleFormControlTextarea1">Escribe tu mensaje</label>
                   <textarea className="form-control mb-2" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
 
