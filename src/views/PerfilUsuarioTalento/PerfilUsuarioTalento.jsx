@@ -299,8 +299,7 @@ export default function PerfilUsuarioTalento() {
                                     Habilidades y virtudes:
                                 </div>
                                 <div className="col-sm-12 col-lg-8">
-                                    Javascript (Avanzado), HTML (Avanzado), CSS (Avanzado), SQL (Avanzado), Python (Avanzado)
-                                </div>
+                                    {userData ? userData.Habilidades : " "}                                </div>
                             </div>
                             {/* ---------------------------------------IDIOMAS */}
 
