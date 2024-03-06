@@ -108,7 +108,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 </a>
                 <ul>
                   <li>
-                    <a className="nav-link scrollto" href="#about">
+                    <a className="nav-link scrollto active" href="#about">
                       ¿Quienes somos?
                     </a>
                   </li>
@@ -134,9 +134,9 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                   </li>
                   {isLoggedIn && (
                 <li>
-                  <a className="nav-link scrollto">
-                    <button onClick={handleLogout}>
-                    Logout</button></a>
+                  <a className="nav-link scrollto" onClick={handleLogout} href='#'>
+                    Logout
+                    </a>
                 </li>
               )}
                 </ul>
@@ -146,11 +146,11 @@ const Navbar = ({ theme, handleChangeTheme }) => {
               </li> */}
               {isLoggedIn ? (
                 <li>
-                  <Link to="perfil">Mi perfil</Link>
+                  <Link to="/perfil">Mi perfil</Link>
                 </li>
               ) : (
                 <li>
-                  <Link to="login">¡Únete!</Link>
+                  <Link to="/login">¡Únete!</Link>
                 </li>
               )} 
               <li>
