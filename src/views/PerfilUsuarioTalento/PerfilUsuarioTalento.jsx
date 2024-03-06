@@ -15,40 +15,31 @@ import Footer from '../../components/Footer/Footer'
 
 export default function PerfilUsuarioTalento() {
 
-    const[usuarios, setUsuarios] = useState([]);
-    // const [empresas,setEmpresas] = useState([]);
-    const token = localStorage.getItem('token');
-      console.log(token)
+    const [userData, setUserData] = useState(null);
 
     useEffect(() => {
-        
-        const fetchData = async () => {
-          try {
-            const response = await fetch('http://localhost:3000/');
-            const data = await response.json();
-    
-            // Aquí puedes manejar los datos y establecer los estados
-            if (data.data) {
-              setUsuarios(data.data.usuarios || []);
+        const token = localStorage.getItem('token');
+
+        fetch('http://localhost:3000/perfil_talento_usuario', {
+            method: 'GET',
+            headers: {
+                'token': token
             }
-
-             // Parsea el token para obtener el ID del usuario
-             const decodedToken = jwt_decode(token);
-             const userId = decodedToken.id;
-
-             // Busca el usuario con el mismo ID
-             const currentUser = usuarios.find(user => user.id === userId);
-             setCurrentUser(currentUser);
-
-           
-          } catch (error) {
-            console.log('Error:', error);
-          }
-        };
-    
-        fetchData();
-      }, []);
-      console.log(usuarios)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch user data');
+            }
+            return response.json();
+        })
+        .then(data => {
+            setUserData(data);
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('Error fetching user data:', error);
+        });
+    }, []);
 
     return (
         <div>
@@ -68,7 +59,7 @@ export default function PerfilUsuarioTalento() {
                             {/*---------------------------------------------------NOMBRE*/}
                             <div className="row text-start">
                                 <div className="col-12 mt-4">
-                                    <h2 className="fw-bold">María García</h2>
+                                    <h2 className="fw-bold">{userData ? userData.name : "Nombre de usuario"}</h2>
                                 </div>
                             </div>
                             {/*---------------------------------------------------ESTADO*/}
@@ -79,7 +70,7 @@ export default function PerfilUsuarioTalento() {
                                 <div className="col-sm-5 col-md-6 col-lg-10 text-start">
                                     <button type="button" className="btn btn-transparent rounded-5 ">
                                         <i className="bi bi-circle-fill text-success">
-                                            <p className="fw-bold" style={{ display: 'inline' }}> Disponible</p>
+                                            <p className="fw-bold" style={{ display: 'inline' }}>{userData ? userData.Estado : " "}</p>
                                         </i>
                                     </button>
                                 </div>
@@ -284,7 +275,7 @@ export default function PerfilUsuarioTalento() {
                                     Descripción:
                                 </div>
                                 <div className="col-8 text-start">
-                                    Consultora Senior de Gestión de Proyectos
+                                {userData ? userData.Descripcion : ""}
                                 </div>
                             </div>
                             {/* -----------------------------------------ACERCA DE */}
@@ -309,8 +300,7 @@ export default function PerfilUsuarioTalento() {
                                     Habilidades y virtudes:
                                 </div>
                                 <div className="col-sm-12 col-lg-8">
-                                    Javascript (Avanzado), HTML (Avanzado), CSS (Avanzado), SQL (Avanzado), Python (Avanzado)
-                                </div>
+                                    {userData ? userData.Habilidades : " "}                                </div>
                             </div>
                             {/* ---------------------------------------IDIOMAS */}
 
