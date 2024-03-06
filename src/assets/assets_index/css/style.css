@@ -363,6 +363,19 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Perfil Section
+--------------------------------------------------------------*/
+#PerfilUsuarioEmpresa {
+  width: 100%;
+  background-image: url("../img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right top;
+  margin-top: 70px;
+  padding: 60px 0;
+  
+}
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
