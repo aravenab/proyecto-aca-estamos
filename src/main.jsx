@@ -7,6 +7,7 @@ import router from './router/routes.jsx' // importamos nuestro router
 import UneteANosotros from './components/UneteANosotros/UneteANosotros.jsx'
 import CartasEmpresas from './components/CartasEmpresas/CartasEmpresas.jsx'
 import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario.jsx'
+import PerfilEmpresa from './views/PerfilEmpresa/PerfilEmpresa.jsx'
 import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
 
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
        <RouterProvider router ={router}/> 
       {/* <CartasEmpresas/> */}
       {/* <PerfilUsuario/> */}
+      {/* <PerfilEmpresa/> */}
       {/* <BuscadorTalentos/> */}
       {/* <CartasBuscadorTalentos/> */}
   </React.StrictMode>,

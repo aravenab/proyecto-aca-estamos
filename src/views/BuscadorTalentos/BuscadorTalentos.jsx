@@ -38,10 +38,12 @@ export default function BuscadorTalentos() {
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
     };
+
     return (
         <div>
             <Navbar/>
-            <section className="section mt-4">
+            <div style={{ margin: '20px' }}></div>
+            <section style={{mt:'50px'}} className="section mt-4">
                 <div className="container">
                     {/*--------------------------------------Filtros de arriba-*/}
                     <div className="justify-content-center row">
