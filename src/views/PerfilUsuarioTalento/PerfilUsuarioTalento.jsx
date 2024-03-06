@@ -11,7 +11,7 @@ import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
 import { Link } from 'react-router-dom';
 
 
-export default function PerfilUsuario() {
+export default function PerfilUsuarioTalento() {
 
     return (
         <div>
