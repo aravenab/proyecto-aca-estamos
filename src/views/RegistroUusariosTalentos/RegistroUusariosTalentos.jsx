@@ -217,6 +217,8 @@ export default function RegistroUusariosTalentos() {
                                 <input className="form-control" type="file" id="cv" />
                             </div>
                         </div>
+
+                        
                         {/* <!-------------------------------------------mensaje --> */}
                         <div className="mb-3">
                             <label className="form-label" htmlFor="message">Mensaje</label>
