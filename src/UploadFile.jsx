@@ -31,9 +31,9 @@ const UploadFile = () => {
 
   return (
     <div>
-      <h3>Subir Archivo</h3>
-      <input type="file" onChange={handleFileUpload} />
-      <button onClick={handleUpload}>Subir</button>
+      <h3 >Subir Foto de Perfil</h3>
+      <input type="file" onChange={handleFileUpload}/> 
+      <button onClick={handleUpload}style={{backgroundColor: 'black', color: 'white'}}>Subir</button>
     </div>
   );
 };
