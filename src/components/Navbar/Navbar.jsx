@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logoAca from './aca_estamos.png';
 import Switch from '../modoOscuro/Switch'
 
 const Navbar = ({ theme, handleChangeTheme }) => {
+
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      try {
+        const response = await fetch('http://tu-backend.com/api/verify-login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            // Aquí deberías enviar el JWT almacenado en el frontend para que el backend pueda verificarlo
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        });
+
+        if (response.ok) {
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+        }
+      } catch (error) {
+        console.error('Error al verificar el estado de login:', error);
+        setIsLoggedIn(false);
+      }
+    };
+
+    checkLoginStatus();
+  }, []);
+
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
@@ -95,9 +126,18 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                   </li>
                 </ul>
               </li>
-              <li>
+              {/* <li>
                 <Link to="login">¡Únete!</Link>
-              </li>
+              </li> */}
+              {isLoggedIn ? (
+                <li>
+                  <Link to="perfil">Mi perfil</Link>
+                </li>
+              ) : (
+                <li>
+                  <Link to="login">¡Únete!</Link>
+                </li>
+              )}
               <li>
                 <a className="nav-link scrollto" href="#contact">
                   Contacto
