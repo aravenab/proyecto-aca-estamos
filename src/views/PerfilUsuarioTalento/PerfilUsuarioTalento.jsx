@@ -9,12 +9,15 @@ import CompletarPerfil from '../../components/CompletarPerfil/CompletarPerfil'
 import ContactarTalento from '../../components/ContactarTalento/ContactarTalento'
 import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 
 export default function PerfilUsuarioTalento() {
 
     return (
         <div>
+            <Navbar/>
             <div className="container-fluid" style={{ marginTop: "5rem" }}> {/*Container de la pagina en general*/}
                 {/*-------------------------------------------------------------TITULOS DE LA PÁGINA*/}
                 <div className="container-fluid">
@@ -444,6 +447,8 @@ export default function PerfilUsuarioTalento() {
                     </div>
 
             </div>
+            <Footer/>
         </div>
+        
     )
 }
