@@ -62,12 +62,12 @@ export default function Login() {
                         <img src={logUser} alt="icono_login" style={{ height: '7rem' }} />
                     </div>
                     <div>
-                        <div className="text-center fs-1 fw-bold fst-italic">Inicio de sesión</div>
+                        <div className="text-center fs-1 fw-bold fst-italic" style={{color:'var(--tith1)'}}>Inicio de sesión</div>
                     </div>
                     <div>
                         <div className="input-group">
                             <div className="input-group-text bg-$orange-500">
-                                <img src={logoUser2} alt="icono_nombredeusuario" style={{ height: '1rem' }} />
+                                <img src={logoUser2} alt="icono_nombredeusuario" style={{ height: '1rem'}} />
                             </div>
                             <input className="form-control" type="text" placeholder="Correo electrónico" value={email} onChange={(e) => setEmail(e.target.value)} />
 
@@ -82,7 +82,7 @@ export default function Login() {
                         </div>
                     </div>
                     <div className='text-start'>
-                        <Link to="" className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}>¿Ha olvidado su contraseña?</Link>
+                        <Link to="" className="fw-semibold fst-italic" style={{ color:'var(--tith2)',fontSize: '0.9rem' }}>¿Ha olvidado su contraseña?</Link>
                     </div>
                     <div className="w-100 mt-4">
                         <button className='btn btn-info text-white' onClick={handleSubmit}>
@@ -94,7 +94,7 @@ export default function Login() {
                     </div>
                     {/* <div className="btn btn-info text-white w-100 mt-1">Solo quiero mirar</div> */}
                     <div className="d-flex gap-1 justify-content-center mt-1">
-                        <div>¿No tienes una cuenta?</div>
+                        <div style={{color: 'var(--check1'}}>¿No tienes una cuenta?</div>
                         {/* <i className="fw-semibold fst-italic" style={{ fontSize: '0.9rem' }}><Link to="/registro">Regístrese</Link></i> */}
                     </div>
                     {/* <!-- botones talentos/empresas --> */}
@@ -123,7 +123,7 @@ export default function Login() {
 
                     <div className="btn d-flex gap-2 justify-content-center border">
                         <img src={logoGoo} alt="icono_google" style={{ height: '1.6rem' }} />
-                        <div>Continuar con Google</div>
+                        <div style={{color: 'var(--check1)'}}>Continuar con Google</div>
                     </div>
                 </div>
             </div>
