@@ -6,8 +6,6 @@ import { RouterProvider } from 'react-router-dom' //Esto es para rutear
 import router from './router/routes.jsx' // importamos nuestro router
 import UneteANosotros from './components/UneteANosotros/UneteANosotros.jsx'
 import CartasEmpresas from './components/CartasEmpresas/CartasEmpresas.jsx'
-import PerfilUsuario from './views/PerfilUsuario/PerfilUsuario.jsx'
-import PerfilEmpresa from './views/PerfilEmpresa/PerfilEmpresa.jsx'
 import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
 import AutorizarUsuarios from './views/AutorizarUsuarios/AutorizarUsuarios.jsx'
