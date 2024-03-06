@@ -51,8 +51,7 @@ export default function Login() {
             <Navbar />
             
             <div className="d-flex justify-content-center align-items-center vh-100">  {/*<!----------------------------LOGIN--> */}
-
-                <div className="bg-white p-5 rounded-5 text-secondary" style={{ backgroundColor: 'var(--container)', width: '25rem' }}>
+            <div className="p-5 rounded-5 text-secondary" style={{ backgroundColor: 'var(--container)', width: '25rem' }}>
                     {mostrarError && ( // Mostrar la alerta de error si mostrarError es true
                         <div className="alert alert-danger text-center" role="alert">
                             Datos malos
