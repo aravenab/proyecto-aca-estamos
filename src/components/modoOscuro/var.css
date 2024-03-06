@@ -13,7 +13,7 @@
 }
 
 [data-theme='dark'] {
-    --background: ##1b1f22;
+    --background: #1b1f22;
     --background2: rgb(12, 65, 57);
     --border1: 3px solid #571e0c;
     --border2: 5px solid #c4380d;;

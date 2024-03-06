@@ -1,12 +1,20 @@
 import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
+
 
 export default function PerfilUsuario() {
   return (
-    <div>
-      <div className="container-fluid" style={{ marginTop: "5rem;" }}>
+ 
+
+ 
+ <div>
+   <Navbar /> 
+   <br /><br />
+       <div className="container-fluid" style={{ marginTop: "5rem;" }}>
         {" "}
         {/*Container de la pagina en general*/}
-        <div className="container-fluid">
+        <div className="container-fluid" > 
+        {/* esta parte es el header del div */}
           {" "}
           {/*TITULOS DE LA PÁGINA*/}
           <div className="row mt-2">
@@ -57,17 +65,19 @@ export default function PerfilUsuario() {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row" > 
+        {/* esta parte es el body del div */}
           {" "}
           {/*Estructura de la pagina*/}
           {/*Dividimos la página en 2 columnas*/}
-          <div className="col-sm-12 col-md-4 col-lg-3 col-xl-3">
+          <div className="col-sm-12 col-md-4 col-lg-3 col-xl-3" >
             {" "}
             {/*Foto Perfil y Redes*/}
-            <div className="container-fluid border my-3 pb-4 rounded-4 shadow-sm">
+            <div className="container-fluid border my-3 pb-4 rounded-4 shadow-sm" style={{backgroundColor: 'var(--container2)'}}>
+              {/* este es el que contiene el container de las redes sociales */}
               {" "}
               {/*Container de foto perfil y redes*/}
-              <div className="row px-4 mt-4"> {/*ESTRELLAS*/}</div>
+              <div className="row px-4 mt-4" > {/*ESTRELLAS*/}</div>
               <div className="row mt-lg-2">
                 {" "}
                 {/*COMPLETAR PERFIL*/}
@@ -199,13 +209,13 @@ export default function PerfilUsuario() {
           <div className="col-sm-12 col-md-8 col-lg-7 col-xl-7">
             {" "}
             {/*Info perfil*/}
-            <div className="container-fluid">
+            <div className="container-fluid" >
               {" "}
               {/*Container de info perfil*/}
               <div
                 className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold text-start"
-                style={{ backgroundColor: "#eee" }}
-              >
+                style={{backgroundColor: 'var(--container2)'}}>
+                  {/* contiene css de principal rubro  */}
                 <div className="col-4">Principal rubro:</div>
                 <div className="col-8 text-start">
                   ELABORACION DE BEBIDAS NO ALCOHOLICAS{" "}
@@ -214,8 +224,7 @@ export default function PerfilUsuario() {
               </div>
               <div
                 className="row rounded-2 ms-1 my-1 py-1 pb-2 text-start"
-                style={{ backgroundColor: "#eee" }}
-              >
+                style={{backgroundColor: 'var(--container2)'}}>
                 <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold">
                   Acerca de:
                 </div>
@@ -410,5 +419,6 @@ export default function PerfilUsuario() {
         </div>
       </div>
     </div>
+
   );
 }

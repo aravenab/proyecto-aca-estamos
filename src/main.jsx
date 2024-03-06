@@ -18,10 +18,10 @@ import UploadFile from './UploadFile.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-       <RouterProvider router ={router}/> 
+        <RouterProvider router ={router}/>
       {/* <CartasEmpresas/> */}
       {/* <PerfilUsuario/> */}
-      {/* <PerfilEmpresa/> */}
+      {/* <PerfilEmpresa/>  */}
       {/* <BuscadorTalentos/> */}
       {/* <CartasBuscadorTalentos/> */}
       {/* <PerfilUsuario/> */}
