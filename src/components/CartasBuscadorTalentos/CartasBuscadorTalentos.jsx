@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Estado from '../Estado/Estado';
+import BusquedaEmergente from '../BusquedaEmergente/BusquedaEmergente'
 
 export default function CartasBuscadorTalentos({ user }) {
+    const [mostrarBusqueda, setMostrarBusqueda] = useState(false);
+    const toggleMostrarBusqueda = () => {
+        setMostrarBusqueda(!mostrarBusqueda)
+    }
+
 
     const properties = Object.entries(user).filter(([key]) => key !== 'name' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota' && key !== 'rut' && key !== 'estado_civil' && key !== 'bday' && key !== 'phone_num' && key !== 'adm_msg' && key !== 'Foto' && key !== "__v" && key !== "_id" && key !== "email" && key !== "password");
 

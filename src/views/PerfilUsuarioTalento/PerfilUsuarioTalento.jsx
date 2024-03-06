@@ -10,7 +10,7 @@ import ContactarTalento from '../../components/ContactarTalento/ContactarTalento
 import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
-import jwt_decode from 'jwt-decode';
+
 
 
 export default function PerfilUsuarioTalento() {
