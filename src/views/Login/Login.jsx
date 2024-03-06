@@ -27,12 +27,21 @@ export default function Login() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ email, password })
-            });
+            })
+      ;
 
             if (response.ok) {
                 console.log('Datos enviados correctamente');
                 const data = await response.json();
+                console.log(data.data.kind)
                 localStorage.setItem('token', data.token); // Almacena el token en el localStorage
+
+                if (data.data.kind === 'Talento') {
+                    navigate('/perfil_usuario_talento');
+                } else if (data.data.kind === 'Empresa') {
+                    navigate('/perfil_usuario_empresa');
+                }
+
                 setFormularioEnviado(true);
                 
             } else {
@@ -47,7 +56,7 @@ export default function Login() {
 
     return (
         <div>
-            {formularioEnviado ? navigate('/perfil_usuario') : (null)}
+            {/* {formularioEnviado ? navigate('/perfil_usuario') : (null)} */}
             <Navbar />
             
             <div className="d-flex justify-content-center align-items-center vh-100">  {/*<!----------------------------LOGIN--> */}

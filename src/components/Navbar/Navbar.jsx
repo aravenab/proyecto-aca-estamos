@@ -6,7 +6,7 @@ import Switch from '../modoOscuro/Switch'
 const Navbar = ({ theme, handleChangeTheme }) => {
 
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 
   useEffect(() => {
@@ -129,15 +129,15 @@ const Navbar = ({ theme, handleChangeTheme }) => {
               {/* <li>
                 <Link to="login">¡Únete!</Link>
               </li> */}
-              {isLoggedIn ? (
+              {/* {isLoggedIn ? (
                 <li>
                   <Link to="perfil">Mi perfil</Link>
                 </li>
-              ) : (
+              ) : ( */}
                 <li>
                   <Link to="login">¡Únete!</Link>
                 </li>
-              )}
+              {/* )} */}
               <li>
                 <a className="nav-link scrollto" href="#contact">
                   Contacto
