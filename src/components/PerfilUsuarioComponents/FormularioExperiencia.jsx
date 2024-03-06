@@ -16,7 +16,7 @@ const FormularioExperiencia = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}` // Incluir el token en el encabezado de autorización
+          'token': token // Incluir el token en el encabezado de autorización
         },
         body: JSON.stringify({ actividad, lugar, fecha, descripcion })
       });

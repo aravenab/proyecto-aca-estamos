@@ -15,17 +15,19 @@ import UploadFile from './UploadFile.jsx'; // Asegúrate de que la ruta sea corr
 
 function App() {
   return (
-    <div className="App">
-      {/* <Navbar /> {'./components/Navbar/Navbar'} */}
-      <Route path="/" exact component={Index2} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/preguntas" component={PreguntasFrecuentes} />
-      <Route path="/aliados" component={Aliados} />
-      <Route path="/testimonios" component={Testimonios} />
-      <Route path="/cartas" component={CartasTalentos} />
-      {/* <UploadFile /> {'./UploadFile.jsx'}
-      <Footer /> {'./components/Footer/Footer'} */}
-    </div>
+
+    <>
+      <Navbar />
+      <Index2 />
+      <Footer />
+    </>
+    // <div className="App">
+      // <Route path="/" exact component={Index2} />
+      // <Route path="/contact" component={Contact} />
+      // <Route path="/preguntas" component={PreguntasFrecuentes} />
+      // <Route path="/aliados" component={Aliados} />
+      // <Route path="/testimonios" component={Testimonios} />
+      // <Route path="/cartas" component={CartasTalentos} />
   );
 }
 

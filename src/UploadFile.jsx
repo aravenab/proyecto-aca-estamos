@@ -16,7 +16,7 @@ const UploadFile = () => {
     const formData = new FormData();
     formData.append('file', selectedFile); // 'file' debe coincidir con el nombre del campo en el servidor
 
-    fetch('/api/upload', {
+    fetch('http://localhost:3000/subir_archivo', {
       method: 'POST',
       body: formData,
     })

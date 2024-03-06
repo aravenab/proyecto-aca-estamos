@@ -11,6 +11,7 @@ import BuscadorTalentos from './views/BuscadorTalentos/BuscadorTalentos.jsx'
 import CartasBuscadorTalentos from './components/CartasBuscadorTalentos/CartasBuscadorTalentos.jsx'
 import AutorizarUsuarios from './views/AutorizarUsuarios/AutorizarUsuarios.jsx'
 import CompletarPerfil from './components/CompletarPerfil/CompletarPerfil.jsx'
+import UploadFile from './UploadFile.jsx'
 
 
 
@@ -22,5 +23,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <BuscadorTalentos/> */}
       {/* <CartasBuscadorTalentos/> */}
       {/* <PerfilUsuario/> */}
+      {/* <UploadFile/> */}
   </React.StrictMode>,
 )
