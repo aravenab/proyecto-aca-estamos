@@ -11,20 +11,20 @@ import CartasTalentos from './components/CartasTalentos/CartasTalentos'
 // import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
 // import RegistroUsuariosEmpresas from './views/RegistroUsuariosEmpresas/RegistroUsuariosEmpresas'
 import React from 'react';
-import UploadFile from './UploadFile'; // Asegúrate de que la ruta sea correcta
+import UploadFile from './UploadFile.jsx'; // Asegúrate de que la ruta sea correcta
 
 function App() {
   return (
     <div className="App">
-      <Navbar /> {'./components/Navbar/Navbar'}
+      {/* <Navbar /> {'./components/Navbar/Navbar'} */}
       <Route path="/" exact component={Index2} />
       <Route path="/contact" component={Contact} />
       <Route path="/preguntas" component={PreguntasFrecuentes} />
       <Route path="/aliados" component={Aliados} />
       <Route path="/testimonios" component={Testimonios} />
       <Route path="/cartas" component={CartasTalentos} />
-      <UploadFile /> {'./UploadFile'}
-      <Footer /> {'./components/Footer/Footer'}
+      {/* <UploadFile /> {'./UploadFile.jsx'}
+      <Footer /> {'./components/Footer/Footer'} */}
     </div>
   );
 }
