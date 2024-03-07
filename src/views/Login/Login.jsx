@@ -40,6 +40,8 @@ export default function Login() {
                     navigate('/perfil_usuario_talento');
                 } else if (data.data.kind === 'Empresa') {
                     navigate('/perfil_usuario_empresa');
+                } else {
+                    navigate('/autorizar_usuarios');
                 }
 
                 setFormularioEnviado(true);

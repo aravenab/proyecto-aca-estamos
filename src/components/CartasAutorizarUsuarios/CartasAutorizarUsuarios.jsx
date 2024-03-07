@@ -1,10 +1,39 @@
 import React, {useState} from 'react'
 import Estado from '../Estado/Estado';
 import "./CartasAutorizarUsuario.css";
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+
 
 export default function CartasAutorizarUsuarios({ user }) {
 
-    const properties = Object.entries(user).filter(([key]) => key !== 'Nombre' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota' && key !== 'rut' && key !== 'estado_civil' && key !== 'bday' && key !== 'phone_num' && key !== 'adm_msg' && key !== 'Foto' && key !== "__v");
+    const [solicitud, setSolicitud] = useState(user.Solicitud);
+
+    const handleStatusChange = async (newStatus) => {
+        try {
+            const token = localStorage.getItem('token');
+            const response = await fetch(`http://localhost:3000/users/${user._id}/update-solicitud`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'token': token
+                },
+                body: JSON.stringify({ solicitud: newStatus })
+            });
+            const data = await response.json();
+            console.log(data);
+            setSolicitud(newStatus);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+    const [mostrarBusqueda, setMostrarBusqueda] = useState(false);
+    const toggleMostrarBusqueda = () => {
+        setMostrarBusqueda(!mostrarBusqueda)
+    }
+
+
+    const properties = Object.entries(user).filter(([key]) => key !== 'name' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota' && key !== 'rut' && key !== 'estado_civil' && key !== 'bday' && key !== 'phone_num' && key !== 'adm_msg' && key !== 'Foto' && key !== "__v" && key !== "_id" && key !== "email" && key !== "password" && key !== "Acerca_de" && key !== "Estado" && key !== "experienciasLaborales" && key !== "visible_bday" && key !== "visible_estado_civil" && key !== "visible_Horarios" && key !== "visible_Disponibilidad" && key !== "visible_Modalidad");
 
     const StrongsHab = user.StrongsHab || '';
     const StrongsHabArray = StrongsHab.split(", ");
@@ -17,10 +46,8 @@ export default function CartasAutorizarUsuarios({ user }) {
     const togglePopup = () => {
       setShowPopup(!showPopup);
     };
-  
 
-    // propiedades
-    // {nombre, foto, descripción, nota, estado, renta, ubicacion, hashtags}
+
 
     return (
         <div>
@@ -40,7 +67,7 @@ export default function CartasAutorizarUsuarios({ user }) {
                                     <div className="candidate-list-content mt-3 mt-lg-0">
                                         {/* ------------------------------------------------TITULO Y NOTA */}
                                         <h5 className="fs-19 mb-0">
-                                            <a className="primary-link" href="#">{user.Nombre}</a>
+                                        <Link className="primary-link" to={`/perfil_talento/${user._id}`}>{user.name}</Link>
                                             {user.Nota >= 2.5 ? (
                                                 <span className="badge bg-success ms-1">
                                                     <i className="mdi mdi-star align-middle"></i>
@@ -92,25 +119,25 @@ export default function CartasAutorizarUsuarios({ user }) {
                                 <Estado status={user.Estado} />
                             </div>
                             <div class="favorite-icon">
-                                <button type="button" class="btn btn-success">Aceptar</button>
-                                <button type="button" class="btn btn-danger" id="openPopupBtn">Rechazar</button>
+                            <button type="button" class="btn btn-success" onClick={() => handleStatusChange('Aceptado')}>Aceptar</button>
+                            <button type="button" class="btn btn-danger" onClick={() => handleStatusChange('Rechazado')}>Rechazar</button>
                                 {/* <!-- Contenido popup --> */}
-                                <div class="popup" id="popupForm">
-                                    <form>
+                                {/* <div class="popup" id="popupForm"> */}
+                                    {/* <form> */}
                                         {/* <!-- Contenido del formulario --> */}
-                                        <label forHtml="motivo">¿Seguro que deseas rechazar a este candidato? (Si estás seguro escribe "SI"):</label>
+                                        {/* <label forHtml="motivo">¿Seguro que deseas rechazar a este candidato? (Si estás seguro escribe "SI"):</label>
                                         <input type="text" id="motivo" name="motivo" />
                                         <button type="submit">Enviar</button>
                                     </form>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="col-2 p-0 align-self-center">
+                {/* <div className="col-2 p-0 align-self-center">
                 <button type="button" class="btn btn-success m-1">Aceptar</button>
                 <button type="button" class="btn btn-danger m-1">Denegar</button>
-                </div>
+                </div> */}
             </div>
 
         </div>

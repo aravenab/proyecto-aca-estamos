@@ -11,6 +11,7 @@ import Registro from '../views/Registro/Registro.jsx'
 import BuscadorTalentos from "../views/BuscadorTalentos/BuscadorTalentos.jsx";
 import AvisoAutorizacion from "../views/AvisoAutorizacion/AvisoAutorizacion.jsx";
 import PerfilTalento from "../views/PerfilTalento/PerfilTalento.jsx";
+import AutorizarUsuarios from "../views/AutorizarUsuarios/AutorizarUsuarios.jsx";
 
 
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
     {path: "/buscador_talentos", element: < BuscadorTalentos/>},
     {path: "/aviso_autorizacion", element: < AvisoAutorizacion/>},
     { path: "/perfil_talento/:id", element: <PerfilTalento /> }, // Añadida la nueva ruta con el parámetro ":id"
+    {path: "/autorizar_usuarios", element: < AutorizarUsuarios/>},
     
      
 
