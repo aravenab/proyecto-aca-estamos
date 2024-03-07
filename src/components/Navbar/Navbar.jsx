@@ -146,7 +146,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
               </li> */}
               {isLoggedIn ? (
                 <li>
-                  <Link to="/perfil">Mi perfil</Link>
+                  <Link to="/perfil_usuario_talento">Mi perfil</Link>
                 </li>
               ) : (
                 <li>

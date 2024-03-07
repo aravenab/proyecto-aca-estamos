@@ -150,8 +150,8 @@ function CompletarPerfil() {
                                     <div className="col-6">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value=""
-                                                id="visible_civil" />
-                                            <label className="form-check-label" forhtml="visible_civil">
+                                                id="visible_turnos" />
+                                            <label className="form-check-label" forhtml="visible_turnos">
                                                 Visible
                                             </label>
                                         </div>
@@ -161,7 +161,7 @@ function CompletarPerfil() {
                                 <div className="row">
                                     <div className="col-12">
                                         <select className="form-select" aria-label="Default select example"
-                                            id="estadoCivil">
+                                            id="turnos">
                                             <option value="1">No especifica</option>
                                             <option value="2">Diurna</option>
                                             <option value="3">Nocturna</option>
@@ -182,8 +182,8 @@ function CompletarPerfil() {
                                     <div className='col-6'>
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value=""
-                                                id="visible_civil" />
-                                            <label className="form-check-label" forhtml="visible_civil">
+                                                id="visible_disponibilidad" />
+                                            <label className="form-check-label" forhtml="visible_disponibilidad">
                                                 Visible
                                             </label>
                                         </div>
@@ -193,7 +193,7 @@ function CompletarPerfil() {
                                 <div className="row">
                                     <div className="col-12">
                                         <select className="form-select" aria-label="Default select example"
-                                            id="estadoCivil">
+                                            id="disponibilidad">
                                             <option value="1">No especifica</option>
                                             <option value="2">Completa</option>
                                             <option value="3">Part time</option>
