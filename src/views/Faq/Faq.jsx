@@ -24,7 +24,7 @@ export default function Faq() {
                   <div className="accordion-item">
                       <h2 className="accordion-header">
                           <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                              <strong> ¿Dónde puedo ver las ofertas de trabajo?</strong>
+                              <strong>¿Cómo puedo ser parte de 'Acá estamos'?</strong>
                           </button>
                       </h2>
                       <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
