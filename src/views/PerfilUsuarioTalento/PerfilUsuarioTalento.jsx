@@ -10,6 +10,7 @@ import ContactarTalento from '../../components/ContactarTalento/ContactarTalento
 import AgregarRedes from '../../components/AgregarRedes/AgregarRedes'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
+import Estado from '../../components/Estado/Estado'
 
 
 
@@ -69,9 +70,7 @@ export default function PerfilUsuarioTalento() {
                                 </div>
                                 <div className="col-sm-5 col-md-6 col-lg-10 text-start">
                                     <button type="button" className="btn btn-transparent rounded-5 ">
-                                        <i className="bi bi-circle-fill text-success">
-                                            <p className="fw-bold" style={{color: 'var(--check1)', display: 'inline' }}>{userData ? userData.Estado : " "}</p>
-                                        </i>
+                                        <Estado status={userData?.Estado}/>
                                     </button>
                                 </div>
                             </div>
@@ -298,14 +297,84 @@ export default function PerfilUsuarioTalento() {
                                 <div className="col-sm-12 col-lg-8">
                                     {userData ? userData.Habilidades : ""}                                </div>
                             </div>
+   
                             {/* ---------------------------------------IDIOMAS */}
-
                             <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
                                 <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
                                     Idiomas:
                                 </div>
                                 <div className="col-sm-12 col-lg-8">
                                 {userData ? userData.Idiomas : "Español (Nativo)"}
+                                </div>
+                            </div>
+
+                            {/* --------------------------------------- Experiencia */}
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
+                                    Experiencia:
+                                </div>
+                                <div className="col-sm-12 col-lg-8">
+                                {userData ? userData.Experiencia : ""}
+                                </div>
+                            </div>
+
+                            {/* --------------------------------------- Edad */}
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
+                                    Fecha de nacimiento:
+                                </div>
+                                <div className="col-sm-12 col-lg-8">
+                                {userData ? userData.bday : ""}
+                                </div>
+                            </div>
+
+                            {/* ---------------------------------------Estado Civil */}
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
+                                    Estado Civil:
+                                </div>
+                                <div className="col-sm-12 col-lg-8">
+                                {userData ? userData.estado_civil : ""}
+                                </div>
+                            </div>
+
+                            {/* ---------------------------------------Horarios */}
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
+                                    Jornada - Horarios:
+                                </div>
+                                <div className="col-sm-12 col-lg-8">
+                                {userData ? userData.Horarios : ""}
+                                </div>
+                            </div>
+
+                            {/* ---------------------------------------Disponibilidad */}
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
+                                    Jornada - Turnos:
+                                </div>
+                                <div className="col-sm-12 col-lg-8">
+                                {userData ? userData.Disponibilidad : ""}
+                                </div>
+                            </div>
+
+                            {/* ---------------------------------------Modalidad */}
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
+                                    Modalidad:
+                                </div>
+                                <div className="col-sm-12 col-lg-8">
+                                {userData ? userData.Modalidad : ""}
+                                </div>
+                            </div>
+
+                            {/* ---------------------------------------Renta Minima */}
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
+                                    Renta_minima:
+                                </div>
+                                <div className="col-sm-12 col-lg-8">
+                                {userData ? userData.Renta_minima : ""}
                                 </div>
                             </div>
 

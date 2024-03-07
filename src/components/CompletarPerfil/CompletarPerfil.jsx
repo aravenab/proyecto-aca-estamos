@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Estado from '../Estado/Estado';
 
 function CompletarPerfil() {
 
@@ -23,6 +24,7 @@ function CompletarPerfil() {
         Renta_minima: '',
         Modalidad: '',
         visible_Modalidad: '',
+        Estado: ''
     });
 
     const handleChange = (e) => {
@@ -84,6 +86,26 @@ function CompletarPerfil() {
                     <div className="row">
                         <div className="col-12">
                             <h1>Información Personal - Preguntas Usuario</h1>
+                        </div>
+                    </div>
+
+                    <div className="row mt-4">
+                        <div className="col-6">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                className="img-fluid img-thumbnail w-50 border border-black rounded-4" />
+                        </div>
+                        <div className="col-6 text-start mt-4">
+                            <div className="row">
+                            <Estado status={formData.Estado}/>
+                            </div>
+                            <div className="row mt-4">
+                                <label className="col-12 form-label" htmlFor="Estado">Estado</label>
+                                <select className="form-select" aria-label="Default select example" id="Estado" onChange={handleChange}>
+                                    <option value="disponible">Disponible</option>
+                                    <option value="no-disponible">No Disponible</option>
+                                    <option value="en-busqueda">En busqueda</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
