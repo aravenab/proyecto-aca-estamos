@@ -11,20 +11,29 @@ function CompletarPerfil() {
         StrongsHab: '',
         Idiomas: '',
         bday: '',
-        visible_birthDate: false,
+        visible_bday: false,
         age: '',
         estado_civil: '',
         visible_estado_civil: false,
         Horarios: '',
         visible_Horarios: false,
         Disponibilidad: '',
-        visible_disponiblidad: false,
-        visible_expectedSalary: false,
-        Renta_minima: ''
+        visible_Disponibilidad: false,
+        visible_Renta_minima: false,
+        Renta_minima: '',
+        Modalidad: '',
+        visible_Modalidad: ''
     });
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
+        const { id, value, type } = e.target;
+        if (type === 'date') {
+            const date = new Date(value);
+            const formattedDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+            setFormData({ ...formData, [id]: formattedDate });
+        } else {
+            setFormData({ ...formData, [id]: value });
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -144,8 +153,8 @@ function CompletarPerfil() {
                                 </div>
                                 <div className="col-6">
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="visible_birthDate" />
-                                        <label className="form-check-label" htmlFor="visible_birthDate">
+                                        <input className="form-check-input" type="checkbox" value="" id="visible_bday" />
+                                        <label className="form-check-label" htmlFor="visible_bday">
                                             Visible
                                         </label>
                                     </div>
@@ -269,8 +278,8 @@ function CompletarPerfil() {
                         </div>
                         <div className="col-6">
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="visible_expectedSalary" />
-                                <label className="form-check-label" htmlFor="visible_expectedSalary">
+                                <input className="form-check-input" type="checkbox" value="" id="visible_Renta_minima" />
+                                <label className="form-check-label" htmlFor="visible_Renta_minima">
                                     Visible
                                 </label>
                             </div>
