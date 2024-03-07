@@ -1,17 +1,17 @@
 import React, {useState} from 'react'
 import Estado from '../Estado/Estado';
-import "./CartasAutorizarUsuario.css";
+import "./CartasAutorizarEmpresas.css";
 import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 
 
-export default function CartasAutorizarUsuarios({ user, onStatusChange }) {
+export default function CartasAutorizarUsuarios({ empresa, onStatusChange }) {
 
-    const [solicitud, setSolicitud] = useState(user.Solicitud);
+    const [solicitud, setSolicitud] = useState(empresa.Solicitud);
 
-    const handleUserStatusChange = async (newStatus) => {
+    const handleEmpresasStatusChange = async (newStatus) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:3000/users/${user._id}/update-solicitud`, {
+            const response = await fetch(`http://localhost:3000/users/${empresa._id}/update-solicitud`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ export default function CartasAutorizarUsuarios({ user, onStatusChange }) {
             console.log(data);
             // setSolicitud(newStatus);
             if (data.success) {
-                onStatusChange(user._id, newStatus);
+                onStatusChange(empresa._id, newStatus);
             }
         } catch (error) {
             console.error('Error:', error);
@@ -36,13 +36,14 @@ export default function CartasAutorizarUsuarios({ user, onStatusChange }) {
     }
 
 
-    const properties = Object.entries(user).filter(([key]) => key !== 'name' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota' && key !== 'rut' && key !== 'estado_civil' && key !== 'bday' && key !== 'phone_num' && key !== 'adm_msg' && key !== 'Foto' && key !== "__v" && key !== "_id" && key !== "email" && key !== "password" && key !== "Acerca_de" && key !== "Estado" && key !== "experienciasLaborales" && key !== "visible_bday" && key !== "visible_estado_civil" && key !== "visible_Horarios" && key !== "visible_Disponibilidad" && key !== "visible_Modalidad");
+    const properties = Object.entries(empresa);
+    // .filter(([key]) => key !== 'name' && key !== 'Descripcion' && key !== 'Renta_minima' && key !== 'StrongsHab' && key !== 'Nota' && key !== 'rut' && key !== 'estado_civil' && key !== 'bday' && key !== 'phone_num' && key !== 'adm_msg' && key !== 'Foto' && key !== "__v" && key !== "_id" && key !== "email" && key !== "password" && key !== "Acerca_de" && key !== "Estado" && key !== "experienciasLaborales" && key !== "visible_bday" && key !== "visible_estado_civil" && key !== "visible_Horarios" && key !== "visible_Disponibilidad" && key !== "visible_Modalidad");
 
-    const StrongsHab = user.StrongsHab || '';
-    const StrongsHabArray = StrongsHab.split(", ");
-    const listaStrongsHab = StrongsHabArray.map((strongHab, index) => (
-        <span key={index} className="badge bg-soft-secondary fs-14 mt-1">{strongHab}</span>
-    ));
+    // const StrongsHab = empresa.StrongsHab || '';
+    // const StrongsHabArray = StrongsHab.split(", ");
+    // const listaStrongsHab = StrongsHabArray.map((strongHab, index) => (
+    //     <span key={index} className="badge bg-soft-secondary fs-14 mt-1">{strongHab}</span>
+    // ));
 
     const [showPopup, setShowPopup] = useState(false);
 
@@ -62,7 +63,7 @@ export default function CartasAutorizarUsuarios({ user, onStatusChange }) {
                                 <div className="col-auto">
                                     <div className="candidate-list-images">
                                         <a href="#">
-                                            <img src={user.Foto} alt="" className="avatar-md img-thumbnail rounded-circle" />
+                                            <img src={empresa.Foto} alt="" className="avatar-md img-thumbnail rounded-circle" />
                                         </a>
                                     </div>
                                 </div>
@@ -70,33 +71,33 @@ export default function CartasAutorizarUsuarios({ user, onStatusChange }) {
                                     <div className="candidate-list-content mt-3 mt-lg-0">
                                         {/* ------------------------------------------------TITULO Y NOTA */}
                                         <h5 className="fs-19 mb-0">
-                                        <Link className="primary-link" to={`/perfil_talento/${user._id}`}>{user.name}</Link>
-                                            {user.Nota >= 2.5 ? (
+                                        <Link className="primary-link" to={`/perfil_talento/${empresa._id}`}>{empresa.name_company}</Link>
+                                            {empresa.Nota >= 2.5 ? (
                                                 <span className="badge bg-success ms-1">
                                                     <i className="mdi mdi-star align-middle"></i>
-                                                    {user.Nota}
+                                                    {empresa.Nota}
                                                 </span>
-                                            ) : user.Nota > 0 && user.nota < 2.5 ? (
+                                            ) : empresa.Nota > 0 && empresa.nota < 2.5 ? (
                                                 <span className="badge bg-danger ms-1">
                                                     <i className="mdi mdi-star align-middle"></i>
-                                                    {user.Nota}
+                                                    {empresa.Nota}
                                                 </span>
                                             ) : (
                                                 <span className="badge bg-secondary ms-1">
                                                     <i className="mdi mdi-star align-middle"></i>
-                                                    {user.Nota}
+                                                    {empresa.Nota}
                                                 </span>
                                             )
                                             }
 
                                         </h5>
                                         {/* ---------------------------------------------------------------DESCRIPCIÓN */}
-                                        <p className="text-muted mb-2">{user.Descripcion}</p>
+                                        <p className="text-muted mb-2">{empresa.Descripcion}</p>
                                         {/* ---------------------------------------------------------PROPIEDADES EXTRAS */}
                                         <ul>
                                             {properties.map(([key, value]) => (
-                                                <div key={key} className="user-card__detail">
-                                                    <li className="user-card__detail-key">{key}: {value}</li>
+                                                <div key={key} className="empresa-card__detail">
+                                                    <li className="empresa-card__detail-key">{key}: {value}</li>
                                                 </div>
                                             ))
                                             }
@@ -106,24 +107,23 @@ export default function CartasAutorizarUsuarios({ user, onStatusChange }) {
                                             <li className="list-inline-item"><i className="mdi mdi-map-marker"></i>
                                                 Renca, Santiago de
                                                 Chile</li>
-                                            <li className="list-inline-item"><i className="mdi mdi-wallet"></i> $ {user.Renta_minima + " "}
-                                                / mes</li>
+                                            <li className="list-inline-item"><i className="mdi mdi-wallet"></i>  + {empresa.necesidad_personal}</li>
                                         </ul>
                                     </div>
                                 </div>
                                 {/* --------------------------------------------- KEYWORDS */}
-                                <div className="col-lg-4">
+                                {/* <div className="col-lg-4">
                                     <div className="mt-2 mt-lg-0 d-flex flex-wrap align-items-start gap-1">
                                         {listaStrongsHab}
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
+                            {/* <div className="favorite-icon">
+                                <Estado status={empresa.Estado} />
+                            </div> */}
                             <div className="favorite-icon">
-                                <Estado status={user.Estado} />
-                            </div>
-                            <div className="favorite-icon">
-                            <button type="button" className="btn btn-success" onClick={() => handleUserStatusChange('Aceptado')}>Aceptar</button>
-                            <button type="button" className="btn btn-danger" onClick={() => handleUserStatusChange('Rechazado')}>Rechazar</button>
+                            <button type="button" className="btn btn-success" onClick={() => handleEmpresasStatusChange('Aceptado')}>Aceptar</button>
+                            <button type="button" className="btn btn-danger" onClick={() => handleEmpresasStatusChange('Rechazado')}>Rechazar</button>
                             </div>
                         </div>
                     </div>

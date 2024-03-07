@@ -1,57 +1,56 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import "./AutorizarUsuarios.css"
 // import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import BusquedaEmergente from '../../components/BusquedaEmergente/BusquedaEmergente';
 import CartasAutorizarUsuarios from '../../components/CartasAutorizarUsuarios/CartasAutorizarUsuarios';
+import CartasAutorizarEmpresas from '../../components/CartasAutorizarEmpresas/CartasAutorizarEmpresas';
 
 export default function AutorizarUsuarios() {
 
+    const [tipoUsuario, setTipoUsuario] = useState("Todos");
+
     const [isVisible, setIsVisible] = useState(false);
     //admin
-    const[usuarios, setUsuarios] = useState([]);
-    const [empresas,setEmpresas] = useState([]);
+    const [usuarios, setUsuarios] = useState([]);
+    const [empresas, setEmpresas] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            const response = await fetch('http://localhost:3000/');
-            const data = await response.json();
-    
-            // Aquí puedes manejar los datos y establecer los estados
-            if (data.data) {
-              setUsuarios(data.data.usuarios || []);
-              setEmpresas(data.data.empresas || []);
+            try {
+                const response = await fetch('http://localhost:3000/');
+                const data = await response.json();
+
+                // Aquí puedes manejar los datos y establecer los estados
+                if (data.data) {
+                    setUsuarios(data.data.usuarios || []);
+                    setEmpresas(data.data.empresas || []);
+                }
+
+
+            } catch (error) {
+                console.log('Error:', error);
             }
-    
-           
-          } catch (error) {
-            console.log('Error:', error);
-          }
         };
-    
+
         fetchData();
-      }, []);
-      console.log(usuarios)
-      console.log(empresas)
+    }, []);
+    console.log(usuarios)
+    console.log(empresas)
     //admin fin
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
     };
 
-    // const users = [
-    //     { Nombre: 'Carlos Silva', Nota: 4.8, Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Project Manager',Estado: "en-busqueda", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Trabajo en equipo, Adaptabilidad, Liderazgo"},
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar2.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar3.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar4.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar5.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar6.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar7.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar8.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" }
+    const handleUserStatusChange = (userId, newStatus) => {
+        setUsuarios(prevUsers => prevUsers.filter(user => user._id !== userId));
+    };
 
-    // ];
+    const handleEmpresaStatusChange = (userId, newStatus) => {
+        setEmpresas(prevUsers => prevUsers.filter(user => user._id !== userId));
+    };
 
     return (
         <div>
@@ -136,7 +135,7 @@ export default function AutorizarUsuarios() {
                                             <div className="col-lg-6">
                                                 <div className="selection-widget">
                                                     <select className="form-select" data-trigger="true"
-                                                        name="choices-single-filter-orderby" id="choices-single-filter-orderby"
+                                                        name="orden" id="orden"
                                                         aria-label="Default select example">
                                                         <option value="df">Predeterminado</option>
                                                         <option value="ne">Nuevos primero</option>
@@ -149,11 +148,11 @@ export default function AutorizarUsuarios() {
                                             <div className="col-lg-6">
                                                 <div className="selection-widget mt-2 mt-lg-0">
                                                     <select className="form-select" data-trigger="true"
-                                                        name="choices-candidate-page" id="choices-candidate-page"
-                                                        aria-label="Default select example">
-                                                        <option value="df">Todos</option>
-                                                        <option value="ne">Talentos</option>
-                                                        <option value="ne">Empresas</option>
+                                                        name="mostrar" id="mostrar"
+                                                        aria-label="Default select example" onChange={(e) => setTipoUsuario(e.target.value)}>
+                                                        <option value="Todos">Todos</option>
+                                                        <option value="Talentos">Talentos</option>
+                                                        <option value="Empresas">Empresas</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -164,32 +163,61 @@ export default function AutorizarUsuarios() {
 
                             <div className="row">
                                 {/*--LISTA DE CANDIDATOS===============================================================-*/}
-                                <div className="col-8">
+                                <div className="col-10">
                                     <div className="candidate-list">
                                         <div className="Cartas">
-                                            {usuarios.map((user, index) => (
-                                                <CartasAutorizarUsuarios
-                                                    key={index}
-                                                    user={user}
-                                                />
-                                            ))}
+                                            {tipoUsuario === "Todos" && (
+                                                <>
+                                                    {usuarios
+                                                        .filter(user => user.Solicitud === "Pendiente")
+                                                        .map((user, index) => (
+                                                            <CartasAutorizarUsuarios
+                                                                key={index}
+                                                                user={user}
+                                                                onStatusChange={handleUserStatusChange}
+                                                            />
+                                                        ))}
+                                                    {empresas
+                                                        .filter(empresa => empresa.Solicitud === "Pendiente")
+                                                        .map((empresa, index) => (
+                                                            <CartasAutorizarEmpresas
+                                                                key={index}
+                                                                empresa={empresa}
+                                                                onStatusChange={handleEmpresaStatusChange}
+                                                            />
+                                                        ))}
+                                                </>
+                                            )}
+                                            {tipoUsuario === "Talentos" && (
+                                                <>
+                                                    {usuarios
+                                                        .filter(user => user.kind === "Talento" && user.Solicitud === "Pendiente")
+                                                        .map((user, index) => (
+                                                            <CartasAutorizarUsuarios
+                                                                key={index}
+                                                                user={user}
+                                                                onStatusChange={handleUserStatusChange}
+                                                            />
+                                                        ))}
+                                                </>
+                                            )}
+                                            {tipoUsuario === "Empresas" && (
+                                                <>
+                                                    {empresas
+                                                        .filter(empresa => empresa.Solicitud === "Pendiente")
+                                                        .map((empresa, index) => (
+                                                            <CartasAutorizarEmpresas
+                                                                key={index}
+                                                                empresa={empresa}
+                                                                onStatusChange={handleEmpresaStatusChange}
+                                                            />
+                                                        ))}
+                                                </>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
-                                {/*-----------------------------------------------------Busqueda emergente-*/}
-                                <div className="col-4">
 
-                                    {/*-----------------------------------------------------Busqueda emergente---- BOTON*/}
-                                    <div className="text-center">
-                                        <button type="submit" className="btn btn-warning rounded-3 mt-4" id="mostrarBtn" onClick={toggleVisibility}>{isVisible ? '' : ''} BÚSQUEDA
-                                            EMERGENTE</button>
-                                    </div>
-                                    {/*-----------------------------------------------------Busqueda emergente---- APARECER*/}
-                                    {isVisible && <div>
-                                        <BusquedaEmergente/>
-                                    </div>}
-
-                                </div>
                             </div>
                         </div>
                         {/*--------------------------------------Paginacion-*/}
