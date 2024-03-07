@@ -60,7 +60,7 @@ export default function RegistroUsuariosEmpresas() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ kind, name_company, email, password, rut_empresa, rubro, url_company, necesidad_personal, HabilidadesNecesarias, RequisitosMinimos, FechaCreacion, Acerca_de })
+                body: JSON.stringify({ kind, name_company, email, password, rut_empresa, rubro, url_company, necesidad_personal, HabilidadesNecesarias, RequisitosMinimos, FechaCreacion, Acerca_de})
             });
 
             if (response.ok) {
@@ -214,7 +214,7 @@ export default function RegistroUsuariosEmpresas() {
                         </div>
 
                         <div className="col-12">
-                            <div className="form-check">
+                            <div className="form-check text-center">
                                 <input className="form-check-input" type="checkbox" value="" name="iAgree" id="iAgree" required />
                                 <label className="form-check-label text-secondary" htmlFor="iAgree">
                                     Estoy de acuerdo con los <a href="#!" className="link-primary text-decoration-none">términos y condiciones</a>

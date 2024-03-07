@@ -118,12 +118,12 @@ export default function CartasAutorizarUsuarios({ user, onStatusChange }) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="favorite-icon">
+                            {/* <div className="favorite-icon">
                                 <Estado status={user.Estado} />
-                            </div>
+                            </div> */}
                             <div className="favorite-icon">
                             <button type="button" className="btn btn-success" onClick={() => handleUserStatusChange('Aceptado')}>Aceptar</button>
-                            <button type="button" className="btn btn-danger" onClick={() => handleUserStatusChange('Rechazado')}>Rechazar</button>
+                            <button type="button" className="btn btn-danger ms-1" onClick={() => handleUserStatusChange('Rechazado')}>Rechazar</button>
                             </div>
                         </div>
                     </div>

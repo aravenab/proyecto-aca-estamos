@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Estado from '../Estado/Estado';
 
-function CompletarPerfil() {
+function CompletarPerfilEmpresa() {
 
     const [formData, setFormData] = useState({
         name_company: '',
@@ -167,4 +167,4 @@ function CompletarPerfil() {
     );
 }
 
-export default CompletarPerfil;
+export default CompletarPerfilEmpresa;

@@ -68,7 +68,7 @@ export default function RegistroUusariosTalentos() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num, Foto, Nota, Descripcion, Disponibilidad, Horarios, Habilidades, Renta_minima, Estado, StrongsHab, Acerca_de, Idiomas, visible_bday, visible_Horarios, visible_estado_civil, visible_Disponibilidad, visible_Renta_minima, visible_Modalidad, Modalidad, Experiencia, Solicitud })
+                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num, Foto, Nota, Descripcion, Disponibilidad, Horarios, Habilidades, Renta_minima, Estado, StrongsHab, Acerca_de, Idiomas, visible_bday, visible_Horarios, visible_estado_civil, visible_Disponibilidad, visible_Renta_minima, visible_Modalidad, Modalidad, Experiencia, Solicitud, Rubro})
             });
 
             if (response.ok) {

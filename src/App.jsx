@@ -19,7 +19,7 @@ function App() {
     <>
       <Navbar />
       <Index2 />
-      <Footer />
+      {/* <Footer /> */}
     </>
     // <div className="App">
       // <Route path="/" exact component={Index2} />

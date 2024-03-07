@@ -113,7 +113,7 @@ export default function BuscadorTalentos() {
                                 {/*--------------------------------------Mostrando paginas-*/}
                                 <div className="col-lg-8">
                                     <div className="mb-3 mb-lg-0">
-                                        <h6 className="fs-16 mb-0">Mostrando 1 – 8 de 11 resultados</h6>
+                                        <h6 className="fs-16 mb-0">Mostrando resultados</h6>
                                     </div>
                                 </div>
                                 {/*--------------------------------------Ordenar y cantidad por página-*/}
@@ -182,26 +182,7 @@ export default function BuscadorTalentos() {
                                 </div>
                             </div>
                         </div>
-                        {/*--------------------------------------Paginacion-*/}
-                        <div className="row">
-                            <div className="mt-4 pt-2 col-lg-12">
-                                <nav aria-label="Page navigation example">
-                                    <div className="pagination job-pagination mb-0 justify-content-center">
-                                        <li className="page-item disabled">
-                                            <a className="page-link" tabIndex="-1" href="#"><i
-                                                className="mdi mdi-chevron-double-left fs-15"></i></a>
-                                        </li>
-                                        <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                        <li className="page-item"><a className="page-link" href="#">3</a></li>
-                                        <li className="page-item"><a className="page-link" href="#">4</a></li>
-                                        <li className="page-item">
-                                            <a className="page-link" href="#"><i className="mdi mdi-chevron-double-right fs-15"></i></a>
-                                        </li>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
+                    
                     </div>
                 </div>
             </section>

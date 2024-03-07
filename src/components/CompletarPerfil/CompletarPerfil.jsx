@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import Estado from '../Estado/Estado';
 
+
 function CompletarPerfil() {
+
+
+    const [profileImage, setProfileImage] = useState(null);
 
     const [formData, setFormData] = useState({
         name: '',
@@ -24,7 +28,8 @@ function CompletarPerfil() {
         Renta_minima: '',
         Modalidad: '',
         visible_Modalidad: '',
-        Estado: ''
+        Estado: '',
+        Rubro: ''
     });
 
     const handleChange = (e) => {
@@ -50,6 +55,13 @@ function CompletarPerfil() {
             }
             return acc;
         }, {});
+
+        // Agregar la imagen de perfil al FormData
+        const formDataWithImage = new FormData();
+        formDataWithImage.append('profileImage', profileImage);
+        for (const key in filledFields) {
+            formDataWithImage.append(key, filledFields[key]);
+        }
 
         try {
             const token = localStorage.getItem('token');
@@ -106,6 +118,14 @@ function CompletarPerfil() {
                                     <option value="en-busqueda">En busqueda</option>
                                 </select>
                             </div>
+                            {/* Foto de perfil */}
+                            <div className="row mt-4">
+                                <div className="col-12 my-3 text-start fw-bold">
+                                    <label className="form-label" htmlFor="profileImage">Foto de perfil:</label>
+                                    <input className="form-control" id="profileImage" type="file" onChange={(e) => setProfileImage(e.target.files[0])} />
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -121,7 +141,7 @@ function CompletarPerfil() {
                     <div className="row text-start fw-bold">
                         <div className="col-12 col-sm-12 col-lg-6 mb-3">
                             <label className="col-12 form-label" htmlFor="Descripcion">Descripción</label>
-                            <input className="form-control" id="Descripcion" type="text" placeholder="Descripción" onChange={handleChange}/>
+                            <input className="form-control" id="Descripcion" type="text" placeholder="Descripción" onChange={handleChange} />
                         </div>
                         <div className="col-12 col-sm-12 col-lg-6 mb-3">
                             <label className="col-12 form-label" htmlFor="Experiencia">Experiencia</label>
@@ -136,9 +156,41 @@ function CompletarPerfil() {
                         </div>
                     </div>
 
+                    {/* Area laboral */}
+                    <div className="row">
+                        <div className="col-12 align-items-center">
+                            <div className="col-12">
+                                <label className="col-12 form-label fw-bold text-start" htmlFor="Rubro">Rubro</label>
+                                <select className="form-select" aria-label="Default select example" id="Rubro" onChange={handleChange}>
+                                    <option value="Tecnología de la información (TI)">Tecnología de la información (TI)</option>
+                                    <option value="Ingeniería">Ingeniería</option>
+                                    <option value="Salud y medicina">Salud y medicina</option>
+                                    <option value="Educación">Educación</option>
+                                    <option value="Marketing y publicidad">Marketing y publicidad</option>
+                                    <option value="Finanzas y contabilidad">Finanzas y contabilidad</option>
+                                    <option value="Recursos humanos">Recursos humanos</option>
+                                    <option value="Servicios legales">Servicios legales</option>
+                                    <option value="Medios de comunicación y entretenimiento">Medios de comunicación y entretenimiento</option>
+                                    <option value="Investigación y desarrollo">Investigación y desarrollo</option>
+                                    <option value="Servicios al cliente">Servicios al cliente</option>
+                                    <option value="Ventas y comercio">Ventas y comercio</option>
+                                    <option value="Diseño y creatividad">Diseño y creatividad</option>
+                                    <option value="Administración y gestión">Administración y gestión</option>
+                                    <option value="Consultoría y asesoría">Consultoría y asesoría</option>
+                                    <option value="Ciencia y tecnología">Ciencia y tecnología</option>
+                                    <option value="Agricultura y medio ambiente">Agricultura y medio ambiente</option>
+                                    <option value="Construcción y arquitectura">Construcción y arquitectura</option>
+                                    <option value="Turismo y hospitalidad">Turismo y hospitalidad</option>
+                                    <option value="Transporte y logística">Transporte y logística</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
                     {/* Acerca de */}
                     <div className="row">
-                        <div className="col-12 mb-3 text-start fw-bold">
+                        <div className="col-12 my-3 text-start fw-bold">
                             <label className="form-label" htmlFor="Acerca_de">Acerca de:</label>
                             <textarea className="form-control" id="Acerca_de" type="text" placeholder="Acerca de..." style={{ height: '10rem' }} onChange={handleChange}></textarea>
                         </div>
@@ -185,16 +237,7 @@ function CompletarPerfil() {
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-6 text-start">
-                                    <label className="form-label mt-1" htmlFor="bday">
-                                        <div className="c-azul">
-                                            <input type="date" id="bday" name="bday" className="sm-form-control" onChange={handleChange} />
-                                        </div>
-                                    </label>
-                                </div>
-                                <div className="col-6">
-                                    <input className="form-control" id="age" type="number" placeholder="Edad" />
-                                </div>
+                                <input type="date" id="bday" name="bday" className="sm-form-control" onChange={handleChange} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-12 col-lg-6 mt-4 mt-lg-0 text-start fw-bold">

@@ -1,9 +1,52 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logoAca from './aca_estamos.png';
-import Switch from '../modoOscuro/Switch'
+import Switch from '../modoOscuro/Switch';
 
 const Navbar = ({ theme, handleChangeTheme }) => {
+
+  const navigate = useNavigate;
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch('http://localhost:3000/verify-login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            // Aquí deberías enviar el JWT almacenado en el frontend para que el backend pueda verificarlo
+            'token': token // Incluir el token en el encabezado de autorización,
+          },
+        });
+
+        if (response.ok) {
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+        }
+      } catch (error) {
+        console.error('Error al verificar el estado de login:', error);
+        setIsLoggedIn(false);
+        
+      }
+    };
+
+    checkLoginStatus();
+  }, []);
+
+  // Función para manejar el logout
+  const handleLogout = () => {
+    // Realiza cualquier lógica de logout necesaria, como eliminar el token del almacenamiento local
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
+    navigate('/');
+
+  };
+
   return (
     <>
       <header id="header" className="fixed-top d-flex align-items-center">
@@ -43,7 +86,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 </form>
               </li>
               {/* Ícono de notificación a la derecha */}
-              <li className="nav-link scrollto">
+              {/* <li className="nav-link scrollto">
                 <button
                   type="button"
                   className="btn btn-lg"
@@ -53,15 +96,15 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 >
                   <i className="bi bi-bell"></i>
                 </button>
-              </li>
-              <li>
+              </li> */}
+              <li className='ms-4'>
                 {/* Interruptor del modo oscuro */}
                 <Switch />
               </li>
               <li>
-                <a className="nav-link scrollto active" href="#hero">
+                <Link to="/" className="nav-link scrollto">
                   Inicio
-                </a>
+                </Link>
               </li>
               <li className="dropdown">
                 <a href="#">
@@ -69,11 +112,16 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 </a>
                 <ul>
                   <li>
-                    <a className="nav-link scrollto" href="#about">
-                      ¿Quiénes somos?
+                    <a className="nav-link scrollto active" href="#about">
+                      ¿Quienes somos?
                     </a>
                   </li>
-                   <li>
+                  <li>
+                    <a className="nav-link scrollto" href="#testimonials">
+                      Testimonios
+                    </a>
+                  </li>
+                  <li>
                     <a className="nav-link scrollto" href="#portfolio">
                       Nuestras Empresas
                     </a>
@@ -84,31 +132,36 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                     </a>
                   </li>
                   <li>
-                    <a className="nav-link scrollto" href="#testimonials">
-                      Testimonios
-                    </a>
-                  </li>
-                  <li>
                     <a className="nav-link scrollto" href="#clients">
-                      Nuestros Aliados
+                      Marcas
                     </a>
                   </li>
-                  <li>
-                    <a className="nav-link scrollto" href="#faq">
-                      Preguntas frecuentes
-                    </a>
-                  </li>
+                  {isLoggedIn && (
+                <li>
+                  <Link to="/" className="nav-link scrollto" onClick={handleLogout}>
+                    Logout
+                    </Link>
+                </li>
+              )}
                 </ul>
               </li>
-              <li>
+              {/* <li>
                 <Link to="login">¡Únete!</Link>
-              </li>
+              </li> */}
+              {isLoggedIn ? (
+                <li>
+                  <Link to="/perfil_usuario_talento">Mi perfil</Link>
+                </li>
+              ) : (
+                <li>
+                  <Link to="/login">¡Únete!</Link>
+                </li>
+              )} 
               <li>
                 <a className="nav-link scrollto" href="#contact">
                   Contacto
                 </a>
               </li>
-              
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>

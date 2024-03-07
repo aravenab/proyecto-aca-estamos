@@ -258,8 +258,7 @@ export default function PerfilUsuarioTalento() {
                             <div className="row text-center align-middle">
                                 <div className="col-12">
                                     <button type="button" className="btn btn-warning rounded-5 align-self-center mt-3" id="subirCurriculum">(+)
-                                        Subir
-                                        Currículum</button>
+                                        Gestionar documentos</button>
                                 </div>
                             </div>
                         </div>
