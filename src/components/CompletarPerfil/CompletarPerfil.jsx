@@ -5,7 +5,7 @@ function CompletarPerfil() {
     const [formData, setFormData] = useState({
         name: '',
         Descripcion: '',
-        experiencia: '',
+        Experiencia: "Menos de 1 año",
         Acerca_de: '',
         Habilidades: '',
         StrongsHab: '',
@@ -22,7 +22,7 @@ function CompletarPerfil() {
         visible_Renta_minima: false,
         Renta_minima: '',
         Modalidad: '',
-        visible_Modalidad: ''
+        visible_Modalidad: false,
     });
 
     const handleChange = (e) => {
@@ -100,14 +100,14 @@ function CompletarPerfil() {
                             <input className="form-control" id="Descripcion" type="text" placeholder="Descripción" onChange={handleChange}/>
                         </div>
                         <div className="col-12 col-sm-12 col-lg-6 mb-3">
-                            <label className="col-12 form-label" htmlFor="experiencia">Experiencia</label>
-                            <select className="form-select" aria-label="Default select example" id="experiencia">
-                                <option value="1">Menos de 1 año</option>
-                                <option value="2">1 Año</option>
-                                <option value="3">2 - 3 años</option>
-                                <option value="4">3 - 5 años</option>
-                                <option value="5">5 - 10 años</option>
-                                <option value="6">Mayor de 10 años</option>
+                            <label className="col-12 form-label" htmlFor="Experiencia">Experiencia</label>
+                            <select className="form-select" aria-label="Default select example" id="Experiencia">
+                                <option value="Menos de 1 año">Menos de 1 año</option>
+                                <option value="1 Año">1 Año</option>
+                                <option value="2 - 3 años">2 - 3 años</option>
+                                <option value="3 - 5 años">3 - 5 años</option>
+                                <option value="5 - 10 años">5 - 10 años</option>
+                                <option value="Mayor de 10 años">Mayor de 10 años</option>
                             </select>
                         </div>
                     </div>
@@ -190,10 +190,10 @@ function CompletarPerfil() {
                             <div className="row">
                                 <div className="col-12">
                                     <select className="form-select" aria-label="Default select example" id="estado_civil" onChange={handleChange}>
-                                        <option value="1">Soltero/a</option>
-                                        <option value="2">Casado/a</option>
-                                        <option value="3">Viudo/a</option>
-                                        <option value="4">Separado/a</option>
+                                        <option value="Soltero/a">Soltero/a</option>
+                                        <option value="Casado/a">Casado/a</option>
+                                        <option value="Viudo/a">Viudo/a</option>
+                                        <option value="Separado/a">Separado/a</option>
                                     </select>
                                 </div>
                             </div>
@@ -226,10 +226,9 @@ function CompletarPerfil() {
                                     <div className="col-12">
                                         <select className="form-select" aria-label="Default select example"
                                             id="Horarios" onChange={handleChange}>
-                                            <option value="1">No especifica</option>
-                                            <option value="2">Diurna</option>
-                                            <option value="3">Nocturna</option>
-                                            <option value="4">Cualquiera</option>
+                                            <option value="Cualquiera">Cualquiera</option>
+                                            <option value="Diurna">Diurna</option>
+                                            <option value="Nocturna">Nocturna</option>
                                         </select>
                                     </div>
                                 </div>
@@ -238,11 +237,11 @@ function CompletarPerfil() {
                             {/* <!--Parte Derecha--> */}
                             <div className="col-sm-12 col-md-12 col-lg-6 mt-4 mt-lg-0">
                                 <div className="row">
-                                    {/* <!--------------------------------------- Modalidad s--> */}
+                                    {/* <!--------------------------------------- Disponibilidad--> */}
                                     <div className='col-6'>
                                         Jornada - Turnos
                                     </div>
-                                    {/* <!-----------------------------------Modalidad s - visible --> */}
+                                    {/* <!-----------------------------------Disponibilidad - visible --> */}
                                     <div className='col-6'>
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value=""
@@ -253,20 +252,46 @@ function CompletarPerfil() {
                                         </div>
                                     </div>
                                 </div>
-                                {/* <!------------------------------------------ Modalidad s - Lista--> */}
+                                {/* <!------------------------------------------ Disponibilidad - Lista--> */}
                                 <div className="row">
                                     <div className="col-12">
                                         <select className="form-select" aria-label="Default select example"
                                             id="Disponibilidad" onChange={handleChange}>
-                                            <option value="1">No especifica</option>
-                                            <option value="2">Completa</option>
-                                            <option value="3">Part time</option>
-                                            <option value="4">Por s</option>
-                                            <option value="5">Freelance</option>
-                                            <option value="6">Cualquiera</option>
+                                            <option value="Cualquiera">Cualquiera</option>
+                                            <option value="Completa">Completa</option>
+                                            <option value="Part time">Part time</option>
+                                            <option value="Freelance">Freelance</option>
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     {/* Modalidad */}
+                     <div className="row mt-4 text-start fw-bold">
+                        <div className="col-6">
+                            <label className="col-12 form-label" htmlFor="Modalidad">Modalidad</label>
+                        </div>
+                        <div className="col-6">
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" value="" id="visible_Modalidad" />
+                                <label className="form-check-label" htmlFor="visible_Renta_minima">
+                                    Visible
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12 align-items-center">
+                            <div className="col-12">
+                                <select className="form-select" aria-label="Default select example"
+                                    id="Modalidad" onChange={handleChange}>
+                                    <option value="Cualquiera">Cualquiera</option>
+                                    <option value="Hibrida">Hibrida</option>
+                                    <option value="Remota">Remota</option>
+                                    <option value="Presencial">Presencial</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -292,6 +317,11 @@ function CompletarPerfil() {
                             </div>
                         </div>
                     </div>
+
+
+                   
+
+
                     <div className='row mt-2'>
                         <div className='col-10'>
                         </div>

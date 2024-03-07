@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logoAca from './aca_estamos.png';
-import Switch from '../modoOscuro/Switch'
+import Switch from '../modoOscuro/Switch';
 
 const Navbar = ({ theme, handleChangeTheme }) => {
 
+  const navigate = useNavigate;
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -30,6 +31,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
       } catch (error) {
         console.error('Error al verificar el estado de login:', error);
         setIsLoggedIn(false);
+        navigate('/');
       }
     };
 
@@ -41,6 +43,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
     // Realiza cualquier lógica de logout necesaria, como eliminar el token del almacenamiento local
     localStorage.removeItem('token');
     setIsLoggedIn(false);
+
   };
 
   return (
@@ -98,9 +101,9 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 <Switch />
               </li>
               <li>
-                <a className="nav-link scrollto active" href="#hero">
+                <Link to="/" className="nav-link scrollto">
                   Inicio
-                </a>
+                </Link>
               </li>
               <li className="dropdown">
                 <a href="#">

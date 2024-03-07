@@ -18,7 +18,7 @@ export default function RegistroUusariosTalentos() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [kind, setKind] = useState('Talento');
-    const [estado_civil, setEstado_civil] = useState('');
+    const [estado_civil, setEstado_civil] = useState('Soltero/a');
     const [bday, setBday] = useState('');
     const [phone_num, setPhone_num] = useState('');
     const [adm_msg, setAdm_msg] = useState('En proceso de confirmación');
@@ -35,6 +35,16 @@ export default function RegistroUusariosTalentos() {
     const StrongsHab= "";
     const Acerca_de="";
     const Idiomas="";
+    const visible_bday= false;
+    const visible_estado_civil = false;
+    const visible_Horarios = false;
+    const visible_Disponibilidad= false;
+    const visible_Renta_minima = false;
+    const visible_Modalidad = false;
+    const Modalidad = "";
+    const Experiencia = "";
+
+
 
 
 
@@ -57,7 +67,7 @@ export default function RegistroUusariosTalentos() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num, Foto, Nota, Descripcion, Disponibilidad, Horarios, Habilidades, Renta_minima, Estado, StrongsHab, Acerca_de, Idiomas })
+                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num, Foto, Nota, Descripcion, Disponibilidad, Horarios, Habilidades, Renta_minima, Estado, StrongsHab, Acerca_de, Idiomas, visible_bday, visible_Horarios, visible_estado_civil, visible_Disponibilidad, visible_Renta_minima, visible_Modalidad, Modalidad, Experiencia })
             });
 
             if (response.ok) {
