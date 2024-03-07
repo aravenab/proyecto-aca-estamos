@@ -138,9 +138,9 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                   </li>
                   {isLoggedIn && (
                 <li>
-                  <a className="nav-link scrollto" onClick={handleLogout} href='#'>
+                  <Link to="/" className="nav-link scrollto" onClick={handleLogout}>
                     Logout
-                    </a>
+                    </Link>
                 </li>
               )}
                 </ul>

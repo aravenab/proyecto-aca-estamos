@@ -1,37 +1,8 @@
+import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import CompletarPerfilEmpresa from "../../components/PerfilEmpresaComponentes/CompletarPerfilEmpresa"
-import React, { useState, useEffect } from 'react'
-
-
 
 export default function PerfilUsuarioEmpresa() {
-
-  const [userData, setUserData] = useState(null);
-
-  useEffect(() => {
-      const token = localStorage.getItem('token');
-
-      fetch('http://localhost:3000/perfil_empresa_usuario', {
-          method: 'GET',
-          headers: {
-              'token': token
-          }
-      })
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Failed to fetch user data');
-          }
-          return response.json();
-      })
-      .then(data => {
-          setUserData(data);
-          console.log(data)
-      })
-      .catch(error => {
-          console.error('Error fetching user data:', error);
-      });
-  }, []);
   return (
  
 
@@ -57,7 +28,7 @@ export default function PerfilUsuarioEmpresa() {
             <div className="col-sm-12 col-md-8 col-lg-7 col-xl-7">
               <div className="row text-start">
                 <div className="col-12 mt-4">
-                  <h2 className="fw-bold" style = {{color: 'var(--tith4)'}}>{userData ? userData.name_company : "Nombre de empresa"}</h2>{" "}
+                  <h2 className="fw-bold" style = {{color: 'var(--tith4)'}}>EMBOTELLADORA ANDINA S.A</h2>{" "}
                   {/*razon social*/}
                 </div>
               </div>
@@ -108,7 +79,8 @@ export default function PerfilUsuarioEmpresa() {
               <div className="row mt-lg-2">
                 {" "}
                 {/*COMPLETAR PERFIL*/}
-                <div className="row mt-lg-2">
+                 {/*----------------------------------------------------COMPLETAR PERFIL*/}
+                 <div className="row mt-lg-2">
                                 <div className="col-12 text-center">
                                     <button type="button" className="btn btn-info rounded-5 align-self-center mt-2" data-bs-toggle="modal" data-bs-target="#completarPerfilModal">
                                         (+) Completar perfil

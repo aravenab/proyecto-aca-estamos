@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { validate, format } from "rut.js";
@@ -15,28 +15,41 @@ const formattedRut = format(rut); // Formatea el RUT (XX.XXX.XXX-X)
 export default function RegistroUsuariosEmpresas() {
 
     // declarar state
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
     const [kind, setKind] = useState('Empresa');
+    
+
     const [name_company, setName_company] = useState('');
     const [enviar, setEnviar] = useState(false)
-    const [formularioEnviado, setFormularioEnviado] = useState(false);
+    // const [formularioEnviado, setFormularioEnviado] = useState(false);
     const [url_company, setUrl_company] = useState('');
    
     const [email, setEmail] = useState('');
     const [rut_empresa, setRut_empresa] = useState('');
     const [rubro, setRubro] = useState('');
     const [necesidad_personal, setNecesidad_personal] = useState('');
+
+    const HabilidadesNecesarias = "";
+    const RequisitosMinimos = "";
+    const FechaCreacion = "";
+    const Acerca_de = "";
     
 
     //value={email} onChange={(e) => setEmail(e.target.value)}
 
+    const [formularioEnviado, setFormularioEnviado] = useState(false);
+    const navigate = useNavigate();
 
-    const enviarFormulario = () => {
-        setFormularioEnviado(true);
-    };
+    const [mostrarError, setMostrarError] = useState(false); // Estado para mostrar la alerta de error
 
-    const formEnviado = () => {
-        setFormularioEnviado(preEnvio => !preEnvio);
-    };
+    // const enviarFormulario = () => {
+    //     setFormularioEnviado(true);
+    // };
+
+    // const formEnviado = () => {
+    //     setFormularioEnviado(preEnvio => !preEnvio);
+    // };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -47,21 +60,22 @@ export default function RegistroUsuariosEmpresas() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ kind, name_company, email, rut_empresa, rubro, url_company, necesidad_personal })
+                body: JSON.stringify({ kind, name_company, email, password, rut_empresa, rubro, url_company, necesidad_personal, HabilidadesNecesarias, RequisitosMinimos, FechaCreacion, Acerca_de })
             });
 
             if (response.ok) {
                 console.log(`Datos enviados correctamente:
                 Tipo: ${kind}
                 Nombre de la empresa: ${name_company}
+                Contraseña: ${password}
                 Email Corporativo: ${email}             
                 Rut empresa: ${rut_empresa}
                 Rubro ó Giro: ${rubro}
                 Url empresa: ${url_company}
                 Necesidad personal: ${necesidad_personal}
-                Adm_msg
-
                 `);
+
+                setFormularioEnviado(true);
 
 
                 // 
@@ -69,25 +83,29 @@ export default function RegistroUsuariosEmpresas() {
                 // Mensaje del admin: ${adm_msg}
             } else {
                 console.error('Error al enviar los datos');
+                setMostrarError(true); // Mostrar la alerta de error si los datos no se envían correctamente
+
             }
         } catch (error) {
             console.error('Error al enviar los datos:', error);
+            setMostrarError(true); // Mostrar la alerta de error si los datos no se envían correctamente
+
         }
     };
 
 
     return (
         <>
+
+{formularioEnviado ? navigate('/aviso_autorizacion') : null}
+
             <Navbar />
             <br />
             <br />
             <div>
 
-                <div className="container-fluid m-5 bg-light shadow border-5 pt-3">
-                    <form className="container position-relative needs-validation" noValidate onSubmit={(e) => {
-                        e.preventDefault(); // Evita que el formulario se envíe por defecto
-                        formEnviado();
-                    }}>
+                <div className="container-fluid m-5 bg-light shadow border-5 pt-3 needs-validation" noValidate>
+                    <form className="container position-relative">
 
                         {/* <!-- botones talentos/empresas --> */}
                         <div className="row">
@@ -113,6 +131,11 @@ export default function RegistroUsuariosEmpresas() {
 
                         <div className="container-fluid mt-4">
                             <h1>Registro como EMPRESA</h1>
+                            {mostrarError && ( // Mostrar la alerta de error si mostrarError es true
+                        <div className="alert alert-danger text-center" role="alert">
+                            Datos no enviados
+                        </div>
+                    )}
                             <div className="row">
                                 <div className="col-6 col-sm-6 mb-3">
                                     <label className="col-12 form-label" htmlFor="name">Nombre de la empresa</label>
@@ -131,13 +154,13 @@ export default function RegistroUsuariosEmpresas() {
                             <div className="row">
                                 <div className="col-6 ">
                                     <label htmlFor="password" className="form-label">Contraseña <span className="text-danger">*</span></label>
-                                    <input type="password" className="form-control" name="password" id="password"  required />
+                                    <input type="password" className="form-control" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 
                                 </div>
                                 {/* <!-- Confirmar contraseña --> */}
                                 <div className="col-6">
                                     <label htmlFor="confirmPassword" className="form-label">Confirmar Contraseña <span className="text-danger">*</span></label>
-                                    <input type="password" className="form-control" name="confirmPassword" id="confirmPassword"  required />
+                                    <input type="password" className="form-control" name="confirmPassword" id="confirmPassword"  value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
 
                                 </div>
                             </div>
@@ -201,7 +224,7 @@ export default function RegistroUsuariosEmpresas() {
                        
 
                         <div className="d-grid">
-                            <button onSubmit={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>
+                            <button className="btn btn-primary btn-lg mb-4" type="submit" onClick={handleSubmit}>Enviar</button>
                             
                         </div>
                     </form>
