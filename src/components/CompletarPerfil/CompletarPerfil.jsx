@@ -11,26 +11,28 @@ function CompletarPerfil() {
         StrongsHab: '',
         Idiomas: '',
         bday: '',
-        visible_bday: false,
+        visible_bday: '',
         age: '',
         estado_civil: '',
-        visible_estado_civil: false,
+        visible_estado_civil: '',
         Horarios: '',
-        visible_Horarios: false,
+        visible_Horarios: '',
         Disponibilidad: '',
-        visible_Disponibilidad: false,
-        visible_Renta_minima: false,
+        visible_Disponibilidad: '',
+        visible_Renta_minima: '',
         Renta_minima: '',
         Modalidad: '',
-        visible_Modalidad: false,
+        visible_Modalidad: '',
     });
 
     const handleChange = (e) => {
-        const { id, value, type } = e.target;
+        const { id, value, type, checked } = e.target;
         if (type === 'date') {
             const date = new Date(value);
             const formattedDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
             setFormData({ ...formData, [id]: formattedDate });
+        } else if (type === 'checkbox') {
+            setFormData({ ...formData, [id]: checked });
         } else {
             setFormData({ ...formData, [id]: value });
         }
@@ -153,7 +155,7 @@ function CompletarPerfil() {
                                 </div>
                                 <div className="col-6">
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="visible_bday" />
+                                        <input className="form-check-input" type="checkbox" value="" id="visible_bday" onChange={handleChange}/>
                                         <label className="form-check-label" htmlFor="visible_bday">
                                             Visible
                                         </label>
@@ -180,7 +182,7 @@ function CompletarPerfil() {
                                 </div>
                                 <div className='col-6'>
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="visible_estado_civil" />
+                                        <input className="form-check-input" type="checkbox" value="" id="visible_estado_civil" onChange={handleChange}/>
                                         <label className="form-check-label" htmlFor="visible_estado_civil">
                                             Visible
                                         </label>
@@ -214,7 +216,7 @@ function CompletarPerfil() {
                                     <div className="col-6">
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value=""
-                                                id="visible_Horarios" />
+                                                id="visible_Horarios" onChange={handleChange}/>
                                             <label className="form-check-label" forhtml="visible_Horarios">
                                                 Visible
                                             </label>
@@ -245,7 +247,7 @@ function CompletarPerfil() {
                                     <div className='col-6'>
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" value=""
-                                                id="visible_disponibilidad" />
+                                                id="visible_disponibilidad" onChange={handleChange}/>
                                             <label className="form-check-label" forhtml="visible_disponibilidad">
                                                 Visible
                                             </label>
@@ -275,8 +277,8 @@ function CompletarPerfil() {
                         </div>
                         <div className="col-6">
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="visible_Modalidad" />
-                                <label className="form-check-label" htmlFor="visible_Renta_minima">
+                                <input className="form-check-input" type="checkbox" value="" id="visible_Modalidad" onChange={handleChange}/>
+                                <label className="form-check-label" htmlFor="visible_Modalidad">
                                     Visible
                                 </label>
                             </div>
@@ -303,7 +305,7 @@ function CompletarPerfil() {
                         </div>
                         <div className="col-6">
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" value="" id="visible_Renta_minima" />
+                                <input className="form-check-input" type="checkbox" value="" id="visible_Renta_minima" onChange={handleChange}/>
                                 <label className="form-check-label" htmlFor="visible_Renta_minima">
                                     Visible
                                 </label>

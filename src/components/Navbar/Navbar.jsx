@@ -31,7 +31,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
       } catch (error) {
         console.error('Error al verificar el estado de login:', error);
         setIsLoggedIn(false);
-        navigate('/');
+        
       }
     };
 
@@ -43,6 +43,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
     // Realiza cualquier lógica de logout necesaria, como eliminar el token del almacenamiento local
     localStorage.removeItem('token');
     setIsLoggedIn(false);
+    navigate('/');
 
   };
 

@@ -35,12 +35,12 @@ export default function RegistroUusariosTalentos() {
     const StrongsHab= "";
     const Acerca_de="";
     const Idiomas="";
-    const visible_bday= false;
-    const visible_estado_civil = false;
-    const visible_Horarios = false;
-    const visible_Disponibilidad= false;
-    const visible_Renta_minima = false;
-    const visible_Modalidad = false;
+    const visible_bday= "";
+    const visible_estado_civil = "";
+    const visible_Horarios = "";
+    const visible_Disponibilidad= "";
+    const visible_Renta_minima = "";
+    const visible_Modalidad = "";
     const Modalidad = "";
     const Experiencia = "";
 
