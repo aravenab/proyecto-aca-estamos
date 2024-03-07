@@ -147,8 +147,8 @@ export default function PerfilUsuarioTalento() {
                                             <CompletarPerfil />
                                         </div>
                                         <div className="modal-footer">
-                                            <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Descartar</button>
-                                            <button type="button" className="btn btn-info rounded-5">Guardar cambios</button>
+                                            {/* <button type="button" className="btn btn-secondary rounded-5" data-bs-dismiss="modal">Salir</button> */}
+                                            {/* <button type="button" className="btn btn-info rounded-5">Guardar cambios</button> */}
                                         </div>
                                     </div>
                                 </div>
@@ -285,11 +285,7 @@ export default function PerfilUsuarioTalento() {
                                     Acerca de:
                                 </div>
                                 <div className="col-sm-12 col-lg-8 lh-1 py-1">
-                                    Soy una profesional comprometida y orientada a resultados con más de 8 años de experiencia en el campo de
-                                    la gestión de proyectos y la consultoría empresarial. Mi enfoque se centra en la optimización de procesos,
-                                    la mejora continua y el desarrollo de soluciones innovadoras para desafíos empresariales. Poseo
-                                    habilidades excepcionales de comunicación y liderazgo, lo que me permite colaborar eficazmente con equipos
-                                    multidisciplinarios y motivar a los miembros del equipo hacia el logro de objetivos comunes.
+                                    {userData ? userData.Acerca_de : ""}
                                 </div>
                             </div>
 
@@ -300,7 +296,7 @@ export default function PerfilUsuarioTalento() {
                                     Habilidades y virtudes:
                                 </div>
                                 <div className="col-sm-12 col-lg-8">
-                                    {userData ? userData.Habilidades : " "}                                </div>
+                                    {userData ? userData.Habilidades : ""}                                </div>
                             </div>
                             {/* ---------------------------------------IDIOMAS */}
 
@@ -309,7 +305,7 @@ export default function PerfilUsuarioTalento() {
                                     Idiomas:
                                 </div>
                                 <div className="col-sm-12 col-lg-8">
-                                    Español (Nativo), Inglés (Avanzado), Coreano (Básico)
+                                {userData ? userData.Idiomas : "Español (Nativo)"}
                                 </div>
                             </div>
 
