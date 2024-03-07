@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Estado from '../Estado/Estado';
-import BusquedaEmergente from '../BusquedaEmergente/BusquedaEmergente'
+// import BusquedaEmergente from '../BusquedaEmergente/BusquedaEmergente'
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
+
 
 export default function CartasBuscadorTalentos({ user }) {
     const [mostrarBusqueda, setMostrarBusqueda] = useState(false);
@@ -36,7 +38,7 @@ export default function CartasBuscadorTalentos({ user }) {
                             <div className="candidate-list-content mt-3 mt-lg-0">
                                 {/* ------------------------------------------------TITULO Y NOTA */}
                                 <h5 className="fs-19 mb-0">
-                                    <a className="primary-link" href="#">{user.name}</a>
+                                <Link className="primary-link" to={`/perfil_talento/${user._id}`}>{user.name}</Link>
                                     {user.Nota >= 2.5 ? (
                                         <span className="badge bg-success ms-1">
                                         <i className="mdi mdi-star align-middle"></i>
