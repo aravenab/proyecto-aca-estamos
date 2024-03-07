@@ -8,13 +8,11 @@ export default function PerfilUsuarioEmpresa() {
  
 
  
- <div>
-   <Navbar /> 
-   <br /><br />
-       <div className="container-fluid" style={{ marginTop: "5rem;" }}>
-        {" "}
-        {/*Container de la pagina en general*/}
-        <div className="container-fluid" > 
+    <div>
+      <Navbar />
+      <div style={{ paddingTop: "5rem" }}>
+        {/* Añade un padding-top para dejar espacio para el Navbar */}
+        <div className="container-fluid">
         {/* esta parte es el header del div */}
           {" "}
           {/*TITULOS DE LA PÁGINA*/}
@@ -45,7 +43,7 @@ export default function PerfilUsuarioEmpresa() {
                     className="btn btn-transparent rounded-5 "
                   >
                     <i className="bi bi-circle-fill text-success">
-                      <p className="fw-bold" style={{ display: "inline" }}>
+                      <p className="fw-bold" style={{color: 'var(--check1)', display: "inline" }}>
                         {" "}
                         Contratacion abierta
                       </p>

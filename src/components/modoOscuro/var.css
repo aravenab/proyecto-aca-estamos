@@ -3,6 +3,7 @@
     --background2: #f2f2f2;
     --border1: #e9ecee;
     --border2: 4px solid #009cea;;
+    --border3: 4px solid #009cea;;
     --shadow: 7px 15px 13px -4px #00000056;
     --container:  #f7f8f9;
     --container2:  #f7f8f9;
@@ -17,14 +18,15 @@
     --background: #1b1f22;
     --background2: rgb(12, 65, 57);
     --border1: 3px solid #571e0c;
-    --border2: 5px solid #c4380d;;
+    --border2: 5px solid #c4380d;
+    --border3: 1.5px solid #bbb4b0;
     --shadow: 7px 15px 13px -4px #ffffff1b;
     --container: #1d1b24;
     --container2: #26232e;
-    --tith1: #ff470f;
+    --tith1: #e93701;
     --tith2: #02a0e9;
     --tith3: #ffffff;
-    --tith4: #ff470f;
+    --tith4: #b6330c;
     --check1: #ffffff;
 
     }
