@@ -14,19 +14,19 @@ const PreguntasFrecuentes = () => {
         <ul className="faq-list">
 
           <li>
-            <div data-bs-toggle="collapse" className="collapsed question" href="#faq1">¿Dónde puedo ver las ofertas de trabajo? <i className="bi bi-chevron-down icon-show"></i><i className="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" className="collapsed question" href="#faq1">¿Cómo puedo ser parte de 'Acá estamos'? <i className="bi bi-chevron-down icon-show"></i><i className="bi bi-chevron-up icon-close"></i></div>
             <div id="faq1" className="collapse" data-bs-parent=".faq-list">
               <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                ¡Es muy fácil! Solo debes registrarte en el botón "Únete" y rellenar el formulario con tus datos y ¡ya serás parte de nuestra plataforma!
               </p>
             </div>
           </li>
 
           <li>
-            <div data-bs-toggle="collapse" className="collapsed question" href="#faq2">¿Cómo puedo hacer para enviarles mis datos por si sale un trabajo para mí?<i className="bi bi-chevron-down icon-show"></i><i className="bi bi-chevron-up icon-close"></i></div>
+            <div data-bs-toggle="collapse" className="collapsed question" href="#faq2">¿Para quiénes está dirigido "Acá estamos"?<i className="bi bi-chevron-down icon-show"></i><i className="bi bi-chevron-up icon-close"></i></div>
             <div id="faq2" className="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                Nuestra web app está dirigida para todas las personas de Renca o personas de otras comunas que desen trabajar <u>en Renca</u>
               </p>
             </div>
           </li>
