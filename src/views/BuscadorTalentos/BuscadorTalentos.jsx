@@ -41,18 +41,6 @@ export default function BuscadorTalentos() {
         setIsVisible(!isVisible);
     };
 
-    // const users = [
-    //     { Nombre: 'Carlos Silva', Nota: 4.8, Foto: "https://bootdey.com/img/Content/avatar/avatar1.png", Descripcion: 'Project Manager',Estado: "en-busqueda", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Trabajo en equipo, Adaptabilidad, Liderazgo"},
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar2.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar3.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar4.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar5.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar6.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar7.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" },
-    //     { Nombre: 'Gabriel Palmer', Nota: 2.3, Foto: "https://bootdey.com/img/Content/avatar/avatar8.png", Descripcion: 'Html Developer',Estado: "disponible", Renta_minima: 750000, Disponibilidad: "Full time", Horarios: "Cualquiera", StrongsHab: "Orientacion al detalle, Inmune al estrés, Lógica" }
-
-    // ];
-
     return (
         <div>
             <Navbar />
@@ -167,12 +155,14 @@ export default function BuscadorTalentos() {
                                 <div className="col-8">
                                     <div className="candidate-list">
                                         <div className="Cartas">
-                                            {usuarios.map((user, index) => (
-                                                <CartasBuscadorTalentos
-                                                    key={index}
-                                                    user={user}
-                                                />
-                                            ))}
+                                            {usuarios
+                                                .filter((user) => user.Solicitud === "Aprobado")
+                                                .map((user, index) => (
+                                                    <CartasBuscadorTalentos
+                                                        key={index}
+                                                        user={user}
+                                                    />
+                                                ))}
                                         </div>
                                     </div>
                                 </div>
