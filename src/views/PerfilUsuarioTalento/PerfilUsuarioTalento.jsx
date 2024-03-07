@@ -59,18 +59,18 @@ export default function PerfilUsuarioTalento() {
                             {/*---------------------------------------------------NOMBRE*/}
                             <div className="row text-start">
                                 <div className="col-12 mt-4">
-                                    <h2 className="fw-bold">{userData ? userData.name : "Nombre de usuario"}</h2>
+                                    <h2 className="fw-bold"  style = {{color: 'var(--tith1)'}}>{userData ? userData.name : "Nombre de usuario"}</h2>
                                 </div>
                             </div>
                             {/*---------------------------------------------------ESTADO*/}
                             <div className="row align-center">
                                 <div className="col-sm-5 col-md-6 col-lg-2">
-                                    <h2>Estado:</h2>
+                                    <h2 style = {{color: 'var(--tith2)'}}>Estado:</h2>
                                 </div>
                                 <div className="col-sm-5 col-md-6 col-lg-10 text-start">
                                     <button type="button" className="btn btn-transparent rounded-5 ">
                                         <i className="bi bi-circle-fill text-success">
-                                            <p className="fw-bold" style={{ display: 'inline' }}>{userData ? userData.Estado : " "}</p>
+                                            <p className="fw-bold" style={{color: 'var(--check1)', display: 'inline' }}>{userData ? userData.Estado : " "}</p>
                                         </i>
                                     </button>
                                 </div>
@@ -114,7 +114,7 @@ export default function PerfilUsuarioTalento() {
                 <div className="row">
                     {/*------------------------------------------------------Foto Perfil y Redes*/}
                     <div className="col-sm-12 col-md-4 col-lg-3 col-xl-3">
-                        <div className="container-fluid border my-3 pb-4 rounded-4 shadow-sm"> {/*Container de foto perfil y redes*/}
+                        <div className="container-fluid my-3 pb-4 rounded-4 shadow-sm" style={{backgroundColor: 'var(--container2)', border:'var(--border3)'}}> {/*Container de foto perfil y redes*/}
 
                             {/*-------------------------------------------------------------ESTRELLAS*/}
                             <div className="row px-4 mt-4">
@@ -268,11 +268,11 @@ export default function PerfilUsuarioTalento() {
 
                     {/*----------------------------------------------------------------------------Info perfil*/}
                     <div className="col-sm-12 col-md-8 col-lg-7 col-xl-7">
-                        <div className="container-fluid">
+                        <div className="container-fluid" >
                             {/* -----------------------------------------DESCRIPCION */}
-                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold text-start" style={{ backgroundColor: "#eee" }}>
-                                <div className="col-4">
-                                    Descripción:
+                            <div className="row rounded-2 ms-1 my-1 pt-1 pb-2 fw-bold text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-4" style={{ color: 'var(--tith1)', }}>
+                                    Profesión o Cargo:
                                 </div>
                                 <div className="col-8 text-start">
                                 {userData ? userData.Descripcion : ""}
@@ -280,8 +280,8 @@ export default function PerfilUsuarioTalento() {
                             </div>
                             {/* -----------------------------------------ACERCA DE */}
 
-                            <div className="row rounded-2 ms-1 my-1 py-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
-                                <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold">
+                            <div className="row rounded-2 ms-1 my-1 py-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)' }}>
+                                <div className="col-sm-12 col-lg-4 align-self-start lh-1 fw-bold"   style={{ color: 'var(--tith1)'}}>
                                     Acerca de:
                                 </div>
                                 <div className="col-sm-12 col-lg-8 lh-1 py-1">
@@ -295,8 +295,8 @@ export default function PerfilUsuarioTalento() {
 
                             {/* -----------------------------------------HABILIDADES Y VIRTUDES */}
 
-                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
-                                <div className="col-sm-12 col-lg-4 fw-bold">
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)' }}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
                                     Habilidades y virtudes:
                                 </div>
                                 <div className="col-sm-12 col-lg-8">
@@ -304,8 +304,8 @@ export default function PerfilUsuarioTalento() {
                             </div>
                             {/* ---------------------------------------IDIOMAS */}
 
-                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: "#eee" }}>
-                                <div className="col-sm-12 col-lg-4 fw-bold">
+                            <div className="row rounded-2 ms-1 mt-1 mb-4 pt-1 pb-2 text-start" style={{ backgroundColor: 'var(--container2)'}}>
+                                <div className="col-sm-12 col-lg-4 fw-bold" style={{ color: 'var(--tith1)' }}>
                                     Idiomas:
                                 </div>
                                 <div className="col-sm-12 col-lg-8">
@@ -316,7 +316,7 @@ export default function PerfilUsuarioTalento() {
                             {/* EXPERIENCIA LABORAL */}
                             <div className="row text-start">
                                 <div className="col-12">
-                                    <h3>Experiencia</h3>
+                                    <h3 style={{ color: 'var(--tith3)' }}>Experiencia</h3>
                                 </div>
                             </div>
 
@@ -359,10 +359,13 @@ export default function PerfilUsuarioTalento() {
                             </div>
 
 
+
+
+
                             {/* EDUCACION */}
-                            <div className="row">
+                            <div className="row text-start">
                                 <div className="col-12">
-                                    <h3>Educación</h3>
+                                    <h3 style={{ color: 'var(--tith3)' }}>Educación</h3>
                                 </div>
                             </div>
 
@@ -407,9 +410,9 @@ export default function PerfilUsuarioTalento() {
                             </div>
 
                             {/* CERTIFICACIONES Y LICENCIAS */}
-                            <div className="row">
+                            <div className="row text-start">
                                 <div className="col-12">
-                                    <h3>Certificaciones y Licencias</h3>
+                                <h3 style={{ color: 'var(--tith3)' }}>Certificaciones y Licencias</h3>
                                 </div>
                             </div>
 
