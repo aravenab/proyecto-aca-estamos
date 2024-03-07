@@ -70,15 +70,10 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 <ul>
                   <li>
                     <a className="nav-link scrollto" href="#about">
-                      ¿Quienes somos?
+                      ¿Quiénes somos?
                     </a>
                   </li>
-                  <li>
-                    <a className="nav-link scrollto" href="#testimonials">
-                      Testimonios
-                    </a>
-                  </li>
-                  <li>
+                   <li>
                     <a className="nav-link scrollto" href="#portfolio">
                       Nuestras Empresas
                     </a>
@@ -89,8 +84,18 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                     </a>
                   </li>
                   <li>
+                    <a className="nav-link scrollto" href="#testimonials">
+                      Testimonios
+                    </a>
+                  </li>
+                  <li>
                     <a className="nav-link scrollto" href="#clients">
-                      Marcas
+                      Nuestros aliados
+                    </a>
+                  </li>
+                  <li>
+                    <a className="nav-link scrollto" href="#faq">
+                      Preguntas frecuentes
                     </a>
                   </li>
                 </ul>
@@ -99,10 +104,11 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 <Link to="login">¡Únete!</Link>
               </li>
               <li>
-                <a className="nav-link scrollto" href="#contact">
+                <a className="nav-link" href="#contact">
                   Contacto
                 </a>
               </li>
+              
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>
           </nav>
