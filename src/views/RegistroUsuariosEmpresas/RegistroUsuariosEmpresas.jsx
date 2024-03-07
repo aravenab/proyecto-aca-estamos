@@ -25,6 +25,7 @@ export default function RegistroUsuariosEmpresas() {
     const [rut_empresa, setRut_empresa] = useState('');
     const [rubro, setRubro] = useState('');
     const [necesidad_personal, setNecesidad_personal] = useState('');
+    
 
     //value={email} onChange={(e) => setEmail(e.target.value)}
 
@@ -197,6 +198,7 @@ export default function RegistroUsuariosEmpresas() {
                                 </label>
                             </div>
                         </div>
+                       
 
                         <div className="d-grid">
                             <button onSubmit={formEnviado} className="btn btn-primary btn-lg mb-4" type="submit">Enviar</button>

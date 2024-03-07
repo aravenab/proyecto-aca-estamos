@@ -23,6 +23,7 @@ export default function RegistroUusariosTalentos() {
     const [phone_num, setPhone_num] = useState('');
     const [adm_msg, setAdm_msg] = useState('En proceso de confirmación');
 
+
     const Foto= "https://bootdey.com/img/Content/avatar/avatar1.png";
     const Nota= "";
     const Descripcion= "";
@@ -32,6 +33,8 @@ export default function RegistroUusariosTalentos() {
     const Renta_minima= "";
     const Estado= "";
     const StrongsHab= "";
+    const Acerca_de="";
+    const Idiomas="";
 
 
 
@@ -54,12 +57,12 @@ export default function RegistroUusariosTalentos() {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num, Foto, Nota, Descripcion, Disponibilidad, Horarios, Habilidades, Renta_minima, Estado, StrongsHab })
+                body: JSON.stringify({ kind, name, email, password, rut, estado_civil, bday, phone_num, Foto, Nota, Descripcion, Disponibilidad, Horarios, Habilidades, Renta_minima, Estado, StrongsHab, Acerca_de, Idiomas })
             });
 
             if (response.ok) {
                 console.log(`Datos enviados correctamente:
-                Tipo: ${kind}
+                Tipo: "${kind}"
                 Nombre: ${name}
                 Email: ${email}
                 Contraseña: ${password}
@@ -89,7 +92,7 @@ export default function RegistroUusariosTalentos() {
 
     return (
         <>
-            {formularioEnviado ? navigate('/perfil_usuario') : null}
+            {formularioEnviado ? navigate('/perfil_usuario_talento') : null}
 
             <Navbar />
             <div>
