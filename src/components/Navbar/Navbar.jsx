@@ -90,7 +90,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                   </li>
                   <li>
                     <a className="nav-link scrollto" href="#clients">
-                      Nuestros aliados
+                      Nuestros
                     </a>
                   </li>
                   <li>
@@ -104,7 +104,7 @@ const Navbar = ({ theme, handleChangeTheme }) => {
                 <Link to="login">¡Únete!</Link>
               </li>
               <li>
-                <a className="nav-link" href="#contact">
+                <a className="nav-link scrollto" href="#contact">
                   Contacto
                 </a>
               </li>
