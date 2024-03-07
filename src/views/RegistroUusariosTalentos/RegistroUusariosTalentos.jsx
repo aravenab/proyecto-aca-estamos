@@ -92,7 +92,7 @@ export default function RegistroUusariosTalentos() {
 
     return (
         <>
-            {formularioEnviado ? navigate('/perfil_usuario_talento') : null}
+            {formularioEnviado ? navigate('/aviso_autorizacion') : null}
 
             <Navbar />
             <div>
